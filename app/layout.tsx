@@ -31,7 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html
+      lang="ko"
+      className="min-h-full w-full text-[16px] tracking-[0.05em] max-[430px]:text-[3.8vw]"
+    >
       <head>
         <link
           rel="preconnect"
@@ -55,7 +58,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body className='mx-auto max-w-[430px] touch-pan-y bg-[#f2f3f1] text-center font-["Resonay-Text","SD_Jan",serif] font-[100] [word-break:keep-all]'>
+        {children}
+      </body>
     </html>
   );
 }

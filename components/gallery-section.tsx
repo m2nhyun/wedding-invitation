@@ -14,42 +14,82 @@ const [
 export function GallerySection() {
   return (
     <>
-      <section className="div4">
-        <img src={wedding.assets.main} alt="" />
+      <section className="relative flex h-auto w-full flex-col bg-[var(--ivory)] py-[2.5em] px-[1em]">
+        <img
+          className="relative block h-auto w-full"
+          src={wedding.assets.main}
+          alt=""
+        />
       </section>
 
-      <section className="div5">
-        <div>
-          <img src={leftPortrait} alt="" />
+      <section className="relative flex flex-row">
+        <div className="relative flex flex-1 flex-col">
+          <img
+            className="relative block h-auto w-full"
+            src={leftPortrait}
+            alt=""
+          />
         </div>
-        <div>
-          <img src={rightPortrait} alt="" />
+        <div className="relative flex flex-1 flex-col items-center justify-center bg-[var(--light)]">
+          <img
+            className="relative block h-auto w-[70%]"
+            src={rightPortrait}
+            alt=""
+          />
         </div>
       </section>
 
-      <section className="div6">
-        <div className="div6-1">
-          <div>
-            <img src={narrowLeft} alt="" />
+      <section className="relative flex w-full flex-col gap-[1em] bg-[#f2f3f1] py-[2em] px-[1em]">
+        <div className="relative flex w-full flex-row items-start gap-[1em]">
+          <div className="relative mr-[2em] flex h-full min-w-0 flex-[0_0_33%] flex-col">
+            <img
+              className="relative block h-auto min-w-0 w-full object-cover"
+              src={narrowLeft}
+              alt=""
+            />
           </div>
-          <div>
-            <img src={tallRight} alt="" />
+          <div className="relative flex h-full min-w-0 flex-1 flex-col">
+            <img
+              className="relative block h-auto min-w-0 w-full object-cover"
+              src={tallRight}
+              alt=""
+            />
           </div>
         </div>
 
-        <img src={widePhoto} alt="" />
-        <div id="img6-4gif">
-          <img src={motionPhoto} alt="" />
+        <img
+          className="relative block h-auto w-full"
+          src={widePhoto}
+          alt=""
+        />
+        <div className="relative flex flex-col">
+          <img
+            className="relative block h-auto w-[74%]"
+            src={motionPhoto}
+            alt=""
+          />
         </div>
 
-        <div id="img6-5">
-          <img src={rightAligned} alt="" />
+        <div className="relative flex flex-col">
+          <img
+            className="relative ml-auto block h-auto w-[68%]"
+            src={rightAligned}
+            alt=""
+          />
         </div>
-        <div id="img6-6">
-          <img src={smallCenter} alt="" />
+        <div className="relative mx-auto my-[1.5em] flex w-[33%] flex-col">
+          <img
+            className="relative block h-auto w-full"
+            src={smallCenter}
+            alt=""
+          />
         </div>
 
-        <img id="glyph03" src={wedding.assets.glyph03} alt="" />
+        <img
+          className="relative mx-auto my-[1em] block h-auto w-[1.8em]"
+          src={wedding.assets.glyph03}
+          alt=""
+        />
       </section>
     </>
   );

@@ -6,7 +6,7 @@ import { ScrollMotion } from "@/components/scroll-motion";
 
 export default function Page() {
   return (
-    <main>
+    <main className="block">
       <ScrollMotion />
       <IntroSection />
       <EventSection />

@@ -2,16 +2,20 @@ import { wedding } from "@/data/wedding";
 
 export function IntroSection() {
   return (
-    <section className="div1">
-      <h2>
+    <section className="relative flex flex-col gap-[2.2em] bg-[var(--light)] pt-[2em] pb-[1.3em]">
+      <h2 className="relative text-[1.2em] leading-[1.85em] tracking-[0.1em] text-[var(--olive)]">
         {wedding.couple.groom.name} {wedding.couple.bride.name}
         <br />
         결혼합니다.
       </h2>
 
-      <img src={wedding.assets.intro} alt="" />
+      <img
+        className="relative block h-auto w-full"
+        src={wedding.assets.intro}
+        alt=""
+      />
 
-      <p>
+      <p className="relative pr-[0.8em] pl-3 text-center text-[0.96em] leading-[1.7em] text-[var(--olive)]">
         유난히 따뜻했던 2017년 가을 시작된 대화는
         <br />
         수많은 계절을 지나 지금까지 이어지고 있습니다.
@@ -27,7 +31,11 @@ export function IntroSection() {
         따뜻한 응원과 축복으로 자리를 빛내주세요.
       </p>
 
-      <img id="glyph01" src={wedding.assets.glyph01} alt="Logo" />
+      <img
+        className="relative -top-[0.6em] left-[2em] block h-auto w-[2.5em]"
+        src={wedding.assets.glyph01}
+        alt="Logo"
+      />
     </section>
   );
 }
