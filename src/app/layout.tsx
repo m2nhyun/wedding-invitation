@@ -4,7 +4,7 @@ import { wedding } from "@/data/wedding";
 import { assetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(wedding.site.url),
+  metadataBase: new URL("https://www.jh-yh.kr"),
   applicationName: wedding.site.title,
   title: wedding.site.title,
   description: wedding.site.description,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: wedding.site.description,
     url: "/",
     siteName: wedding.site.title,
-    locale: wedding.site.locale,
+    locale: "ko_KR",
     type: "website",
   },
   twitter: {
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang={wedding.site.language}
+      lang="ko"
       className="min-h-full w-full text-[16px] tracking-[0.05rem] max-[430px]:text-[3.8vw]"
     >
       <head>

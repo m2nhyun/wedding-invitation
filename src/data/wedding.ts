@@ -2,9 +2,6 @@ import { assetPath } from "@/lib/asset-path";
 
 export const wedding = {
   site: {
-    url: "https://www.jh-yh.kr",
-    language: "ko",
-    locale: "ko_KR",
     title: "김제현 송영현",
     description: "2026년 10월 17일 12시 30분",
   },
