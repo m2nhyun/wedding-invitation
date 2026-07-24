@@ -52,7 +52,39 @@ html {
   letter-spacing: 0.05em;
   width: 100%;
   min-height: 100%;
-  background: rgb(235, 223, 239);
+  background: #f2f3f1;
+}
+
+body h1.scroll-hidden,
+body h2.scroll-hidden,
+body p.scroll-hidden,
+body a.scroll-hidden,
+body img.scroll-hidden:not(.scroll-svg) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s ease var(--scroll-delay, 0ms),
+    transform 0.9s ease var(--scroll-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+body h1.scroll-hidden.show,
+body h2.scroll-hidden.show,
+body p.scroll-hidden.show,
+body a.scroll-hidden.show,
+body img.scroll-hidden:not(.scroll-svg).show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body img.scroll-svg {
+  opacity: 0;
+  transform: translateY(-20px);
+  will-change: opacity, transform;
+}
+
+body img.scroll-svg.show {
+  animation: svg-drop 0.9s ease-out var(--scroll-delay, 0ms) forwards;
 }
 
 body {
@@ -97,7 +129,7 @@ section div {
 
 .div1 {
   padding: 2em 0 1.3em;
-  background-color: var(--light);
+  background: white;
   gap: 2.2em;
 }
 
@@ -111,7 +143,6 @@ section div {
   position: relative;
   left: 2em;
   top: -0.6em;
-  color: aqua;
 }
 
 .div2 {
@@ -382,7 +413,7 @@ section div {
   padding: 2em 1em;
   width: 100%;
   gap: 1em;
-  background: #f2f3f1;
+  background: white;
 }
 
 .div6 .div6-1 {
@@ -458,5 +489,16 @@ section div {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes svg-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
