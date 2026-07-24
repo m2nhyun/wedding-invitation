@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "tailwindcss";
 
 :root {
   --ivory: rgb(240, 240, 222);
@@ -134,6 +135,10 @@ section div {
 
 .div1 p {
   padding: 0 0.8em;
+  font-size: 0.96em;
+  padding-left: 12px;
+  padding-left: 12px;
+  text-align: center;
 }
 
 .div1 #glyph01 {
@@ -234,6 +239,7 @@ section div {
 .gift-modal-panel {
   width: min(100%, 386px);
   max-height: calc(100vh - 2.8em);
+  border-radius: 12px;
   overflow: auto;
   display: flex;
   flex-direction: column;
