@@ -52,7 +52,6 @@ html {
   letter-spacing: 0.05em;
   width: 100%;
   min-height: 100%;
-  background: #f2f3f1;
 }
 
 body h1.scroll-hidden,
@@ -129,7 +128,7 @@ section div {
 
 .div1 {
   padding: 2em 0 1.3em;
-  background: white;
+  background-color: var(--light);
   gap: 2.2em;
 }
 
@@ -283,11 +282,6 @@ section div {
   align-items: center;
   gap: 0.7em;
   padding: 0.9em 0;
-  border-top: 1px solid rgba(133, 129, 101, 0.22);
-}
-
-.gift-account:last-child {
-  border-bottom: 1px solid rgba(133, 129, 101, 0.22);
 }
 
 .gift-account-person {
@@ -413,7 +407,7 @@ section div {
   padding: 2em 1em;
   width: 100%;
   gap: 1em;
-  background: white;
+  background: #f2f3f1;
 }
 
 .div6 .div6-1 {
