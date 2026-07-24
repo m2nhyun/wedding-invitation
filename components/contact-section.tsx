@@ -5,7 +5,7 @@ import { wedding } from "@/data/wedding";
 
 type GiftSide = "groom" | "bride";
 
-import KakaoPayIcon from "../icons/kakaopay_ver.svg?react";
+import KakaoPayIcon from "../icons/kakao_simple.svg?react";
 
 const giftSideLabel: Record<GiftSide, string> = {
   groom: wedding.gift.groom.title,
@@ -94,30 +94,30 @@ export function ContactSection() {
           src={wedding.assets.glyph02}
           alt=""
         />
-        <div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--olive)] py-[1.8em] text-[var(--ivory)]">
-          <p className="relative text-[1em] leading-[1.7em] text-[var(--ivory)]">
+        <div className="flex flex-1 flex-col gap-[0.4em] bg-[var(--olive)] py-[1.8em] text-[var(--ivory)]">
+          <p className="text-[1em] leading-[1.7em] text-[var(--ivory)]">
             {wedding.couple.groom.parents}
           </p>
-          <h1 className="relative text-[1.42em] leading-[1.7em] tracking-[0.1em] text-[var(--ivory)]">
+          <h1 className="text-[1.42em] leading-[1.7em] tracking-[0.1em] text-[var(--ivory)]">
             {wedding.couple.groom.name}
           </h1>
           <button
-            className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
+            className="mt-auto w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
             type="button"
             onClick={() => setSelectedSide("groom")}
           >
             마음 보내실 곳
           </button>
         </div>
-        <div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--lavender)] py-[1.8em] text-[var(--olive)]">
-          <p className="relative text-[1em] leading-[1.7em] text-[var(--olive)]">
+        <div className="flex flex-1 flex-col gap-[0.4em] bg-[var(--lavender)] py-[1.8em] text-[var(--olive)]">
+          <p className="text-[1em] leading-[1.7em] text-[var(--olive)]">
             {wedding.couple.bride.parents}
           </p>
-          <h1 className="relative text-[1.42em] leading-[1.7em] tracking-[0.1em] text-[var(--olive)]">
+          <h1 className="text-[1.42em] leading-[1.7em] tracking-[0.1em] text-[var(--olive)]">
             {wedding.couple.bride.name}
           </h1>
           <button
-            className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
+            className="mt-auto w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
             type="button"
             onClick={() => setSelectedSide("bride")}
           >
@@ -141,11 +141,11 @@ export function ContactSection() {
           />
           <div className="relative z-10 flex max-h-[calc(100vh-2.8em)] w-[min(100%,386px)] flex-col gap-[1.15em] overflow-auto rounded-[12px] bg-[#f2f3f1] pt-[1.55em] pr-[1.1em] pb-[1.15em] pl-[1.1em] shadow-[0_1.2em_3em_rgba(55,54,43,0.18)] animate-[giftPanelIn_240ms_cubic-bezier(0.2,0.8,0.2,1)_both]">
             <div className="relative flex flex-col gap-[0.15em] px-[2.4em]">
-              <p className="relative text-[0.9em] leading-[1.7em] text-[var(--olive)]">
+              <p className="text-[0.9em] leading-[1.7em] text-[var(--olive)]">
                 마음 보내실 곳
               </p>
               <h2
-                className="relative text-[1.22em] leading-[1.85em] tracking-[0.1em] text-[var(--olive)]"
+                className="text-[1.22em] leading-[1.85em] tracking-[0.1em] text-[var(--olive)]"
                 id="gift-modal-title"
               >
                 {giftSideLabel[selectedSide]}
@@ -160,7 +160,7 @@ export function ContactSection() {
               </button>
             </div>
 
-            <div className="relative flex flex-col">
+            <div className="flex flex-col">
               {wedding.gift[selectedSide].accounts.map((account) => {
                 const hasAccount = Boolean(account.accountNumber);
                 const hasKakaoPay = Boolean(account.kakaoPayUrl);
@@ -171,31 +171,31 @@ export function ContactSection() {
 
                 return (
                   <div
-                    className="relative grid grid-cols-[4.7em_minmax(0,1fr)_auto] items-center gap-[0.7em] py-[0.9em]"
+                    className="grid grid-cols-[4.7em_minmax(0,1fr)_auto] items-center gap-[0.7em] py-[0.9em]"
                     key={`${selectedSide}-${account.relation}`}
                   >
-                    <div className="relative flex flex-col gap-[0.1em]">
-                      <span className="relative text-[0.82em] leading-[1.45] text-[var(--olive)]">
+                    <div className="flex flex-col gap-[0.1em]">
+                      <span className="text-[0.82em] leading-[1.45] text-[var(--olive)]">
                         {account.relation}
                         {account.hanja ? `(${account.hanja})` : ""}
                       </span>
-                      <strong className="relative text-[1.08em] leading-[1.45] font-[100] text-[var(--olive)]">
+                      <strong className="text-[1.08em] leading-[1.45] font-[100] text-[var(--olive)]">
                         {account.name}
                       </strong>
                     </div>
-                    <div className="relative flex min-w-0 flex-col gap-[0.12em]">
+                    <div className="flex min-w-0 flex-col gap-[0.12em]">
                       {account.bank ? (
-                        <span className="relative text-left text-[0.78em] leading-[1.35] text-[rgba(133,129,101,0.78)]">
+                        <span className="text-left text-[0.78em] leading-[1.35] text-[rgba(133,129,101,0.78)]">
                           {account.bank}
                         </span>
                       ) : null}
-                      <p className="relative break-all text-left text-[1em] leading-[1.35] text-[var(--olive)]">
+                      <p className="break-all text-left text-[1em] leading-[1.35] text-[var(--olive)]">
                         {account.accountNumber || "계좌 정보 준비중"}
                       </p>
                     </div>
-                    <div className="relative flex min-w-[4.72em] flex-row justify-end gap-[0.42em]">
+                    <div className="flex min-w-[4.72em] flex-row justify-end gap-[0.42em]">
                       <button
-                        className="relative flex h-[2.15em] w-[2.15em] cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
+                        className="flex h-[2.15em] w-[2.15em] cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
                         type="button"
                         disabled={!hasAccount}
                         onClick={() => copyAccount(accountCopyText)}
@@ -205,7 +205,7 @@ export function ContactSection() {
                       </button>
                       {hasKakaoPay ? (
                         <button
-                          className="relative flex h-[2.15em] w-[2.15em] cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
+                          className="flex h-[2.15em] w-[2.15em] cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
                           type="button"
                           disabled={!hasAccount}
                           onClick={() => openKakaoPay(account.kakaoPayUrl)}
