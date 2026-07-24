@@ -140,7 +140,10 @@ export function ContactSection() {
                 );
 
                 return (
-                  <div className="gift-account" key={`${selectedSide}-${account.relation}`}>
+                  <div
+                    className="gift-account"
+                    key={`${selectedSide}-${account.relation}`}
+                  >
                     <div className="gift-account-person">
                       <span>
                         {account.relation}
@@ -180,7 +183,9 @@ export function ContactSection() {
         </div>
       ) : null}
 
-      <p className={toastMessage ? "gift-toast is-show" : "gift-toast"}>{toastMessage}</p>
+      <p className={toastMessage ? "gift-toast is-show" : "gift-toast"}>
+        {toastMessage}
+      </p>
     </>
   );
 }
