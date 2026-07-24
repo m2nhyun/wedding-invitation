@@ -59,7 +59,7 @@ html {
 	width: 100%;
 	min-height: 100%;
 	// background: rgb(235, 223, 239);
-	background: #f2f3f1;
+	// background: #f2f3f1;
 }
 
 body {
@@ -138,8 +138,8 @@ body {
 
 	.div1 {
 		padding: 2em 0 1.3em;
-		// background-color: var(--light);
-		background: white;
+		background-color: var(--light);
+		// background: white;
 
 		gap: 2.2em;
 		p {
@@ -253,8 +253,8 @@ body {
 		padding: 2em 1em;
 		width: 100%;
 		gap: 1em;
-		// background: #f2f3f1;
-		background: white;
+		background: #f2f3f1;
+		// background: white;
 
 		.div6-1 {
 			width: 100%;
