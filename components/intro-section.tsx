@@ -12,7 +12,7 @@ export function IntroSection() {
       <img src={wedding.assets.intro} alt="" />
 
       <p>
-        2017년 유난히 따뜻했던 가을 시작된 대화는
+        유난히 따뜻했던 2017년 가을 시작된 대화는
         <br />
         수많은 계절을 지나 지금까지도 이어지고 있습니다.
         <br />
