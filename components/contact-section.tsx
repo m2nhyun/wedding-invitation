@@ -2,10 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { wedding } from "@/data/wedding";
+import KakaoPayIcon from "../icons/kakao_simple.svg?react";
 
 type GiftSide = "groom" | "bride";
-
-import KakaoPayIcon from "../icons/kakao_simple.svg?react";
 
 const giftSideLabel: Record<GiftSide, string> = {
   groom: wedding.gift.groom.title,
@@ -193,9 +192,9 @@ export function ContactSection() {
                         {account.accountNumber || "계좌 정보 준비중"}
                       </p>
                     </div>
-                    <div className="flex min-w-[4.72em] flex-row justify-end gap-[0.42em]">
+                    <div className="flex min-w-[70px] flex-row justify-end gap-1.5">
                       <button
-                        className="flex h-[2.15em] w-[2.15em] cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
+                        className="flex h-8 w-8 cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] outline-none [-webkit-tap-highlight-color:transparent] focus-visible:ring-1 focus-visible:ring-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
                         type="button"
                         disabled={!hasAccount}
                         onClick={() => copyAccount(accountCopyText)}
@@ -205,13 +204,13 @@ export function ContactSection() {
                       </button>
                       {hasKakaoPay ? (
                         <button
-                          className="flex h-[2.15em] w-[2.15em] cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[0.95em] leading-none text-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
+                          className="flex h-8 w-8 cursor-pointer appearance-none items-center justify-center rounded-full border border-[rgba(133,129,101,0.4)] bg-transparent text-[var(--olive)] outline-none [-webkit-tap-highlight-color:transparent] focus-visible:ring-1 focus-visible:ring-[var(--olive)] disabled:pointer-events-none disabled:cursor-default disabled:opacity-[0.34]"
                           type="button"
                           disabled={!hasAccount}
                           onClick={() => openKakaoPay(account.kakaoPayUrl)}
                           aria-label={`${account.name} 카카오페이 송금`}
                         >
-                          <KakaoPayIcon />
+                          ₩
                         </button>
                       ) : null}
                     </div>
