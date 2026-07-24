@@ -46,7 +46,7 @@ export const wedding = {
           hanja: "",
           name: "김제현",
           bank: "카카오뱅크",
-          accountNumber: "3333-02-4025793",
+          accountNumber: "3333 02 4025793",
           kakaoPayUrl: "https://link.kakaopay.com/__/_9x4Q35",
         },
       ],
