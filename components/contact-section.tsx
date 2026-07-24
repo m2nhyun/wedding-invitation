@@ -5,7 +5,7 @@ import { wedding } from "@/data/wedding";
 
 type GiftSide = "groom" | "bride";
 
-// import KakaoPayIcon from "../icons/kakaopay_ver.svg";
+import KakaoPayIcon from "../icons/kakaopay_ver.svg?react";
 
 const giftSideLabel: Record<GiftSide, string> = {
   groom: wedding.gift.groom.title,
@@ -211,7 +211,7 @@ export function ContactSection() {
                           onClick={() => openKakaoPay(account.kakaoPayUrl)}
                           aria-label={`${account.name} 카카오페이 송금`}
                         >
-                          ₩
+                          <KakaoPayIcon />
                         </button>
                       ) : null}
                     </div>
