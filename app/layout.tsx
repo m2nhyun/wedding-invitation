@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className="min-h-full w-full text-[16px] tracking-[0.05em] max-[430px]:text-[3.8vw]"
+      className="min-h-full w-full text-[16px] tracking-[0.05rem] max-[430px]:text-[3.8vw]"
     >
       <head>
         <link

@@ -14,7 +14,7 @@ const [
 export function GallerySection() {
   return (
     <>
-      <section className="flex h-auto w-full flex-col bg-[var(--ivory)] py-[2.5em] px-[1em]">
+      <section className="flex h-auto w-full flex-col bg-[var(--ivory)] py-[2.5rem] px-[1rem]">
         <img
           className="block h-auto w-full"
           src={wedding.assets.main}
@@ -39,9 +39,9 @@ export function GallerySection() {
         </div>
       </section>
 
-      <section className="flex w-full flex-col gap-[1em] bg-[#f2f3f1] py-[2em] px-[1em]">
-        <div className="flex w-full flex-row items-start gap-[1em]">
-          <div className="mr-[2em] flex h-full min-w-0 flex-[0_0_33%] flex-col">
+      <section className="flex w-full flex-col gap-[1rem] bg-[#f2f3f1] py-[2rem] px-[1rem]">
+        <div className="flex w-full flex-row items-start gap-[1rem]">
+          <div className="mr-[2rem] flex h-full min-w-0 flex-[0_0_33%] flex-col">
             <img
               className="block h-auto min-w-0 w-full object-cover"
               src={narrowLeft}
@@ -77,7 +77,7 @@ export function GallerySection() {
             alt=""
           />
         </div>
-        <div className="mx-auto my-[1.5em] flex w-[33%] flex-col">
+        <div className="mx-auto my-[1.5rem] flex w-[33%] flex-col">
           <img
             className="block h-auto w-full"
             src={smallCenter}
@@ -86,7 +86,7 @@ export function GallerySection() {
         </div>
 
         <img
-          className="mx-auto my-[1em] block h-auto w-[1.8em]"
+          className="mx-auto my-[1rem] block h-auto w-[1.8rem]"
           src={wedding.assets.glyph03}
           alt=""
         />

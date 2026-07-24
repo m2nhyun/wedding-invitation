@@ -2,8 +2,8 @@ import { wedding } from "@/data/wedding";
 
 export function IntroSection() {
   return (
-    <section className="flex flex-col gap-[2.2em] bg-[var(--light)] pt-[2em] pb-[1.3em]">
-      <h2 className="text-[1.2em] leading-[1.85em] tracking-[0.1em] text-[var(--olive)]">
+    <section className="flex flex-col gap-[2.2rem] bg-[var(--light)] pt-[2rem] pb-[1.3rem]">
+      <h2 className="text-[1.2rem] leading-[1.85] tracking-[0.12rem] text-[var(--olive)]">
         {wedding.couple.groom.name} {wedding.couple.bride.name}
         <br />
         결혼합니다.
@@ -15,7 +15,7 @@ export function IntroSection() {
         alt=""
       />
 
-      <p className="pr-[0.8em] pl-3 text-center text-[0.96em] leading-[1.7em] text-[var(--olive)]">
+      <p className="pr-[0.8rem] pl-3 text-center text-[0.96rem] leading-[1.7] text-[var(--olive)]">
         유난히 따뜻했던 2017년 가을 시작된 대화는
         <br />
         수많은 계절을 지나 지금까지 이어지고 있습니다.
@@ -32,7 +32,7 @@ export function IntroSection() {
       </p>
 
       <img
-        className="ml-[2em] -mt-[0.6em] mb-[0.6em] block h-auto w-[2.5em]"
+        className="ml-[2rem] -mt-[0.6rem] mb-[0.6rem] block h-auto w-[2.5rem]"
         src={wedding.assets.glyph01}
         alt="Logo"
       />
