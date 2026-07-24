@@ -30,7 +30,7 @@ export const wedding = {
           hanja: "父",
           name: "김명국",
           bank: "우리은행",
-          accountNumber: "02510271202501",
+          accountNumber: "025 102712 02 2501",
           kakaoPayUrl: "",
         },
         {
