@@ -1,27 +1,28 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { wedding } from "@/data/wedding";
 import { assetPath } from "@/lib/asset-path";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.jh-yh.kr"),
-  applicationName: "김제현 송영현",
-  title: "김제현 송영현",
-  description: "2026년 10월 17일 12시 30분",
+  metadataBase: new URL(wedding.site.url),
+  applicationName: wedding.site.title,
+  title: wedding.site.title,
+  description: wedding.site.description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "김제현 송영현",
-    description: "2026년 10월 17일 12시 30분",
+    title: wedding.site.title,
+    description: wedding.site.description,
     url: "/",
-    siteName: "김제현 송영현",
-    locale: "ko_KR",
+    siteName: wedding.site.title,
+    locale: wedding.site.locale,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "김제현 송영현",
-    description: "2026년 10월 17일 12시 30분",
+    title: wedding.site.title,
+    description: wedding.site.description,
   },
 };
 
@@ -32,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="ko"
+      lang={wedding.site.language}
       className="min-h-full w-full text-[16px] tracking-[0.05rem] max-[430px]:text-[3.8vw]"
     >
       <head>

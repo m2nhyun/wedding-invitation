@@ -38,13 +38,13 @@ export function EventSection() {
         href={wedding.event.naverMapUrl}
         onClick={openNaverMap}
       >
-        네이버지도
+        {wedding.event.naverMapLabel}
       </a>
       <a
         className="leading-[1.7] text-[var(--olive)] underline"
         href={wedding.event.kakaoMapUrl}
       >
-        카카오맵
+        {wedding.event.kakaoMapLabel}
       </a>
 
       <p className="mt-auto w-full text-base leading-[1.7] text-white">
