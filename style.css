@@ -49,17 +49,20 @@ html {
   letter-spacing: 0.05em;
   width: 100%;
   min-height: 100%;
-  background: #f2f3f1;
+  overflow-anchor: none;
 }
 
+body {
+  overflow-anchor: none;
+}
 body h1.scroll-hidden,
 body h2.scroll-hidden,
 body p.scroll-hidden,
 body a.scroll-hidden,
 body img.scroll-hidden:not(.scroll-svg) {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.9s ease var(--scroll-delay, 0ms), transform 0.9s ease var(--scroll-delay, 0ms);
+  transform: translateY(45px);
+  transition: opacity 1.2s ease-out var(--scroll-delay, 0ms), transform 1.2s ease-out var(--scroll-delay, 0ms);
   will-change: opacity, transform;
 }
 body h1.scroll-hidden.show,
@@ -116,7 +119,7 @@ body div {
 }
 body .div1 {
   padding: 2em 0 1.3em;
-  background: white;
+  background-color: var(--light);
   gap: 2.2em;
 }
 body .div1 p {
@@ -212,7 +215,7 @@ body .div6 {
   padding: 2em 1em;
   width: 100%;
   gap: 1em;
-  background: white;
+  background: #f2f3f1;
 }
 body .div6 .div6-1 {
   width: 100%;

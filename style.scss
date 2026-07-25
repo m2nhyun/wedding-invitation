@@ -60,9 +60,12 @@ html {
 	min-height: 100%;
 	// background: rgb(235, 223, 239);
 	// background: #f2f3f1;
+
+	overflow-anchor: none;
 }
 
 body {
+	overflow-anchor: none;
 	// 일반 텍스트와 이미지
 	h1.scroll-hidden,
 	h2.scroll-hidden,
@@ -70,10 +73,10 @@ body {
 	a.scroll-hidden,
 	img.scroll-hidden:not(.scroll-svg) {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(45px);
 		transition:
-			opacity 0.9s ease var(--scroll-delay, 0ms),
-			transform 0.9s ease var(--scroll-delay, 0ms);
+			opacity 1.2s ease-out var(--scroll-delay, 0ms),
+			transform 1.2s ease-out var(--scroll-delay, 0ms);
 		will-change: opacity, transform;
 	}
 	h1.scroll-hidden.show,
