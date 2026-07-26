@@ -2,32 +2,32 @@
 @import "tailwindcss";
 
 :root {
-  --ivory: rgb(240, 240, 222);
-  --olive: rgb(133, 129, 101);
-  --lavender: rgb(210, 195, 215);
-  --light: rgb(228, 230, 224);
+	--ivory: rgb(240, 240, 222);
+	--olive: rgb(133, 129, 101);
+	--lavender: rgb(210, 195, 215);
+	--BG: rgb(228, 230, 224);
 }
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 @keyframes giftBackdropIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes giftPanelIn {
-  from {
-    opacity: 0;
-    transform: translateY(0.8rem) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(0.8rem) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
 }

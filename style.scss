@@ -1,21 +1,23 @@
 // 20260724
-// 단축어 설정
+// 컬러 설정
 :root {
-	--ivory: rgb(240, 240, 222); /* Pantone 9064 C */
-	--olive: rgb(133, 129, 101); /* Pantone 4226 C */
-	--lavender: rgb(210, 195, 215); /* Pantone 9343 C (근사) */
-	--light: rgb(228, 230, 224); /* Pantone 9102 C (근사) */
+	--olive: hsl(52, 18%, 42%); /* Pantone 4226 C */
+	--BG: hsl(76, 37%, 90%); /* Pantone 9102 C 근사 */
+	--lightBG: hsl(100, 43%, 95%);
+
+	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @font-face {
 	font-family: "Resonay-Text";
-	src: url(./assets/Resonay-Text-Variable-Demo.ttf);
+	src: url("./assets/Resonay-Text-Variable-Demo.ttf") format("truetype");
 	font-weight: 100;
-	size-adjust: calc(103%);
+	font-style: normal;
+	font-display: swap;
+	size-adjust: 103%;
 }
 
 // 기본 설정
-
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -31,8 +33,8 @@
 	word-break: keep-all;
 	text-align: center;
 
-	// 가로 scroll 금지
-	touch-action: pan-y; /* 세로만 스와이프 */
+	// 세로 스크롤만 허용
+	touch-action: pan-y;
 }
 
 a,
@@ -48,37 +50,56 @@ a:visited {
 
 img {
 	display: block;
-	margin: 0;
 	width: 100%;
 	height: auto;
+	margin: 0;
 }
 
 html {
-	font-size: 16px;
-	letter-spacing: 0.05em;
 	width: 100%;
 	min-height: 100%;
-	// background: rgb(235, 223, 239);
-	// background: #f2f3f1;
+
+	font-size: 16px;
+	letter-spacing: 0.05em;
 
 	overflow-anchor: none;
 }
 
 body {
+	max-width: 430px;
+	margin: 0 auto;
+
+	background: var(--lightBG);
 	overflow-anchor: none;
-	// 일반 텍스트와 이미지
+
+	// 텍스트 등장 전
 	h1.scroll-hidden,
 	h2.scroll-hidden,
 	p.scroll-hidden,
-	a.scroll-hidden,
+	a.scroll-hidden {
+		opacity: 0;
+		transform: translateY(28px);
+
+		transition:
+			opacity 1.1s var(--motion-ease) var(--scroll-delay, 0ms),
+			transform 1.1s var(--motion-ease) var(--scroll-delay, 0ms);
+
+		will-change: opacity, transform;
+	}
+
+	// 일반 이미지 등장 전
 	img.scroll-hidden:not(.scroll-svg) {
 		opacity: 0;
 		transform: translateY(45px);
+
 		transition:
-			opacity 1.2s ease-out var(--scroll-delay, 0ms),
-			transform 1.2s ease-out var(--scroll-delay, 0ms);
+			opacity 1.2s var(--motion-ease) var(--scroll-delay, 0ms),
+			transform 1.2s var(--motion-ease) var(--scroll-delay, 0ms);
+
 		will-change: opacity, transform;
 	}
+
+	// 텍스트 및 일반 이미지 등장 후
 	h1.scroll-hidden.show,
 	h2.scroll-hidden.show,
 	p.scroll-hidden.show,
@@ -87,51 +108,50 @@ body {
 		opacity: 1;
 		transform: translateY(0);
 	}
+
 	// SVG 장식 요소
+	.glyph-wrap {
+		animation: floatY 2.6s ease-out forwards;
+	}
+
+	.glyph-wrap img {
+		animation: sway 2.6s ease-in-out forwards;
+	}
 
 	img.scroll-svg {
 		opacity: 0;
-		transform: translateY(-20px);
+		transform: translateY(-18px);
+
+		transition:
+			opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-delay),
+			transform 2.1s cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-delay);
+
 		will-change: opacity, transform;
 	}
 
 	img.scroll-svg.show {
-		animation: svg-drop 0.9s ease-out var(--scroll-delay, 0ms) forwards;
+		opacity: 1;
+		transform: translateY(0);
 	}
-
-	@keyframes svg-drop {
-		from {
-			opacity: 0;
-			transform: translateY(-20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	max-width: 430px;
-	margin: 0 auto;
-	background: #f2f3f1;
 
 	h1 {
 		font-size: 1.42em;
 		color: var(--olive);
 		letter-spacing: 0.1em;
-		line-height: 1.7em;
+		line-height: 1.7;
 	}
 
 	h2 {
 		font-size: 1.2em;
 		color: var(--olive);
 		letter-spacing: 0.1em;
-		line-height: 1.85em;
+		line-height: 1.85;
 	}
 
 	p {
 		font-size: 1em;
 		color: var(--olive);
-		line-height: 1.7em;
+		line-height: 1.7;
 	}
 
 	div {
@@ -140,31 +160,33 @@ body {
 	}
 
 	.div1 {
-		padding: 2em 0 1.3em;
-		background-color: var(--light);
-		// background: white;
+		background-color: var(--BG);
 
-		gap: 2.2em;
+		h2 {
+			padding: 4em 0;
+		}
+
 		p {
-			padding: 0 0.8em;
+			margin: 2.5em 0 4em;
 		}
 
 		#glyph01 {
 			width: 2.5em;
 			height: auto;
+
 			position: relative;
 			left: 2em;
-			top: -0.6em;
+			top: -2.7em;
 		}
 	}
 
 	.div2 {
-		background-image: url(./assets/2_13130012.jpg);
-		background-size: cover;
-		background-position: center;
-
 		height: 40em;
 		padding: 3.7em 0;
+
+		background-image: url("./assets/2_13130012.jpg");
+		background-size: cover;
+		background-position: center;
 
 		h1 {
 			margin-bottom: 1rem;
@@ -172,15 +194,15 @@ body {
 
 		a {
 			color: var(--olive);
-			line-height: 1.7em;
+			line-height: 1.7;
 			text-decoration: underline;
 		}
 
 		#parking {
 			position: absolute;
 			bottom: 1.6em;
-			width: 100%;
 
+			width: 100%;
 			color: white;
 		}
 	}
@@ -196,11 +218,13 @@ body {
 			position: absolute;
 			top: -1.2em;
 			right: 1.8em;
+
 			z-index: 1000;
 		}
 
 		.contact {
-			flex: 1; // 반반
+			flex: 1;
+
 			display: flex;
 			gap: 0.4em;
 			padding: 1.8em 0;
@@ -208,15 +232,18 @@ body {
 			a {
 				position: absolute;
 				bottom: 1.7em;
+
 				width: 100%;
-				text-decoration: underline;
 				padding-bottom: 0.1em;
+
+				text-decoration: underline;
 			}
 		}
 
 		.JH {
 			background-color: var(--olive);
-			color: var(--ivory);
+			color: white;
+
 			h1,
 			p {
 				color: var(--ivory);
@@ -224,7 +251,7 @@ body {
 		}
 
 		.YH {
-			background-color: var(--lavender);
+			background: hsl(285, 27%, 80%);
 			color: var(--olive);
 		}
 	}
@@ -232,58 +259,98 @@ body {
 	.div4 {
 		width: 100%;
 		height: auto;
-		background-color: var(--ivory);
 		padding: 2.5em 1em;
+		background: hsl(97, 18%, 85%);
+		// background: #d8dad4;
 	}
 
 	.div5 {
+		display: flex;
 		flex-direction: row;
-		div {
-			flex: 1;
+
+		width: 100%;
+		height: 44vh;
+
+		#glyph04 {
+			width: 4.9em;
+
+			position: absolute;
+			top: -1.1em;
+			left: 1.7em;
+
+			z-index: 1000;
 		}
-		div:nth-child(2) {
+
+		> div {
+			flex: 1;
+			min-width: 0;
+			height: 100%;
+		}
+
+		// 첫 번째 이미지
+		> div:first-child {
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		// 두 번째 이미지
+		> div:nth-child(2) {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background: var(--light);
+
+			background: var(--BG);
+
 			img {
 				width: 70%;
+				height: auto;
 			}
 		}
 	}
 
 	.div6 {
-		padding: 2em 1em;
 		width: 100%;
-		gap: 1em;
-		background: #f2f3f1;
-		// background: white;
+		padding: 1.5em 1em;
+
+		gap: 1.5em;
+
+		background: var(--lightBG);
 
 		.div6-1 {
-			width: 100%;
-
 			display: flex;
 			flex-direction: row;
 			align-items: flex-start;
+
+			width: 100%;
 			gap: 1em;
 
-			div {
+			> div {
 				min-width: 0;
 				height: 100%;
 			}
 
-			div:first-child {
+			> div:first-child {
 				flex: 0 0 33%;
 				margin-right: 2em;
 			}
+
 			> div:last-child {
 				flex: 1;
 			}
 
 			img {
 				display: block;
+
 				min-width: 0;
 				height: auto;
+
 				object-fit: cover;
 			}
 		}
@@ -297,20 +364,34 @@ body {
 		#img6-5 {
 			img {
 				display: block;
+
 				width: 68%;
+				margin-top: 2em;
 				margin-left: auto;
 			}
 		}
 
 		#img6-6 {
-			width: 33%;
 			display: block;
-			margin: 1.5em auto;
+
+			width: 33%;
+			margin: 2em auto;
 		}
 
 		#glyph03 {
 			width: 1.8em;
 			margin: 1em auto;
+
+			transition: transform 0.2s ease;
+
+			&:active {
+				transform: scale(0.94);
+			}
+		}
+
+		#cats {
+			width: 10em;
+			margin: 0 auto;
 		}
 	}
 }
@@ -318,5 +399,21 @@ body {
 @media (max-width: 430px) {
 	html {
 		font-size: 3.8vw;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body {
+		h1.scroll-hidden,
+		h2.scroll-hidden,
+		p.scroll-hidden,
+		a.scroll-hidden,
+		img.scroll-hidden,
+		img.scroll-svg {
+			opacity: 1;
+			transform: none;
+			transition: none;
+			animation: none;
+		}
 	}
 }
