@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className="min-h-full w-full text-[16px] tracking-[0.05rem] max-[430px]:text-[3.8vw]"
+      className="min-h-full w-full text-[16px] tracking-[0.05rem] [overflow-anchor:none] max-[430px]:text-[3.8vw]"
     >
       <head>
         <link
@@ -59,7 +59,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className='mx-auto max-w-[430px] touch-pan-y bg-[#f2f3f1] text-center font-["Resonay-Text","SD_Jan",serif] font-[100] [word-break:keep-all]'>
+      <body className='mx-auto max-w-[430px] touch-pan-y bg-[var(--lightBG)] text-center font-["Resonay-Text","SD_Jan",serif] font-[100] [overflow-anchor:none] [word-break:keep-all]'>
         {children}
       </body>
     </html>

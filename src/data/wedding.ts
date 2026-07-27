@@ -28,8 +28,9 @@ export const wedding = {
         "새하얀 크리스마스를 맞이하려 합니다.",
       ],
       [
-        "2026년 가을, 소중한 약속이 시작되는 자리에 오셔서",
-        "따뜻한 응원과 축복으로 자리를 빛내주세요.",
+        "2026년 가을,",
+        "소중한 약속이 시작되는 자리에 오셔서",
+        "따뜻한 응원과 축복으로 자리를 빛내주세요!",
       ],
     ],
   },
@@ -44,6 +45,9 @@ export const wedding = {
     kakaoMapUrl: "https://kko.to/OTYRI91GQP",
     naverMapLabel: "네이버지도",
     kakaoMapLabel: "카카오맵",
+  },
+  gallery: {
+    scrollToTopLabel: "맨 위로 이동",
   },
   gift: {
     labels: {
@@ -120,11 +124,13 @@ export const wedding = {
     glyph01: assetPath("/assets/glyph01.svg"),
     glyph02: assetPath("/assets/glyph02.svg"),
     glyph03: assetPath("/assets/glyph03.svg"),
+    glyph05: assetPath("/assets/glyph05.svg"),
     intro: assetPath("/assets/1_12900008_m.jpg"),
     eventBackground: assetPath("/assets/2_13130012.jpg"),
     main: assetPath("/assets/3_12900023.png"),
+    cats: assetPath("/assets/11_20260511_6.jpg"),
     gallery: [
-      assetPath("/assets/4_MG_4995.png"),
+      assetPath("/assets/4_12900005.jpg"),
       assetPath("/assets/5_20260511_8.jpg"),
       assetPath("/assets/6_12900026.jpg"),
       assetPath("/assets/7_12900039.jpg"),
