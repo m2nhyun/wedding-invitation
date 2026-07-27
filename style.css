@@ -132,7 +132,7 @@ body .div1 #glyph01 {
   z-index: 1000;
 }
 body .div2 {
-  height: 37em;
+  height: 38em;
   padding: 2.6em 0;
   background-image: url("./assets/2_13130012.jpg");
   background-size: cover;
@@ -143,7 +143,7 @@ body .div2 h2 {
 }
 body .div2 a {
   color: var(--olive);
-  line-height: 1.7;
+  line-height: 1.85;
   text-decoration: underline;
 }
 body .div2 #parking {
