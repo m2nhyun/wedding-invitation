@@ -1,9 +1,8 @@
-// 20260724
 // 컬러 설정
 :root {
-	--olive: hsl(52, 18%, 42%); /* Pantone 4226 C */
-	--BG: hsl(76, 37%, 90%); /* Pantone 9102 C 근사 */
-	--lightBG: hsl(76, 15%, 89%);
+	--olive: hsl(52, 18%, 35%);
+	--BG: hsl(76, 36%, 92%);
+	--bodyBG: #f7f7f7;
 
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -69,11 +68,10 @@ body {
 	max-width: 430px;
 	margin: 0 auto;
 
-	background: var(--lightBG);
+	background: var(--bodyBG);
 	overflow-anchor: none;
 
 	// 텍스트 등장 전
-	h1.scroll-hidden,
 	h2.scroll-hidden,
 	p.scroll-hidden,
 	a.scroll-hidden {
@@ -100,7 +98,6 @@ body {
 	}
 
 	// 텍스트 및 일반 이미지 등장 후
-	h1.scroll-hidden.show,
 	h2.scroll-hidden.show,
 	p.scroll-hidden.show,
 	a.scroll-hidden.show,
@@ -134,24 +131,21 @@ body {
 		transform: translateY(0);
 	}
 
-	h1 {
-		font-size: 1.42em;
-		color: var(--olive);
-		letter-spacing: 0.1em;
-		line-height: 1.7;
-	}
-
 	h2 {
-		font-size: 1.2em;
+		font-size: 1.32em;
 		color: var(--olive);
 		letter-spacing: 0.1em;
-		line-height: 1.85;
+		line-height: 1.75;
 	}
 
 	p {
-		font-size: 1em;
+		font-size: 1.1em;
 		color: var(--olive);
 		line-height: 1.7;
+	}
+
+	a {
+		font-size: 1.1em;
 	}
 
 	div {
@@ -167,28 +161,30 @@ body {
 		}
 
 		p {
-			margin: 2.5em 0 4em;
+			margin: 2.5em 0 7em;
 		}
 
 		#glyph01 {
-			width: 2.5em;
+			width: 2em;
 			height: auto;
 
 			position: relative;
-			left: 2em;
-			top: -2.7em;
+			// left: 2em;
+			margin: 0 auto;
+			top: -3.9em;
+			z-index: 1000;
 		}
 	}
 
 	.div2 {
-		height: 40em;
-		padding: 3.7em 0;
+		height: 37em;
+		padding: 2.6em 0;
 
 		background-image: url("./assets/2_13130012.jpg");
 		background-size: cover;
 		background-position: center;
 
-		h1 {
+		h2 {
 			margin-bottom: 1rem;
 		}
 
@@ -200,7 +196,7 @@ body {
 
 		#parking {
 			position: absolute;
-			bottom: 1.6em;
+			bottom: 2.1em;
 
 			width: 100%;
 			color: white;
@@ -212,15 +208,15 @@ body {
 		height: 11.5em;
 		flex-direction: row;
 
-		#glyph02 {
-			width: 2.6em;
+		// #glyph02 {
+		// 	width: 2.6em;
 
-			position: absolute;
-			top: -1.2em;
-			right: 1.8em;
+		// 	position: absolute;
+		// 	top: -1.2em;
+		// 	right: 1.8em;
 
-			z-index: 1000;
-		}
+		// 	z-index: 1000;
+		// }
 
 		.contact {
 			flex: 1;
@@ -228,6 +224,9 @@ body {
 			display: flex;
 			gap: 0.4em;
 			padding: 1.8em 0;
+
+			background: var(--BG);
+			color: var(--olive);
 
 			a {
 				position: absolute;
@@ -239,38 +238,54 @@ body {
 				text-decoration: underline;
 			}
 		}
+	}
 
-		.JH {
-			background-color: var(--olive);
-			color: white;
-
-			h1,
-			p {
-				color: var(--ivory);
-			}
-		}
-
-		.YH {
-			background: hsl(285, 27%, 80%);
-			color: var(--olive);
-		}
+	.YH {
+		border-left: 0.4px solid rgb(from var(--olive) r g b / 60%);
 	}
 
 	.div4 {
 		width: 100%;
 		height: auto;
 		padding: 2.5em 1em;
-		background: hsl(76, 37%, 80%);
-		// background: #d8dad4;
+		background: white;
 	}
 
 	.div5 {
 		display: flex;
-		flex-direction: row;
-
+		flex-direction: column;
 		width: 100%;
-		height: 44vh;
+		background: white;
 
+		#rings {
+			height: 12em;
+			margin-top: -1em;
+
+			img {
+				position: absolute;
+				padding: 0 1em;
+				right: 0;
+				width: 40%;
+				height: auto;
+			}
+		}
+
+		// 첫 번째 이미지
+		> div:nth-child(2) {
+			overflow: hidden;
+			width: 83%;
+			img {
+				margin-left: 1em;
+				margin-bottom: 2.5em;
+				width: 100%;
+				height: 100%;
+
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		// 오리
 		#glyph04 {
 			width: 4.9em;
 
@@ -280,48 +295,15 @@ body {
 
 			z-index: 1000;
 		}
-
-		> div {
-			flex: 1;
-			min-width: 0;
-			height: 100%;
-		}
-
-		// 첫 번째 이미지
-		> div:first-child {
-			overflow: hidden;
-
-			img {
-				width: 100%;
-				height: 100%;
-
-				object-fit: cover;
-				object-position: center;
-			}
-		}
-
-		// 두 번째 이미지
-		> div:nth-child(2) {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			background: var(--BG);
-
-			img {
-				width: 70%;
-				height: auto;
-			}
-		}
 	}
 
 	.div6 {
 		width: 100%;
-		padding: 1.5em 1em;
+		padding: 2.5em 1em;
 
-		gap: 1.5em;
+		gap: 2.5em;
 
-		background: var(--lightBG);
+		background: var(--BG);
 
 		.div6-1 {
 			display: flex;
@@ -329,7 +311,7 @@ body {
 			align-items: flex-start;
 
 			width: 100%;
-			gap: 1em;
+			gap: 2em;
 
 			> div {
 				min-width: 0;
@@ -338,9 +320,7 @@ body {
 
 			> div:first-child {
 				flex: 0 0 30%;
-				margin-right: 2em;
-
-				// align-self: flex-end; // 아래 정렬
+				margin-right: 0.5em;
 			}
 
 			> div:last-child {
@@ -368,7 +348,7 @@ body {
 				display: block;
 
 				width: 68%;
-				margin-top: 2em;
+				margin-top: 1em;
 				margin-left: auto;
 			}
 		}
@@ -377,7 +357,7 @@ body {
 			display: block;
 
 			width: 33%;
-			margin: 2em auto;
+			margin: 1em auto;
 		}
 
 		#glyph03 {
@@ -396,7 +376,7 @@ body {
 		}
 		#cats {
 			width: 80%;
-			margin: 0 auto 2em;
+			margin: 0 auto 15vh;
 		}
 	}
 }
@@ -409,7 +389,6 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
 	body {
-		h1.scroll-hidden,
 		h2.scroll-hidden,
 		p.scroll-hidden,
 		a.scroll-hidden,

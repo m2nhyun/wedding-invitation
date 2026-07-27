@@ -1,8 +1,7 @@
-@charset "UTF-8";
 :root {
-  --olive: hsl(52, 18%, 42%); /* Pantone 4226 C */
-  --BG: hsl(76, 37%, 90%); /* Pantone 9102 C 근사 */
-  --lightBG: hsl(76, 15%, 89%);
+  --olive: hsl(52, 18%, 35%);
+  --BG: hsl(76, 36%, 92%);
+  --bodyBG: #f7f7f7;
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -57,10 +56,9 @@ html {
 body {
   max-width: 430px;
   margin: 0 auto;
-  background: var(--lightBG);
+  background: var(--bodyBG);
   overflow-anchor: none;
 }
-body h1.scroll-hidden,
 body h2.scroll-hidden,
 body p.scroll-hidden,
 body a.scroll-hidden {
@@ -75,7 +73,6 @@ body img.scroll-hidden:not(.scroll-svg) {
   transition: opacity 1.2s var(--motion-ease) var(--scroll-delay, 0ms), transform 1.2s var(--motion-ease) var(--scroll-delay, 0ms);
   will-change: opacity, transform;
 }
-body h1.scroll-hidden.show,
 body h2.scroll-hidden.show,
 body p.scroll-hidden.show,
 body a.scroll-hidden.show,
@@ -99,22 +96,19 @@ body img.scroll-svg.show {
   opacity: 1;
   transform: translateY(0);
 }
-body h1 {
-  font-size: 1.42em;
-  color: var(--olive);
-  letter-spacing: 0.1em;
-  line-height: 1.7;
-}
 body h2 {
-  font-size: 1.2em;
+  font-size: 1.32em;
   color: var(--olive);
   letter-spacing: 0.1em;
-  line-height: 1.85;
+  line-height: 1.75;
 }
 body p {
-  font-size: 1em;
+  font-size: 1.1em;
   color: var(--olive);
   line-height: 1.7;
+}
+body a {
+  font-size: 1.1em;
 }
 body div {
   display: flex;
@@ -127,23 +121,24 @@ body .div1 h2 {
   padding: 4em 0;
 }
 body .div1 p {
-  margin: 2.5em 0 4em;
+  margin: 2.5em 0 7em;
 }
 body .div1 #glyph01 {
-  width: 2.5em;
+  width: 2em;
   height: auto;
   position: relative;
-  left: 2em;
-  top: -2.7em;
+  margin: 0 auto;
+  top: -3.9em;
+  z-index: 1000;
 }
 body .div2 {
-  height: 40em;
-  padding: 3.7em 0;
+  height: 37em;
+  padding: 2.6em 0;
   background-image: url("./assets/2_13130012.jpg");
   background-size: cover;
   background-position: center;
 }
-body .div2 h1 {
+body .div2 h2 {
   margin-bottom: 1rem;
 }
 body .div2 a {
@@ -153,7 +148,7 @@ body .div2 a {
 }
 body .div2 #parking {
   position: absolute;
-  bottom: 1.6em;
+  bottom: 2.1em;
   width: 100%;
   color: white;
 }
@@ -162,18 +157,13 @@ body .div3 {
   height: 11.5em;
   flex-direction: row;
 }
-body .div3 #glyph02 {
-  width: 2.6em;
-  position: absolute;
-  top: -1.2em;
-  right: 1.8em;
-  z-index: 1000;
-}
 body .div3 .contact {
   flex: 1;
   display: flex;
   gap: 0.4em;
   padding: 1.8em 0;
+  background: var(--BG);
+  color: var(--olive);
 }
 body .div3 .contact a {
   position: absolute;
@@ -182,29 +172,43 @@ body .div3 .contact a {
   padding-bottom: 0.1em;
   text-decoration: underline;
 }
-body .div3 .JH {
-  background-color: var(--olive);
-  color: white;
-}
-body .div3 .JH h1,
-body .div3 .JH p {
-  color: var(--ivory);
-}
-body .div3 .YH {
-  background: hsl(285, 27%, 80%);
-  color: var(--olive);
+body .YH {
+  border-left: 0.4px solid rgb(from var(--olive) r g b/60%);
 }
 body .div4 {
   width: 100%;
   height: auto;
   padding: 2.5em 1em;
-  background: hsl(76, 37%, 80%);
+  background: white;
 }
 body .div5 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: 44vh;
+  background: white;
+}
+body .div5 #rings {
+  height: 12em;
+  margin-top: -1em;
+}
+body .div5 #rings img {
+  position: absolute;
+  padding: 0 1em;
+  right: 0;
+  width: 40%;
+  height: auto;
+}
+body .div5 > div:nth-child(2) {
+  overflow: hidden;
+  width: 83%;
+}
+body .div5 > div:nth-child(2) img {
+  margin-left: 1em;
+  margin-bottom: 2.5em;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 body .div5 #glyph04 {
   width: 4.9em;
@@ -213,42 +217,18 @@ body .div5 #glyph04 {
   left: 1.7em;
   z-index: 1000;
 }
-body .div5 > div {
-  flex: 1;
-  min-width: 0;
-  height: 100%;
-}
-body .div5 > div:first-child {
-  overflow: hidden;
-}
-body .div5 > div:first-child img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-body .div5 > div:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--BG);
-}
-body .div5 > div:nth-child(2) img {
-  width: 70%;
-  height: auto;
-}
 body .div6 {
   width: 100%;
-  padding: 1.5em 1em;
-  gap: 1.5em;
-  background: var(--lightBG);
+  padding: 2.5em 1em;
+  gap: 2.5em;
+  background: var(--BG);
 }
 body .div6 .div6-1 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  gap: 1em;
+  gap: 2em;
 }
 body .div6 .div6-1 > div {
   min-width: 0;
@@ -256,7 +236,7 @@ body .div6 .div6-1 > div {
 }
 body .div6 .div6-1 > div:first-child {
   flex: 0 0 30%;
-  margin-right: 2em;
+  margin-right: 0.5em;
 }
 body .div6 .div6-1 > div:last-child {
   flex: 1;
@@ -273,13 +253,13 @@ body .div6 #img6-4gif img {
 body .div6 #img6-5 img {
   display: block;
   width: 68%;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-left: auto;
 }
 body .div6 #img6-6 {
   display: block;
   width: 33%;
-  margin: 2em auto;
+  margin: 1em auto;
 }
 body .div6 #glyph03 {
   width: 1.8em;
@@ -295,7 +275,7 @@ body .div6 #glyph05 {
 }
 body .div6 #cats {
   width: 80%;
-  margin: 0 auto 2em;
+  margin: 0 auto 15vh;
 }
 
 @media (max-width: 430px) {
@@ -304,7 +284,6 @@ body .div6 #cats {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  body h1.scroll-hidden,
   body h2.scroll-hidden,
   body p.scroll-hidden,
   body a.scroll-hidden,

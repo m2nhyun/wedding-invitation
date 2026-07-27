@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const normalElements = document.querySelectorAll(
-		"body h1, body h2, body p, body a, body img:not([src$='.svg'])",
+		"body h2, body h2, body p, body a, body img:not([src$='.svg'])",
 	);
 
 	const svgElements = document.querySelectorAll("body img[src$='.svg']");

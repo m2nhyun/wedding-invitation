@@ -6,7 +6,7 @@
 	--olive: hsl(52, 18%, 42%);
 	--lavender: hsl(285, 27%, 80%);
 	--BG: hsl(76, 37%, 90%);
-	--lightBG: hsl(76, 15%, 89%);
+	--bodyBG: hsl(76, 15%, 89%);
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
