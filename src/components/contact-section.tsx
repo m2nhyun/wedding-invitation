@@ -99,7 +99,8 @@ export function ContactSection() {
 						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
 						data-scroll-motion-text
-						onClick={() => setSelectedSide("groom")}>
+						onClick={() => setSelectedSide("groom")}
+					>
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
@@ -114,7 +115,8 @@ export function ContactSection() {
 						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
 						data-scroll-motion-text
-						onClick={() => setSelectedSide("bride")}>
+						onClick={() => setSelectedSide("bride")}
+					>
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
@@ -125,7 +127,8 @@ export function ContactSection() {
 					className="fixed inset-0 z-[2000] flex items-center justify-center p-[1.4rem]"
 					role="dialog"
 					aria-modal="true"
-					aria-labelledby="gift-modal-title">
+					aria-labelledby="gift-modal-title"
+				>
 					<button
 						type="button"
 						className="fixed inset-0 h-full w-full cursor-pointer appearance-none border-0 bg-[rgba(55,54,43,0.34)] animate-[giftBackdropIn_180ms_ease-out_both]"
@@ -139,14 +142,16 @@ export function ContactSection() {
 							</p>
 							<h2
 								className="text-[1.22rem] leading-[1.85] tracking-[0.122rem] text-[var(--olive)]"
-								id="gift-modal-title">
+								id="gift-modal-title"
+							>
 								{giftSideLabel[selectedSide]}
 							</h2>
 							<button
 								type="button"
 								className="absolute -top-[0.21rem] right-0 h-[3.08rem] w-[3.08rem] cursor-pointer appearance-none border-0 bg-transparent text-[1.4rem] leading-none text-[var(--olive)]"
 								aria-label={wedding.gift.labels.close}
-								onClick={() => setSelectedSide(null)}>
+								onClick={() => setSelectedSide(null)}
+							>
 								{wedding.gift.labels.closeSymbol}
 							</button>
 						</div>
@@ -163,7 +168,8 @@ export function ContactSection() {
 								return (
 									<div
 										className="grid grid-cols-[4.7rem_minmax(0,1fr)_auto] items-center gap-[0.7rem] py-[0.9rem]"
-										key={`${selectedSide}-${account.relation}`}>
+										key={`${selectedSide}-${account.relation}`}
+									>
 										<div className="flex flex-col gap-[0.1rem]">
 											<span className="text-[0.82rem] leading-[1.45] text-[var(--olive)]">
 												{account.relation}
@@ -190,7 +196,8 @@ export function ContactSection() {
 												type="button"
 												disabled={!hasAccount}
 												onClick={() => copyAccount(accountCopyText)}
-												aria-label={`${account.name} ${wedding.gift.labels.copyAccount}`}>
+												aria-label={`${account.name} ${wedding.gift.labels.copyAccount}`}
+											>
 												{wedding.gift.labels.copySymbol}
 											</button>
 											{hasKakaoPay ? (
@@ -199,7 +206,8 @@ export function ContactSection() {
 													type="button"
 													disabled={!hasAccount}
 													onClick={() => openKakaoPay(account.kakaoPayUrl)}
-													aria-label={`${account.name} ${wedding.gift.labels.kakaoPay}`}>
+													aria-label={`${account.name} ${wedding.gift.labels.kakaoPay}`}
+												>
 													{wedding.gift.labels.kakaoPaySymbol}
 												</button>
 											) : null}
@@ -217,7 +225,8 @@ export function ContactSection() {
 					toastMessage
 						? "translate-y-0 opacity-100"
 						: "translate-y-[0.44rem] opacity-0"
-				}`}>
+				}`}
+			>
 				{toastMessage}
 			</p>
 		</>

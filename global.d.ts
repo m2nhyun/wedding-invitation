@@ -1,8 +1,8 @@
-declare module '*.css';
+declare module "*.css";
 
 declare module "*.svg?react" {
-  import type { FC, SVGProps } from "react";
+	import type { FC, SVGProps } from "react";
 
-  const SvgComponent: FC<SVGProps<SVGSVGElement>>;
-  export default SvgComponent;
+	const SvgComponent: FC<SVGProps<SVGSVGElement>>;
+	export default SvgComponent;
 }

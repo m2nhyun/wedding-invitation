@@ -117,7 +117,8 @@ export function GallerySection() {
 					className="mx-auto my-[1rem] block w-[1.8rem] cursor-pointer appearance-none border-0 bg-transparent p-0 transition-transform duration-200 active:scale-[0.94]"
 					type="button"
 					data-scroll-to-top
-					aria-label={wedding.gallery.scrollToTopLabel}>
+					aria-label={wedding.gallery.scrollToTopLabel}
+				>
 					<Image
 						className="block h-auto w-full"
 						src={wedding.assets.glyph03}
