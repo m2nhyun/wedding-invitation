@@ -5,13 +5,13 @@ import { IntroSection } from "@/components/intro-section";
 import { ScrollMotion } from "@/components/scroll-motion";
 
 export default function Page() {
-  return (
-    <main className="block">
-      <ScrollMotion />
-      <IntroSection />
-      <EventSection />
-      <ContactSection />
-      <GallerySection />
-    </main>
-  );
+	return (
+		<main className="block">
+			<ScrollMotion />
+			<IntroSection />
+			<EventSection />
+			<ContactSection />
+			<GallerySection />
+		</main>
+	);
 }
