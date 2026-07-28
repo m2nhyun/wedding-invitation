@@ -20,8 +20,9 @@ export const wedding = {
     logoAlt: "Logo",
     message: [
       [
-        "유난히 따뜻했던 2017년 가을 시작된 대화는",
-        "수많은 계절을 지나 지금까지 이어지고 있습니다.",
+        "유난히 따뜻했던 2017년 가을",
+        "시작된 대화는 수많은 계절을 지나",
+        "지금까지 이어지고 있습니다.",
       ],
       [
         "앞으로도 서로의 곁에서 함께 장마를 보고,",
@@ -122,7 +123,6 @@ export const wedding = {
   },
   assets: {
     glyph01: assetPath("/assets/glyph01.svg"),
-    glyph02: assetPath("/assets/glyph02.svg"),
     glyph03: assetPath("/assets/glyph03.svg"),
     glyph05: assetPath("/assets/glyph05.svg"),
     intro: assetPath("/assets/1_12900008_m.jpg"),

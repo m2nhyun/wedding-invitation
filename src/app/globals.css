@@ -2,11 +2,9 @@
 @import "tailwindcss";
 
 :root {
-	--ivory: rgb(240, 240, 222);
-	--olive: hsl(52, 18%, 42%);
-	--lavender: hsl(285, 27%, 80%);
-	--BG: hsl(76, 37%, 90%);
-	--bodyBG: hsl(76, 15%, 89%);
+	--olive: hsl(52, 18%, 35%);
+	--BG: hsl(76, 36%, 92%);
+	--bodyBG: #f7f7f7;
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 

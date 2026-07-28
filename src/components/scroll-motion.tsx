@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 type ScrollMotionType = "text" | "image" | "svg";
 
-const textSelector = "h2, h2, p, a";
+const textSelector = "h2, p, a, [data-scroll-motion-text]";
 const imageSelector = "img:not([src$='.svg'])";
 const svgSelector = "img[src$='.svg']";
 

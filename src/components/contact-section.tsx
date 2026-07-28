@@ -87,36 +87,33 @@ export function ContactSection() {
 
 	return (
 		<>
-			<section className="relative flex h-[11.5rem] w-full flex-row">
-				<img
-					className="absolute -top-[1.2rem] right-[1.8rem] z-[1000] block h-auto w-[2.6rem]"
-					src={wedding.assets.glyph02}
-					alt=""
-				/>
-				<div className="flex flex-1 flex-col gap-[0.4rem] bg-[var(--olive)] py-[1.8rem] text-[var(--ivory)]">
-					<p className="text-base leading-[1.7] text-[var(--ivory)]">
+			<section className="relative flex h-[11.5em] w-full flex-row">
+				<div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+					<p className="text-[1.1em] leading-[1.7] text-[var(--olive)]">
 						{wedding.couple.groom.parents}
 					</p>
-					<h2 className="text-[1.42rem] leading-[1.7] tracking-[0.142rem] text-[var(--ivory)]">
+					<h2 className="text-[1.32em] leading-[1.75] tracking-[0.1em] text-[var(--olive)]">
 						{wedding.couple.groom.name}
 					</h2>
 					<button
-						className="mt-auto w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1rem] text-inherit underline [-webkit-tap-highlight-color:transparent]"
+						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
+						data-scroll-motion-text
 						onClick={() => setSelectedSide("groom")}>
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
-				<div className="flex flex-1 flex-col gap-[0.4rem] bg-[var(--lavender)] py-[1.8rem] text-[var(--olive)]">
-					<p className="text-base leading-[1.7] text-[var(--olive)]">
+				<div className="relative flex flex-1 flex-col gap-[0.4em] border-l-[0.4px] border-[rgb(from_var(--olive)_r_g_b/60%)] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+					<p className="text-[1.1em] leading-[1.7] text-[var(--olive)]">
 						{wedding.couple.bride.parents}
 					</p>
-					<h2 className="text-[1.42rem] leading-[1.7] tracking-[0.142rem] text-[var(--olive)]">
+					<h2 className="text-[1.32em] leading-[1.75] tracking-[0.1em] text-[var(--olive)]">
 						{wedding.couple.bride.name}
 					</h2>
 					<button
-						className="mt-auto w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1rem] text-inherit underline [-webkit-tap-highlight-color:transparent]"
+						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
+						data-scroll-motion-text
 						onClick={() => setSelectedSide("bride")}>
 						{wedding.gift.labels.heading}
 					</button>
