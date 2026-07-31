@@ -1,3 +1,4 @@
+import { CatPlayground } from "@/components/cat-playground";
 import { ContactSection } from "@/components/contact-section";
 import { EventSection } from "@/components/event-section";
 import { GallerySection } from "@/components/gallery-section";
@@ -7,6 +8,7 @@ import { ScrollMotion } from "@/components/scroll-motion";
 export default function Page() {
   return (
     <main className="block">
+      <CatPlayground />
       <ScrollMotion />
       <IntroSection />
       <EventSection />

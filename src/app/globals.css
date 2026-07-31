@@ -72,3 +72,38 @@
 		transform: translateY(0) scale(1);
 	}
 }
+
+.cat-depth-moving {
+	animation: catDepthHop 420ms ease-in-out infinite alternate;
+}
+
+.cat-shadow-moving {
+	animation: catShadowPulse 420ms ease-in-out infinite alternate;
+}
+
+@keyframes catDepthHop {
+	from {
+		transform: translateY(0) rotate(-1deg);
+	}
+	to {
+		transform: translateY(-10px) rotate(1deg);
+	}
+}
+
+@keyframes catShadowPulse {
+	from {
+		opacity: 0.34;
+		transform: scaleX(1);
+	}
+	to {
+		opacity: 0.18;
+		transform: scaleX(0.78);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cat-depth-moving,
+	.cat-shadow-moving {
+		animation: none;
+	}
+}
