@@ -12,7 +12,7 @@ const [
 	smallCenter,
 ] = wedding.assets.gallery;
 
-export function GallerySection() {
+export function GalleryFirstPage() {
 	return (
 		<>
 			<section className="flex h-auto w-full flex-col bg-white px-[1em] py-[2.5em]">
@@ -48,8 +48,13 @@ export function GallerySection() {
 					/>
 				</div>
 			</section>
+		</>
+	);
+}
 
-			<section className="flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
+export function GallerySecondPage() {
+	return (
+		<section className="flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
 				<div className="flex w-full flex-row items-start gap-[2em]">
 					<div className="mr-[0.5em] flex h-full min-w-0 flex-[0_0_30%] flex-col">
 						<Image
@@ -81,6 +86,13 @@ export function GallerySection() {
 					height={2048}
 					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
 				/>
+		</section>
+	);
+}
+
+export function GalleryThirdPage() {
+	return (
+		<section className="flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
 				<div className="flex flex-col">
 					<Image
 						className="block h-auto w-[74%]"
@@ -113,38 +125,15 @@ export function GallerySection() {
 					/>
 				</div>
 
-				<button
-					className="mx-auto my-[1rem] block w-[1.8rem] cursor-pointer appearance-none border-0 bg-transparent p-0 transition-transform duration-200 active:scale-[0.94]"
-					type="button"
-					data-scroll-to-top
-					aria-label={wedding.gallery.scrollToTopLabel}>
-					<Image
-						className="block h-auto w-full"
-						src={wedding.assets.glyph03}
-						alt=""
-						width={77}
-						height={85}
-						sizes="1.8em"
-					/>
-				</button>
+		</section>
+	);
+}
 
-				<Image
-					className="mx-auto my-[5rem] block h-auto w-[0.6rem]"
-					src={wedding.assets.glyph05}
-					alt=""
-					width={27}
-					height={711}
-					sizes="0.6em"
-				/>
-				<Image
-					className="mx-auto mb-[15vh] block h-auto w-[80%]"
-					src={wedding.assets.cats}
-					alt=""
-					width={1800}
-					height={2223}
-					sizes="(max-width: 430px) 80vw, 344px"
-				/>
-			</section>
-		</>
+export function GalleryClosing() {
+	return (
+		<section className="flex h-full w-full flex-col justify-center gap-[3.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
+			<Image className="mx-auto block h-auto w-[0.6rem]" src={wedding.assets.glyph05} alt="" width={27} height={711} sizes="0.6em" />
+			<Image className="mx-auto block h-auto w-[80%]" src={wedding.assets.cats} alt="" width={1800} height={2223} sizes="(max-width: 430px) 80vw, 344px" />
+		</section>
 	);
 }
