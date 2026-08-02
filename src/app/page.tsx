@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <HorizontalPager>
       <IntroSection />
-      <><EventSection /><ContactSection /></>
+      <div className="event-page"><EventSection /><ContactSection /></div>
       <GalleryFirstPage />
       <GallerySecondPage />
       <GalleryThirdPage />

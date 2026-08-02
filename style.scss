@@ -496,7 +496,19 @@ body {
 }
 
 .invitation-page-event {
-	justify-content: center;
+	justify-content: stretch;
+
+	.div2 {
+		flex: 1 1 0;
+		height: auto;
+		min-height: 0;
+	}
+
+	.div3 {
+		flex: 0 0 auto;
+		height: auto;
+		aspect-ratio: 2 / 1;
+	}
 }
 
 .invitation-page-gallery-one {

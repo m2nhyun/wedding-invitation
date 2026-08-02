@@ -22,7 +22,7 @@ export function EventSection() {
 
 	return (
 		<section
-			className="relative flex h-[38em] flex-col bg-cover bg-center py-[2.6em]"
+			className="event-section relative flex h-[38em] flex-col bg-cover bg-center py-[2.6em]"
 			style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }}>
 			<h2 className="mb-4 text-[1.32em] leading-[1.75] tracking-[0.1em] text-[var(--olive)]">
 				{wedding.event.date}
