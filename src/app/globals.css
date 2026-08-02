@@ -5,13 +5,14 @@
 	--olive: hsl(52, 18%, 35%);
 	--BG: hsl(76, 36%, 92%);
 	--bodyBG: #f7f7f7;
+	--page-background: var(--BG);
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: none; background: white !important; }
+html, body { width: 100%; height: 100%; overflow: hidden; overscroll-behavior: none; background: var(--page-background) !important; }
 body { position: fixed; inset: 0; }
 
-.invitation-pager { position: relative; width: min(100%, 430px); height: 100svh; max-height: 100svh; margin: 0 auto; overflow: hidden; background: var(--BG); container-type: inline-size; }.invitation-pager.is-white-page { background: white; }
+.invitation-pager { position: relative; width: min(100%, 430px); height: 100svh; max-height: 100svh; margin: 0 auto; overflow: hidden; background: var(--page-background); container-type: inline-size; }.invitation-pager.is-white-page { background: white; }
 .invitation-track { display: flex; width: 100%; height: 100%; flex-direction: row; transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1); }
 .invitation-page { flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding-bottom: 3.4rem; }
 .invitation-page > section { width: 100%; }

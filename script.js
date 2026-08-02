@@ -83,7 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			dot.classList.toggle("is-active", index === currentPage);
 		});
 
-		invitation.classList.toggle("is-white-page", currentPage === 4);
+		const hasWhitePagination = currentPage === 2 || currentPage === 4;
+		const pageBackground = hasWhitePagination ? "#ffffff" : "hsl(76 36% 92%)";
+		invitation.classList.toggle("is-white-page", hasWhitePagination);
+		document.documentElement.style.setProperty("--page-background", pageBackground);
 
 		invitation.setAttribute(
 			"aria-label",

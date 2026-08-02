@@ -3,6 +3,7 @@
 	--olive: hsl(52, 18%, 35%);
 	--BG: hsl(76, 36%, 92%);
 	--bodyBG: #f7f7f7;
+	--page-background: var(--BG);
 
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -62,13 +63,14 @@ html {
 	letter-spacing: 0.05em;
 
 	overflow-anchor: none;
+	background: var(--page-background);
 }
 
 body {
 	max-width: 430px;
 	margin: 0 auto;
 
-	// background: var(--bodyBG);
+	background: var(--page-background);
 	overflow-anchor: none;
 
 	// 텍스트 등장 전
