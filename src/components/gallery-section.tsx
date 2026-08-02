@@ -14,7 +14,7 @@ const [
 
 export function GalleryFirstPage() {
 	return (
-		<>
+		<div className="gallery-slide gallery-slide-one">
 			<section className="flex h-auto w-full flex-col bg-white px-[1em] py-[2.5em]">
 				<Image
 					className="block h-auto w-full"
@@ -48,13 +48,13 @@ export function GalleryFirstPage() {
 					/>
 				</div>
 			</section>
-		</>
+		</div>
 	);
 }
 
 export function GallerySecondPage() {
 	return (
-		<section className="flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
+		<section className="gallery-slide gallery-slide-two flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
 				<div className="flex w-full flex-row items-start gap-[2em]">
 					<div className="mr-[0.5em] flex h-full min-w-0 flex-[0_0_30%] flex-col">
 						<Image
@@ -92,7 +92,7 @@ export function GallerySecondPage() {
 
 export function GalleryThirdPage() {
 	return (
-		<section className="flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
+		<section className="gallery-slide gallery-slide-three flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
 				<div className="flex flex-col">
 					<Image
 						className="block h-auto w-[74%]"
@@ -131,9 +131,8 @@ export function GalleryThirdPage() {
 
 export function GalleryClosing() {
 	return (
-		<section className="flex h-full w-full flex-col justify-center gap-[3.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
-			<Image className="mx-auto block h-auto w-[0.6rem]" src={wedding.assets.glyph05} alt="" width={27} height={711} sizes="0.6em" />
-			<Image className="mx-auto block h-auto w-[80%]" src={wedding.assets.cats} alt="" width={1800} height={2223} sizes="(max-width: 430px) 80vw, 344px" />
+		<section className="gallery-slide gallery-slide-closing flex h-full w-full items-center justify-center bg-[var(--BG)] px-[1em]">
+			<Image className="block h-auto w-[80%]" src={wedding.assets.cats} alt="" width={1800} height={2223} sizes="(max-width: 430px) 80vw, 344px" loading="eager" />
 		</section>
 	);
 }
