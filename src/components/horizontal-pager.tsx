@@ -5,6 +5,7 @@ import { Children, type ReactNode, useEffect, useRef, useState } from "react";
 export function HorizontalPager({ children }: { children: ReactNode }) {
 	const pages = Children.toArray(children);
 	const [page, setPage] = useState(0);
+	const hasWhitePagination = page === 2 || page === 4;
 	const touchStartX = useRef<number | null>(null);
 	const move = (amount: number) =>
 		setPage((current) => Math.max(0, Math.min(pages.length - 1, current + amount)));
@@ -19,16 +20,16 @@ export function HorizontalPager({ children }: { children: ReactNode }) {
 	}, []);
 
 	useEffect(() => {
-		const color = page === 4 ? "#ffffff" : "hsl(76 36% 92%)";
+		const color = hasWhitePagination ? "#ffffff" : "hsl(76 36% 92%)";
 		const themeColor = document.querySelector('meta[name="theme-color"]');
 
 		document.documentElement.style.backgroundColor = color;
 		document.body.style.backgroundColor = color;
 		if (themeColor) themeColor.setAttribute("content", color);
-	}, [page]);
+	}, [hasWhitePagination]);
 
 	return (
-		<main className={`invitation-pager${page === 4 ? " is-white-page" : ""}`} aria-label="모바일 청첩장">
+		<main className={`invitation-pager${hasWhitePagination ? " is-white-page" : ""}`} aria-label="모바일 청첩장">
 			<div className="invitation-track" style={{ transform: `translateX(-${page * 100}%)` }} onTouchStart={(event) => { touchStartX.current = event.touches[0]?.clientX ?? null; }} onTouchEnd={(event) => { const start = touchStartX.current; const end = event.changedTouches[0]?.clientX; touchStartX.current = null; if (start === null || end === undefined || Math.abs(end - start) < 42) return; move(end < start ? 1 : -1); }}>
 				{pages.map((content, index) => <section className="invitation-page" key={index}>{content}</section>)}
 			</div>
