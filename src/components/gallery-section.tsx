@@ -101,6 +101,8 @@ export function GalleryThirdPage() {
 						width={1200}
 						height={1500}
 						sizes="(max-width: 430px) 74vw, 318px"
+						preload
+						unoptimized
 					/>
 				</div>
 

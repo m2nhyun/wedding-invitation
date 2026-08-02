@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { wedding } from "@/data/wedding";
 import { assetPath } from "@/lib/asset-path";
@@ -37,6 +37,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "hsl(76 36% 92%)",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,6 +52,7 @@ export default function RootLayout({
       className="min-h-full w-full text-[16px] tracking-[0.05rem] [overflow-anchor:none] max-[430px]:text-[3.8vw]"
     >
       <head>
+		<link rel="preload" as="image" href={assetPath("/assets/div5_04.gif")} type="image/gif" />
         <link
           rel="preconnect"
           href="https://bks0c7yrb0.execute-api.ap-northeast-2.amazonaws.com"
