@@ -3,7 +3,7 @@ import "./globals.css";
 import { wedding } from "@/data/wedding";
 import { assetPath } from "@/lib/asset-path";
 
-const socialThumbnail = assetPath("/assets/5_20260511_8.jpg");
+const socialThumbnail = assetPath("/assets/jh-yh_thumbnail.jpg");
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.jh-yh.kr"),
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialThumbnail,
-        width: 5354,
-        height: 6634,
+        width: 800,
+        height: 400,
         alt: wedding.site.title,
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: wedding.site.title,
     description: wedding.site.description,
     images: [socialThumbnail],
