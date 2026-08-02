@@ -27,8 +27,8 @@ export function HorizontalPager({ children }: { children: ReactNode }) {
 				<img className="corner-glyph corner-glyph-bottom-left" src="/assets/glyph03.svg" alt="" />
 				<img className="corner-glyph corner-glyph-bottom-right" src="/assets/glyph01.svg" alt="" />
 			</div>
-			<button className="page-arrow page-arrow-previous" type="button" aria-label="이전 페이지" disabled={page === 0} onClick={() => move(-1)}>PREV</button>
-			<button className="page-arrow page-arrow-next" type="button" aria-label="다음 페이지" disabled={page === pages.length - 1} onClick={() => move(1)}>NEXT</button>
+			<button className="page-arrow page-arrow-previous" type="button" aria-label="이전 페이지" disabled={page === 0} onClick={() => move(-1)}>‹</button>
+			<button className="page-arrow page-arrow-next" type="button" aria-label="다음 페이지" disabled={page === pages.length - 1} onClick={() => move(1)}>›</button>
 			<div className="page-indicator" aria-label={`${page + 1} / ${pages.length} 페이지`}>
 				{pages.map((_, index) => <span className={index === page ? "is-active" : ""} key={index} />)}
 			</div>
