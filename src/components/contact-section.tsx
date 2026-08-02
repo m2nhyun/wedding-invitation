@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { wedding } from "@/data/wedding";
 import KakaoPayIcon from "../icons/kakao_simple.svg?react";
 
@@ -96,7 +97,7 @@ export function ContactSection() {
 						{wedding.couple.groom.name}
 					</h2>
 					<button
-						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
+						className="absolute bottom-[1.7em] z-10 w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
 						data-scroll-motion-text
 						onClick={() => setSelectedSide("groom")}>
@@ -111,7 +112,7 @@ export function ContactSection() {
 						{wedding.couple.bride.name}
 					</h2>
 					<button
-						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
+						className="absolute bottom-[1.7em] z-10 w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
 						data-scroll-motion-text
 						onClick={() => setSelectedSide("bride")}>
@@ -120,7 +121,7 @@ export function ContactSection() {
 				</div>
 			</section>
 
-			{selectedSide ? (
+			{selectedSide ? createPortal(
 				<div
 					className="fixed inset-0 z-[2000] flex items-center justify-center p-[1.4rem]"
 					role="dialog"
@@ -209,7 +210,8 @@ export function ContactSection() {
 							})}
 						</div>
 					</div>
-				</div>
+				</div>,
+				document.body,
 			) : null}
 
 			<p
