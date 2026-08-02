@@ -25,11 +25,13 @@
 			referrerpolicy="origin"></link>
 
 		<link rel="stylesheet" href="./style.css" />
-		<!--스크롤 모션 -->
-		<script src="./scrollMotion.js" defer></script>
+		<script src="./script.js" defer></script>
 	</head>
 
 	<body>
+		<main class="invitation" aria-label="모바일 청첩장">
+			<div class="invitation-track">
+				<section class="invitation-page">
 		<div class="div1">
 			<h2>
 				김제현 송영현
@@ -61,7 +63,9 @@
 
 			<img id="glyph01" src="./assets/glyph01.svg" alt="Logo" />
 		</div>
+				</section>
 
+				<section class="invitation-page invitation-page-event">
 		<div class="div2">
 			<h2>
 				2026년 10월 17일
@@ -90,7 +94,9 @@
 				<a href="#">마음 보내실 곳</a>
 			</div>
 		</div>
+				</section>
 
+				<section class="invitation-page invitation-page-gallery-one">
 		<div class="div4">
 			<img src="./assets/3_12900023.png" alt="" />
 		</div>
@@ -100,23 +106,41 @@
 			<div><img src="./assets/4_12900005.jpg" alt="" /></div>
 			<!-- <img id="glyph04" src="./assets/glyph04.svg" alt="Logo" /> -->
 		</div>
+				</section>
 
-		<div class="div6">
+				<section class="invitation-page invitation-page-gallery-two">
+		<div class="div6 div6-two">
 			<div class="div6-1">
 				<div><img src="./assets/6_12900026.jpg" alt="" /></div>
 				<div><img src="./assets/7_12900039.jpg" alt="" /></div>
 			</div>
 
 			<img src="./assets/8_13150017.jpg" alt="" />
+		</div>
+				</section>
+
+				<section class="invitation-page invitation-page-gallery-three">
+		<div class="div6 div6-three">
 			<div id="img6-4gif"><img src="./assets/div5_04.gif" alt="" /></div>
 
 			<div id="img6-5"><img src="./assets/9_13150018.jpg" alt="" /></div>
 			<div id="img6-6"><img src="./assets/10_20260511_5.jpg" alt="" /></div>
+		</div>
+				</section>
 
-			<img id="glyph03" src="./assets/glyph03.svg" alt="" />
-
+				<section class="invitation-page invitation-page-closing">
+		<div class="div6 div6-closing">
 			<img id="glyph05" src="./assets/glyph05.svg" alt="" />
 			<img id="cats" src="./assets/11_20260511_6.jpg" alt="" />
 		</div>
+				</section>
+			</div>
+
+			<button class="page-arrow page-arrow-previous" type="button" aria-label="이전 페이지" disabled>‹</button>
+			<button class="page-arrow page-arrow-next" type="button" aria-label="다음 페이지">›</button>
+			<div class="page-indicator" aria-label="1 / 6 페이지">
+				<span class="is-active"></span><span></span><span></span><span></span><span></span><span></span>
+			</div>
+		</main>
 	</body>
 </html>

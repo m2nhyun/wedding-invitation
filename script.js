@@ -58,3 +58,59 @@
     });
   });
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+	const invitation = document.querySelector(".invitation");
+	const track = document.querySelector(".invitation-track");
+	const pages = Array.from(document.querySelectorAll(".invitation-page"));
+	const previousButton = document.querySelector(".page-arrow-previous");
+	const nextButton = document.querySelector(".page-arrow-next");
+	const dots = Array.from(document.querySelectorAll(".page-indicator span"));
+
+	if (!invitation || !track || !previousButton || !nextButton || !pages.length) {
+		return;
+	}
+
+	let currentPage = 0;
+
+	const renderPage = () => {
+		track.style.transform = `translateX(-${currentPage * 100}%)`;
+		previousButton.disabled = currentPage === 0;
+		nextButton.disabled = currentPage === pages.length - 1;
+
+		dots.forEach((dot, index) => {
+			dot.classList.toggle("is-active", index === currentPage);
+		});
+
+		invitation.setAttribute(
+			"aria-label",
+			`모바일 청첩장 ${currentPage + 1} / ${pages.length} 페이지`,
+		);
+	};
+
+	const movePage = (direction) => {
+		const nextPage = Math.min(
+			Math.max(currentPage + direction, 0),
+			pages.length - 1,
+		);
+
+		if (nextPage === currentPage) return;
+		currentPage = nextPage;
+		renderPage();
+	};
+
+	previousButton.addEventListener("click", () => movePage(-1));
+	nextButton.addEventListener("click", () => movePage(1));
+
+	window.addEventListener("keydown", (event) => {
+		if (event.key === "ArrowLeft") {
+			event.preventDefault();
+			movePage(-1);
+		} else if (event.key === "ArrowRight") {
+			event.preventDefault();
+			movePage(1);
+		}
+	});
+
+	renderPage();
+});
