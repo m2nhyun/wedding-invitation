@@ -326,28 +326,6 @@ body {
   will-change: transform;
 }
 
-.corner-glyphs {
-  pointer-events: none;
-}
-
-.corner-glyph {
-  position: absolute;
-  z-index: 30;
-  width: 1.7rem;
-  height: auto;
-  margin: 0;
-}
-
-.corner-glyph-bottom-left {
-  bottom: max(1.55rem, env(safe-area-inset-bottom));
-  left: 1.35rem;
-}
-
-.corner-glyph-bottom-right {
-  right: 1.35rem;
-  bottom: max(1.55rem, env(safe-area-inset-bottom));
-  width: 1.9rem;
-}
 
 .invitation .intro-message {
   white-space: nowrap;

@@ -435,28 +435,6 @@ body {
 	will-change: transform;
 }
 
-.corner-glyphs {
-	pointer-events: none;
-}
-
-.corner-glyph {
-	position: absolute;
-	z-index: 30;
-	width: 1.7rem;
-	height: auto;
-	margin: 0;
-}
-
-.corner-glyph-bottom-left {
-	bottom: max(1.55rem, env(safe-area-inset-bottom));
-	left: 1.35rem;
-}
-
-.corner-glyph-bottom-right {
-	right: 1.35rem;
-	bottom: max(1.55rem, env(safe-area-inset-bottom));
-	width: 1.9rem;
-}
 
 .invitation .intro-message {
 	// 자동 줄바꿈은 막고, HTML에 넣은 <br>에서만 줄을 바꿉니다.
