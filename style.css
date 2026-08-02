@@ -481,3 +481,49 @@ body {
     width: 2.35rem;
   }
 }
+
+/* 배포 버전과 동일한 가로 페이지 레이아웃 */
+.invitation {
+  --heading-size: clamp(1.32rem, 5.7cqw, 1.55rem);
+  --body-size: clamp(1rem, 4.25cqw, 1.14rem);
+  background: var(--page-background);
+}
+.invitation .invitation-page h2 { font-size: var(--heading-size) !important; }
+.invitation .invitation-page p,
+.invitation .invitation-page a,
+.invitation .invitation-page button:not(.page-arrow) { font-size: var(--body-size) !important; }
+.invitation .div1 { display: flex; min-height: 0; }
+.invitation .div1 h2 { flex: 0 0 19%; display: flex; align-items: center; justify-content: center; margin: 0; padding: clamp(0.75rem, 2svh, 1.5rem) 0; }
+.invitation .div1 > img { flex: 0 0 32%; min-height: 0; height: 32%; object-fit: cover; }
+.invitation .div1 .intro-message { flex: 1 1 0; display: flex; min-height: 0; align-items: center; justify-content: center; margin: 0; padding: 0.75rem 1rem 2.65rem; white-space: nowrap; font-size: clamp(1.05rem, 4.6cqw, 1.22rem) !important; line-height: 1.7; }
+.invitation.is-white-page { background: white; }
+.invitation-page-event .div3 { aspect-ratio: 3.4/1; font-size: 0.92em; }
+.invitation-page-event .div3 .contact { padding: 0.9em 0; }
+.invitation-page-event .div3 .contact p { font-size: 1.16em; }
+.invitation-page-event .div3 .contact h2 { font-size: 1.48em; }
+.invitation-page-event .div3 .contact a { bottom: 0.85em; }
+.invitation-page-gallery-one .div4 { flex: 0 0 38%; padding: 1rem; }
+.invitation-page-gallery-one .div4 img { height: 100%; object-fit: contain; }
+.invitation-page-gallery-one .div5 { flex: 0 0 48%; overflow: hidden; }
+.invitation-page-gallery-one .div5 #rings { height: 42%; }
+.invitation-page-gallery-one .div5 > div:nth-child(2) { width: 72%; }
+.div6-two { height: 100%; gap: 1.75rem; padding: 1rem; }
+.div6-two .div6-1 { flex: 0 0 43%; overflow: hidden; }
+.div6-two > img { max-height: 33%; object-fit: contain; }
+.div6-three { height: 100%; gap: 1rem; padding: clamp(2rem, 4svh, 3rem) 1rem 1rem; background: white; }
+.div6-three #img6-4gif { flex: 0 0 42%; }
+.div6-three #img6-5 { flex: 0 0 23%; }
+.div6-three #img6-6 { flex: 0 0 20%; }
+.div6-closing #cats { transform: translateY(1rem); }
+.page-arrow { width: 2.25rem; height: 2.8rem; color: #8a8a8a; }
+.page-arrow::after { width: 0.82rem; height: 0.82rem; }
+.page-arrow-previous { left: 0.15rem; }
+.page-arrow-next { right: 0.15rem; }
+@media (max-height: 740px) {
+  .invitation { --heading-size: clamp(1.1rem, 5.1cqw, 1.28rem); --body-size: clamp(0.84rem, 3.7cqw, 0.98rem); }
+  .invitation-page { padding-bottom: 3rem; }
+  .invitation .div1 h2 { flex-basis: 18%; }
+  .invitation .div1 > img { flex-basis: 30%; height: 30%; }
+  .invitation .div1 .intro-message { padding: 0.4rem 0.75rem 2.25rem; font-size: clamp(0.94rem, 4.1cqw, 1.06rem) !important; }
+  .div6-two { gap: 1rem; padding: 0.65rem; }
+}
