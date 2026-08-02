@@ -16,7 +16,7 @@ body { position: fixed; inset: 0; }
 .invitation-page { flex: 0 0 100%; width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding-bottom: 3.4rem; }
 .invitation-page > section { width: 100%; }
 .corner-glyphs { pointer-events: none; }
-.corner-glyph { position: fixed; z-index: 30; width: 1.7rem; height: auto; }
+.corner-glyph { position: absolute; z-index: 30; width: 1.7rem; height: auto; }
 .corner-glyph-bottom-left { left: 1.35rem; bottom: max(1.55rem, env(safe-area-inset-bottom)); }
 .corner-glyph-bottom-right { right: 1.35rem; bottom: max(1.55rem, env(safe-area-inset-bottom)); width: 1.9rem; }
 .page-arrow { position: absolute; top: 50%; z-index: 20; display: grid; width: 2.6rem; height: 3.5rem; place-items: center; border: 0; background: transparent; color: var(--olive); font-size: 0; transform: translateY(-50%); cursor: pointer; }
