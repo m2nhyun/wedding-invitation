@@ -533,18 +533,27 @@ body {
 	position: absolute;
 	top: 50%;
 	z-index: 20;
+	display: grid;
 	width: 2rem;
+	height: 2.6rem;
 	padding: 0;
 	border: 0;
+	place-items: center;
 	background: transparent;
 	color: var(--olive);
-	font-family: "Resonay-Text", "SD Jan", serif;
-	font-size: 2rem;
-	font-weight: 100;
+	font-size: 0;
 	line-height: 1;
 	transform: translateY(-50%);
 	cursor: pointer;
 	-webkit-tap-highlight-color: transparent;
+
+	&::after {
+		width: 0.7rem;
+		height: 0.7rem;
+		border-top: 1px solid currentColor;
+		border-right: 1px solid currentColor;
+		content: "";
+	}
 
 	&:disabled {
 		opacity: 0;
@@ -554,9 +563,17 @@ body {
 
 .page-arrow-previous {
 	left: 0.2rem;
+
+	&::after {
+		transform: rotate(-135deg);
+	}
 }
 .page-arrow-next {
 	right: 0.2rem;
+
+	&::after {
+		transform: rotate(45deg);
+	}
 }
 
 .invitation.is-white-page {
