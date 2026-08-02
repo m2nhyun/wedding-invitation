@@ -20,7 +20,7 @@ export function HorizontalPager({ children }: { children: ReactNode }) {
 	}, []);
 
 	useEffect(() => {
-		const color = hasWhitePagination ? "#ffffff" : "hsl(76 36% 92%)";
+		const color = "#ffffff";
 		const themeColor = document.querySelector('meta[name="theme-color"]');
 
 		document.documentElement.style.backgroundColor = color;
