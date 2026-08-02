@@ -92,7 +92,7 @@ export function GallerySecondPage() {
 
 export function GalleryThirdPage() {
 	return (
-		<section className="gallery-slide gallery-slide-three flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
+		<section className="gallery-slide gallery-slide-three flex w-full flex-col gap-[2.5em] bg-white px-[1em] py-[2.5em]">
 				<div className="flex flex-col">
 					<Image
 						className="block h-auto w-[74%]"

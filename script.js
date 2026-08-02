@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	let currentPage = 0;
+	let touchStartX = null;
 
 	const renderPage = () => {
 		track.style.transform = `translateX(-${currentPage * 100}%)`;
@@ -81,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		dots.forEach((dot, index) => {
 			dot.classList.toggle("is-active", index === currentPage);
 		});
+
+		invitation.classList.toggle("is-white-page", currentPage === 4);
 
 		invitation.setAttribute(
 			"aria-label",
@@ -101,6 +104,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	previousButton.addEventListener("click", () => movePage(-1));
 	nextButton.addEventListener("click", () => movePage(1));
+
+	track.addEventListener("touchstart", (event) => {
+		touchStartX = event.touches[0]?.clientX ?? null;
+	});
+
+	track.addEventListener("touchend", (event) => {
+		const touchEndX = event.changedTouches[0]?.clientX;
+		if (touchStartX === null || touchEndX === undefined) return;
+		const distance = touchEndX - touchStartX;
+		touchStartX = null;
+		if (Math.abs(distance) < 42) return;
+		movePage(distance < 0 ? 1 : -1);
+	});
 
 	window.addEventListener("keydown", (event) => {
 		if (event.key === "ArrowLeft") {

@@ -309,7 +309,8 @@ body {
 .invitation {
   position: relative;
   width: min(100%, 430px);
-  height: 100dvh;
+  height: 100svh;
+  max-height: 100svh;
   margin: 0 auto;
   overflow: hidden;
   background: var(--BG);
@@ -330,7 +331,7 @@ body {
 }
 
 .corner-glyph {
-  position: fixed;
+  position: absolute;
   z-index: 30;
   width: 1.7rem;
   height: auto;
@@ -381,7 +382,17 @@ body {
 }
 
 .invitation-page-event {
-  justify-content: center;
+  justify-content: stretch;
+}
+.invitation-page-event .div2 {
+  flex: 1 1 0;
+  height: auto;
+  min-height: 0;
+}
+.invitation-page-event .div3 {
+  flex: 0 0 auto;
+  height: auto;
+  aspect-ratio: 2/1;
 }
 
 .invitation-page-gallery-one {
@@ -390,9 +401,13 @@ body {
 }
 
 .invitation-page-gallery-two,
-.invitation-page-gallery-three,
 .invitation-page-closing {
   background: var(--BG);
+}
+
+.invitation-page-gallery-three,
+.invitation.is-white-page {
+  background: white;
 }
 
 .div6-two,
@@ -407,39 +422,37 @@ body {
 
 .div6-three {
   gap: clamp(1.3em, 4dvh, 2.5em);
+  padding-top: clamp(3.5em, 7dvh, 5em);
 }
 
 .div6-closing {
-  gap: clamp(2em, 6dvh, 3.5em);
 }
-.div6-closing #glyph05,
 .div6-closing #cats {
   margin: 0 auto;
+  width: 80%;
+  max-height: min(68svh, 38rem);
+  object-fit: contain;
 }
 
 .page-arrow {
   position: absolute;
   top: 50%;
   z-index: 20;
-  display: grid;
-  width: 2.6rem;
-  height: 3.5rem;
-  place-items: center;
+  width: 1.5rem;
+  padding: 0;
   border: 0;
   background: transparent;
   color: var(--olive);
-  font-size: 0;
+  font-family: "Resonay-Text", "SD Jan", serif;
+  font-size: 0.64rem;
+  font-weight: 100;
+  letter-spacing: 0.1em;
   line-height: 1;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   transform: translateY(-50%);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-}
-.page-arrow::after {
-  content: "";
-  width: 0.72rem;
-  height: 0.72rem;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
 }
 .page-arrow:disabled {
   opacity: 0;
@@ -447,17 +460,11 @@ body {
 }
 
 .page-arrow-previous {
-  left: 0.15rem;
-}
-.page-arrow-previous::after {
-  transform: rotate(-135deg);
+  left: 0.35rem;
 }
 
 .page-arrow-next {
-  right: 0.15rem;
-}
-.page-arrow-next::after {
-  transform: rotate(45deg);
+  right: 0.35rem;
 }
 
 .page-indicator {
@@ -485,7 +492,5 @@ body {
   .invitation {
     font-size: clamp(12px, 3.55vw, 16px);
   }
-  .page-arrow {
-    width: 2.35rem;
-  }
+  .page-arrow { width: 1.5rem; }
 }

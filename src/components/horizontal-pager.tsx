@@ -19,7 +19,7 @@ export function HorizontalPager({ children }: { children: ReactNode }) {
 	}, []);
 
 	return (
-		<main className="invitation-pager" aria-label="모바일 청첩장">
+		<main className={`invitation-pager${page === 4 ? " is-white-page" : ""}`} aria-label="모바일 청첩장">
 			<div className="invitation-track" style={{ transform: `translateX(-${page * 100}%)` }} onTouchStart={(event) => { touchStartX.current = event.touches[0]?.clientX ?? null; }} onTouchEnd={(event) => { const start = touchStartX.current; const end = event.changedTouches[0]?.clientX; touchStartX.current = null; if (start === null || end === undefined || Math.abs(end - start) < 42) return; move(end < start ? 1 : -1); }}>
 				{pages.map((content, index) => <section className="invitation-page" key={index}>{content}</section>)}
 			</div>
