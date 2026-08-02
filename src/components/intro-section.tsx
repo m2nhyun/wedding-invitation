@@ -40,14 +40,6 @@ export function IntroSection() {
         ))}
       </p>
 
-      <Image
-        className="relative -top-[3.9em] mx-auto block h-auto w-[2em]"
-        src={wedding.assets.glyph01}
-        alt={wedding.intro.logoAlt}
-        width={101}
-        height={96}
-        sizes="2em"
-      />
     </section>
   );
 }
