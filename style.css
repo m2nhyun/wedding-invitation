@@ -313,6 +313,7 @@ body {
   margin: 0 auto;
   overflow: hidden;
   background: var(--BG);
+  container-type: inline-size;
 }
 
 .invitation-track {
@@ -322,6 +323,21 @@ body {
   height: 100%;
   transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
+}
+
+.invitation #glyph01 {
+  position: fixed;
+  right: 1.35rem;
+  bottom: max(1.55rem, env(safe-area-inset-bottom));
+  z-index: 30;
+  width: 1.75rem;
+  height: auto;
+  margin: 0;
+}
+
+.invitation .intro-message {
+  white-space: nowrap;
+  font-size: clamp(0.7rem, 3.2cqw, 1em);
 }
 
 .invitation-page {
@@ -341,8 +357,8 @@ body {
   overflow: hidden;
 }
 .invitation-page .div1 h2 {
-  padding-top: clamp(2rem, 7dvh, 4em);
-  padding-bottom: clamp(2rem, 7dvh, 4em);
+  padding-top: clamp(1rem, 5dvh, 4em);
+  padding-bottom: clamp(1rem, 5dvh, 4em);
 }
 .invitation-page .div1 p {
   margin-bottom: clamp(2rem, 8dvh, 7em);
