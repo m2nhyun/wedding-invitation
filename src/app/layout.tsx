@@ -75,7 +75,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className='mx-auto max-w-[430px] touch-pan-y bg-[var(--bodyBG)] text-center font-["Resonay-Text","SD_Jan",serif] font-[100] [overflow-anchor:none] [word-break:keep-all]'>
+	  <body className="mx-auto max-w-[430px] touch-pan-y bg-[var(--bodyBG)] text-center font-[100] [overflow-anchor:none] [word-break:keep-all]" style={{ fontFamily: '"SD Jan", serif' }}>
         {children}
       </body>
     </html>
