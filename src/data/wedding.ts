@@ -127,7 +127,7 @@ export const wedding = {
     glyph05: assetPath("/assets/glyph05.svg"),
     intro: assetPath("/assets/1_12900008_m.jpg"),
     eventBackground: assetPath("/assets/2_13130012.jpg"),
-    main: assetPath("/assets/3_12900023.png"),
+    main: assetPath("/assets/3_12900023.jpg"),
     cats: assetPath("/assets/11_20260511_6.jpg"),
     gallery: [
       assetPath("/assets/4_12900005.jpg"),
