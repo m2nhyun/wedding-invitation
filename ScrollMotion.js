@@ -1,4 +1,46 @@
 document.addEventListener("DOMContentLoaded", () => {
+	const viewport = document.querySelector(".invitation-viewport");
+	if (!viewport) return;
+
+	const pages = Array.from(viewport.children);
+	const dots = document.querySelector(".page-dots");
+	const previous = document.querySelector(".page-arrow-previous");
+	const next = document.querySelector(".page-arrow-next");
+	let page = 0;
+
+	pages.forEach((_, index) => {
+		const dot = document.createElement("button");
+		dot.type = "button";
+		dot.setAttribute("aria-label", `${index + 1}번째 슬라이드`);
+		dot.addEventListener("click", () => goTo(index));
+		dots?.appendChild(dot);
+	});
+
+	const updatePager = () => {
+		page = Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1));
+		dots?.querySelectorAll("button").forEach((dot, index) => dot.classList.toggle("is-active", index === page));
+		if (previous) previous.disabled = page === 0;
+		if (next) next.disabled = page === pages.length - 1;
+	};
+	const goTo = (index) => viewport.scrollTo({ left: index * viewport.clientWidth, behavior: "smooth" });
+
+	viewport.addEventListener("scroll", updatePager, { passive: true });
+	viewport.addEventListener("wheel", (event) => {
+		if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+		event.preventDefault();
+		viewport.scrollBy({ left: event.deltaY, behavior: "smooth" });
+	}, { passive: false });
+	previous?.addEventListener("click", () => goTo(Math.max(page - 1, 0)));
+	next?.addEventListener("click", () => goTo(Math.min(page + 1, pages.length - 1)));
+	window.addEventListener("keydown", (event) => {
+		if (event.key === "ArrowRight") goTo(Math.min(page + 1, pages.length - 1));
+		if (event.key === "ArrowLeft") goTo(Math.max(page - 1, 0));
+	});
+	document.getElementById("glyph03")?.addEventListener("click", () => goTo(0));
+	updatePager();
+
+	return;
+
 	const normalElements = document.querySelectorAll(
 		"body h2, body h2, body p, body a, body img:not([src$='.svg'])",
 	);

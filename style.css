@@ -295,3 +295,42 @@ body .div6 #cats {
     animation: none;
   }
 }
+
+/* Live Server mirrors the exported site's horizontal slide pager. */
+html, body { height: 100%; overflow: hidden; }
+body .invitation, body .invitation-viewport { height: 100%; }
+body .invitation { position: relative; }
+body .invitation-viewport { display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+body .invitation-viewport > div { min-width: 100%; height: 100%; flex: 0 0 100%; overflow: hidden; scroll-snap-align: start; scroll-snap-stop: always; }
+body .div1 { justify-content: space-between; }
+body .div1 h2 { padding: clamp(2.75rem, 9vh, 4.5rem) 0 1.75rem; }
+body .div1 > img:not(#glyph01) { max-height: 31vh; object-fit: cover; }
+body .div1 p { margin: 1.75rem 1.15rem auto; font-size: 1.03em; line-height: 1.73; }
+body .div1 #glyph01 { margin: 1.25rem auto 3.4rem; top: 0; }
+body .div2 { height: 100%; padding: clamp(2.8rem, 10vh, 5rem) 1rem; }
+body .div2 #parking { bottom: 5.2rem; }
+body .div3 { height: 100%; align-items: stretch; }
+body .div3 .contact { justify-content: center; padding: 1.5rem .7rem 4.5rem; }
+body .div4 { height: 100%; justify-content: center; padding: 1rem; }
+body .div4 img { max-height: 72vh; object-fit: contain; }
+body .div5 { height: 100%; justify-content: center; padding: 1rem; }
+body .div5 #rings { height: 29vh; margin-top: 0; }
+body .div5 #rings img { top: 0; width: 50%; max-height: 29vh; object-fit: contain; }
+body .div5 > div:nth-child(2) img { max-height: 48vh; object-fit: cover; }
+body .div6 { height: 100%; justify-content: center; padding: 1rem; gap: clamp(.85rem, 2.8vh, 1.8rem); }
+body .div6 .div6-1 { max-height: 23vh; gap: 1rem; }
+body .div6 > img { max-height: 19vh; object-fit: cover; }
+body .div6 #img6-4gif img { width: 66%; max-height: 22vh; object-fit: cover; }
+body .div6 #img6-5 img { width: 57%; max-height: 16vh; object-fit: cover; }
+body .div6 #img6-6 { width: 24%; margin: 0 auto; }
+body .div6 #glyph03 { width: 1.55rem; margin: .1rem auto; }
+body .div6 #glyph05 { display: none; }
+body .div6 #cats { width: 42%; max-height: 21vh; margin: 0 auto; object-fit: contain; }
+.pager-controls { position: fixed; right: 0; bottom: max(1rem, env(safe-area-inset-bottom)); left: 0; z-index: 20; display: flex; align-items: center; justify-content: center; gap: .9rem; pointer-events: none; }
+.page-dots { display: flex; gap: .42rem; padding: .48rem .68rem; border-radius: 999px; background: rgb(255 255 255 / .5); backdrop-filter: blur(5px); pointer-events: auto; }
+.page-dots button { width: .38rem; height: .38rem; padding: 0; border: 0; border-radius: 999px; background: rgb(from var(--olive) r g b / .32); }
+.page-dots button.is-active { transform: scale(1.35); background: var(--olive); }
+.page-arrow { width: 2.7rem; height: 2.7rem; border: 0; border-radius: 50%; background: rgb(255 255 255 / .5); color: var(--olive); pointer-events: auto; }
+.page-arrow::after { content: ""; display: inline-block; width: .55rem; height: .55rem; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
+.page-arrow-previous::after { transform: rotate(-135deg); }
+.page-arrow:disabled { visibility: hidden; }
