@@ -555,7 +555,7 @@ body {
 	}
 
 	.div4 { height: 100%; justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); padding: clamp(.55rem, 2vh, 1rem) .75rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-	.div4 .gallery-main { width: 100%; height: auto; max-height: 30vh; object-fit: contain; object-position: center; }
+	.div4 .gallery-main { width: 100%; height: auto; max-height: 34vh; object-fit: contain; object-position: center; }
 	.div4 .gallery-hand { align-self: flex-end; width: 30%; max-height: 20vh; margin-right: 0; object-fit: contain; }
 	.div4 .gallery-portrait { align-self: flex-start; width: 84%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 
@@ -568,13 +568,34 @@ body {
 		gap: clamp(0.45rem, 1.4vh, 0.8rem);
 		background: var(--BG);
 	}
+	.div6 {
+		justify-content: space-between;
+	}
 	.div6 .div6-1 {
-		max-height: 32vh;
+		flex: 0 0 30vh;
+		height: 30vh;
+		max-height: none;
 		gap: 0.75rem;
 	}
+	.div6 .div6-1 img {
+		height: 100%;
+		object-fit: contain;
+	}
 	.div6 > img {
+		align-self: stretch;
 		max-height: 27vh;
 		object-fit: cover;
+	}
+	.div7 {
+		justify-content: flex-start;
+		gap: clamp(0.22rem, 0.7vh, 0.4rem);
+		padding-top: max(0.45rem, env(safe-area-inset-top));
+	}
+	.div7 #img6-5 {
+		margin-top: 0.2rem !important;
+	}
+	.div7 #img6-6 {
+		margin: 0.2rem auto 0 !important;
 	}
 	.div7 #img6-4gif img {
 		width: 56%;
@@ -595,6 +616,8 @@ body {
 		display: none;
 	}
 	.div8 #cats {
+		position: relative;
+		top: 1em;
 		width: min(56%, 15rem);
 		max-height: 56vh;
 		margin: 0 auto;

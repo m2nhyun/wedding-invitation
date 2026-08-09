@@ -122,19 +122,24 @@ body {
 
 .gallery-slide { padding: clamp(1rem, 4vh, 2.5rem) 1rem; }
 .gallery-combined-slide { justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); padding: clamp(.55rem, 2vh, 1rem) .75rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.gallery-combined-slide .gallery-main { width: 100%; height: auto; max-height: 30vh; object-fit: contain; object-position: center; }
+.gallery-combined-slide .gallery-main { width: 100%; height: auto; max-height: 34vh; object-fit: contain; object-position: center; }
 .gallery-combined-slide .gallery-hand { align-self: flex-end; width: 30%; max-height: 20vh; margin-right: 0; object-fit: contain; }
 .gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 84%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.gallery-triptych-slide > div:first-child { max-height: 32vh; gap: .75rem; }
-.gallery-triptych-slide > img { max-height: 27vh; object-fit: cover; }
+.gallery-triptych-slide { justify-content: space-between; }
+.gallery-triptych-slide > div:first-child { flex: 0 0 30vh; height: 30vh; max-height: none; gap: .75rem; }
+.gallery-triptych-slide > div:first-child img { height: 100%; object-fit: contain; }
+.gallery-triptych-slide > img { align-self: stretch; max-height: 27vh; object-fit: cover; }
+.gallery-extra-slide { justify-content: flex-start; gap: clamp(.22rem, .7vh, .4rem); padding-top: max(.45rem, env(safe-area-inset-top)); }
+.gallery-extra-slide > div:nth-of-type(2) { margin-top: .2rem !important; }
+.gallery-extra-slide > div:nth-of-type(3) { margin: .2rem auto 0 !important; }
 .gallery-extra-slide #img6-4gif img { width: 56%; max-height: 25vh; object-fit: contain; }
 .gallery-extra-slide #img6-5 img { width: 52%; max-height: 20vh; object-fit: cover; }
 .gallery-extra-slide #img6-6 { width: 20%; margin: 0 auto; }
 .gallery-extra-slide #glyph03, .gallery-extra-slide #glyph05 { display: none; }
 .gallery-extra-slide #cats { width: 36%; max-height: 25vh; margin: 0 auto; object-fit: contain; }
 .gallery-cat-slide { align-items: center; justify-content: center; padding: 1rem 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.gallery-cat-slide img { width: min(56%, 15rem); max-height: 56vh; object-fit: contain; }
+.gallery-cat-slide img { position: relative; top: 1em; width: min(56%, 15rem); max-height: 56vh; object-fit: contain; }
 
 .pager-controls { position: fixed; z-index: 40; right: 0; bottom: max(1rem, env(safe-area-inset-bottom)); left: 0; display: flex; align-items: center; justify-content: center; gap: .9rem; pointer-events: auto; }
 .page-dots { display: flex; flex-direction: row; gap: .42rem; overflow: hidden; isolation: isolate; padding: .48rem .68rem; border-radius: 999px; background: rgb(255 255 255 / .5); backdrop-filter: blur(5px); pointer-events: auto; }
