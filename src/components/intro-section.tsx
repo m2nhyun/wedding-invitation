@@ -11,16 +11,6 @@ export function IntroSection() {
         {wedding.intro.title}
       </h2>
 
-      <Image
-        className="intro-photo"
-        src={wedding.assets.intro}
-        alt=""
-        width={3089}
-        height={2048}
-        sizes="(max-width: 430px) 100vw, 430px"
-        preload
-      />
-
       <p className="intro-message">
         {wedding.intro.message.map((paragraph, paragraphIndex) => (
           <Fragment key={paragraph[0]}>

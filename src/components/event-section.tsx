@@ -22,7 +22,7 @@ export function EventSection() {
 
 	return (
 		<section
-			className="invitation-slide event-slide"
+			className="event-slide"
 			style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }}>
 			<h2 className="event-heading">
 				{wedding.event.date}

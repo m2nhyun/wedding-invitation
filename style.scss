@@ -439,9 +439,17 @@ body {
 	.div1 > img:not(#glyph01) { max-height: 31vh; object-fit: cover; }
 	.div1 p { margin: 1.75rem 1.15rem auto; font-size: 1.03em; line-height: 1.73; }
 	.div1 #glyph01 { margin: 1.25rem auto 3.4rem; top: 0; }
+	.div1-2 { justify-content: center; background: white; }
+	.div1-2 img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
 
-	.div2 { height: 100%; padding: clamp(2.8rem, 10vh, 5rem) 1rem; }
-	.div2 #parking { bottom: 5.2rem; }
+	.div2 { height: 100%; padding: 0; background: var(--BG); }
+	.div2-1 { min-height: 72%; flex: 1 1 auto; padding: clamp(2.8rem, 10vh, 5rem) 1rem; background-image: url("./assets/2_13130012.jpg"); background-size: cover; background-position: center; }
+	.div2-1 h2 { margin-bottom: 1rem; }
+	.div2-1 a { color: var(--olive); font-size: 1.1em; line-height: 1.85; text-decoration: underline; }
+	.div2-2 { display: flex; min-height: 28%; flex: 0 0 28%; flex-direction: row; }
+	.div2-2 .contact { flex: 1; justify-content: center; padding: 1rem .7rem 2.6rem; background: var(--BG); color: var(--olive); }
+	.div2-2 .contact + .contact { border-left: .4px solid rgb(from var(--olive) r g b / 60%); }
+	.div2-2 .contact a { position: absolute; bottom: 1rem; width: 100%; padding-bottom: .1em; text-decoration: underline; }
 
 	.div3 { height: 100%; align-items: stretch; }
 	.div3 .contact { justify-content: center; padding: 1.5rem .7rem 4.5rem; }
