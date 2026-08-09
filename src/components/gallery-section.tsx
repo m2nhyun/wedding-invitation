@@ -28,7 +28,7 @@ export function GallerySection() {
 				<Image className="gallery-portrait" src={landscapePhoto} alt="" width={2212} height={1429} sizes="(max-width: 430px) 78vw, 335px" />
 			</section>
 
-			<section className="invitation-slide gallery-slide gallery-grid-slide">
+			<section className="invitation-slide gallery-slide gallery-grid-slide gallery-triptych-slide">
 				<div className="flex w-full flex-row items-start gap-[2em]">
 					<div className="mr-[0.5em] flex h-full min-w-0 flex-[0_0_30%] flex-col">
 						<Image
@@ -60,6 +60,9 @@ export function GallerySection() {
 					height={2048}
 					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
 				/>
+			</section>
+
+			<section className="invitation-slide gallery-slide gallery-grid-slide gallery-extra-slide">
 				<div className="flex flex-col">
 					<Image
 						className="block h-auto w-[74%]"
