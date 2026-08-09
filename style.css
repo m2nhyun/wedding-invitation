@@ -428,6 +428,9 @@ body .div3-2 .contact button {
   text-decoration: underline;
   cursor: pointer;
 }
+body .div3-2 .YH button {
+  margin-top: 0.22rem;
+}
 body .div3 {
   height: 100%;
   align-items: stretch;

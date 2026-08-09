@@ -117,6 +117,7 @@ body {
 .contact-slide > div p { margin-top: .16rem; }
 .contact-slide > div h2 { margin-top: -.22rem; }
 .contact-slide > div button { position: static; bottom: auto; margin-top: .36rem; }
+.contact-slide > div:last-child button { margin-top: .22rem; }
 .contact-slide h2 { font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; }
 
 .gallery-slide { padding: clamp(1rem, 4vh, 2.5rem) 1rem; }
