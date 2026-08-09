@@ -437,41 +437,38 @@ body .div4 .gallery-portrait { width: 78%; max-height: 28vh; margin-left: 5%; ob
 body .div6 {
   height: 100%;
   justify-content: center;
-  padding: 1rem;
-  gap: clamp(0.85rem, 2.8vh, 1.8rem);
+  padding: max(0.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom));
+  gap: clamp(0.45rem, 1.4vh, 0.8rem);
 }
 body .div6 .div6-1 {
-  max-height: 23vh;
-  gap: 1rem;
+  max-height: 19vh;
+  gap: 0.75rem;
 }
 body .div6 > img {
-  max-height: 19vh;
+  max-height: 14vh;
   object-fit: cover;
 }
 body .div6 #img6-4gif img {
-  width: 66%;
-  max-height: 22vh;
-  object-fit: cover;
+  width: 56%;
+  max-height: 17vh;
+  object-fit: contain;
 }
 body .div6 #img6-5 img {
-  width: 57%;
-  max-height: 16vh;
+  width: 52%;
+  max-height: 12vh;
   object-fit: cover;
 }
 body .div6 #img6-6 {
-  width: 24%;
+  width: 20%;
   margin: 0 auto;
 }
-body .div6 #glyph03 {
-  width: 1.55rem;
-  margin: 0.1rem auto;
-}
+body .div6 #glyph03,
 body .div6 #glyph05 {
   display: none;
 }
 body .div6 #cats {
-  width: 42%;
-  max-height: 21vh;
+  width: 36%;
+  max-height: 17vh;
   margin: 0 auto;
   object-fit: contain;
 }
