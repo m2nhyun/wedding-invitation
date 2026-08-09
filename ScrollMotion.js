@@ -30,6 +30,28 @@ document.addEventListener("DOMContentLoaded", () => {
 		event.preventDefault();
 		viewport.scrollBy({ left: event.deltaY, behavior: "smooth" });
 	}, { passive: false });
+	let dragStartX = 0;
+	let dragStartLeft = 0;
+	let isDragging = false;
+	viewport.addEventListener("pointerdown", (event) => {
+		if (event.target.closest("button, a")) return;
+		dragStartX = event.clientX;
+		dragStartLeft = viewport.scrollLeft;
+		isDragging = true;
+		viewport.setPointerCapture(event.pointerId);
+	});
+	viewport.addEventListener("pointermove", (event) => {
+		if (!isDragging) return;
+		viewport.scrollLeft = dragStartLeft - (event.clientX - dragStartX);
+	});
+	viewport.addEventListener("pointerup", (event) => {
+		if (!isDragging) return;
+		isDragging = false;
+		viewport.releasePointerCapture(event.pointerId);
+		const nearestPage = Math.round(viewport.scrollLeft / viewport.clientWidth);
+		goTo(nearestPage);
+	});
+	viewport.addEventListener("pointercancel", () => { isDragging = false; });
 	previous?.addEventListener("click", () => goTo(Math.max(page - 1, 0)));
 	next?.addEventListener("click", () => goTo(Math.min(page + 1, pages.length - 1)));
 	window.addEventListener("keydown", (event) => {
