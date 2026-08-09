@@ -482,7 +482,7 @@ body {
 		background: var(--BG);
 	}
 	.div2-1 {
-		min-height: 77%;
+		min-height: calc(77% - 1em);
 		flex: 1 1 auto;
 		padding: clamp(1.7rem, 6vh, 3rem) 1rem;
 		background-image: url("./assets/2_13130012.jpg");
@@ -500,14 +500,14 @@ body {
 	}
 	.div2-2 {
 		display: flex;
-		min-height: 23%;
-		flex: 0 0 23%;
+		min-height: calc(23% + 1em);
+		flex: 0 0 calc(23% + 1em);
 		flex-direction: row;
 	}
 	.div2-2 .contact {
 		flex: 1;
-		justify-content: flex-start;
-		padding: 0.8rem 0.7rem 4.6rem;
+		justify-content: center;
+		padding: 1.4rem 0.7rem 5.1rem;
 		background: var(--BG);
 		color: var(--olive);
 	}
@@ -515,15 +515,15 @@ body {
 		border-left: 0.4px solid rgb(from var(--olive) r g b / 60%);
 	}
 	.div2-2 .contact a {
-		position: absolute;
-		bottom: 3.8rem;
+		position: static;
+		margin-top: 0.6rem;
 		width: 100%;
 		padding-bottom: 0.1em;
 		text-decoration: underline;
 	}
 	.div2-2 .contact button {
-		position: absolute;
-		bottom: 3.8rem;
+		position: static;
+		margin-top: 0.6rem;
 		width: 100%;
 		border: 0;
 		background: transparent;
