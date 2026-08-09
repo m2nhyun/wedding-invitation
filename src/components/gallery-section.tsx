@@ -95,36 +95,16 @@ export function GallerySection() {
 					/>
 				</div>
 
-				<button
-					className="mx-auto my-[1rem] block w-[1.8rem] cursor-pointer appearance-none border-0 bg-transparent p-0 transition-transform duration-200 active:scale-[0.94]"
-					type="button"
-					data-scroll-to-top
-					aria-label={wedding.gallery.scrollToTopLabel}>
-					<Image
-						className="block h-auto w-full"
-						src={wedding.assets.glyph03}
-						alt=""
-						width={77}
-						height={85}
-						sizes="1.8em"
-					/>
-				</button>
+			</section>
 
+			<section className="invitation-slide gallery-slide gallery-cat-slide">
 				<Image
-					className="mx-auto my-[5rem] block h-auto w-[0.6rem]"
-					src={wedding.assets.glyph05}
-					alt=""
-					width={27}
-					height={711}
-					sizes="0.6em"
-				/>
-				<Image
-					className="mx-auto mb-[15vh] block h-auto w-[80%]"
+					className="block h-auto w-full"
 					src={wedding.assets.cats}
 					alt=""
 					width={1800}
 					height={2223}
-					sizes="(max-width: 430px) 80vw, 344px"
+					sizes="(max-width: 430px) 56vw, 241px"
 				/>
 			</section>
 		</>
