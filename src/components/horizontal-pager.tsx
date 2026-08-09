@@ -1,0 +1,67 @@
+"use client";
+
+import { type ReactNode, useEffect, useRef, useState } from "react";
+
+type HorizontalPagerProps = {
+  children: ReactNode;
+};
+
+export function HorizontalPager({ children }: HorizontalPagerProps) {
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const [page, setPage] = useState(0);
+  const [pageCount, setPageCount] = useState(1);
+
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    const updatePage = () => {
+      setPage(Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1)));
+    };
+    const updatePageCount = () => setPageCount(viewport.children.length);
+    const onWheel = (event: WheelEvent) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      event.preventDefault();
+      viewport.scrollBy({ left: event.deltaY, behavior: "smooth" });
+    };
+
+    viewport.addEventListener("scroll", updatePage, { passive: true });
+    viewport.addEventListener("wheel", onWheel, { passive: false });
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowRight") viewport.scrollBy({ left: viewport.clientWidth, behavior: "smooth" });
+      if (event.key === "ArrowLeft") viewport.scrollBy({ left: -viewport.clientWidth, behavior: "smooth" });
+    };
+    const onTopButtonClick = (event: MouseEvent) => {
+      if (!(event.target instanceof Element) || !event.target.closest("[data-scroll-to-top]")) return;
+      viewport.scrollTo({ left: 0, behavior: "smooth" });
+    };
+    window.addEventListener("keydown", onKeyDown);
+    viewport.addEventListener("click", onTopButtonClick);
+    updatePageCount();
+    window.addEventListener("resize", updatePageCount);
+    return () => {
+      viewport.removeEventListener("scroll", updatePage);
+      viewport.removeEventListener("wheel", onWheel);
+      window.removeEventListener("keydown", onKeyDown);
+      viewport.removeEventListener("click", onTopButtonClick);
+      window.removeEventListener("resize", updatePageCount);
+    };
+  }, []);
+
+  const goTo = (index: number) => {
+    viewportRef.current?.scrollTo({ left: index * viewportRef.current.clientWidth, behavior: "smooth" });
+  };
+
+  return (
+    <div className="invitation-pager">
+      <div className="invitation-viewport" ref={viewportRef} aria-label="청첩장 슬라이드">
+        {children}
+      </div>
+      <nav className="pager-controls" aria-label="슬라이드 이동">
+        <button type="button" className="page-arrow page-arrow-previous" onClick={() => goTo(Math.max(page - 1, 0))} disabled={page === 0} aria-label="이전 슬라이드" />
+        <div className="page-dots">{Array.from({ length: pageCount }, (_, index) => <button type="button" key={index} className={index === page ? "is-active" : ""} onClick={() => goTo(index)} aria-label={`${index + 1}번째 슬라이드`} />)}</div>
+        <button type="button" className="page-arrow page-arrow-next" onClick={() => goTo(Math.min(page + 1, pageCount - 1))} disabled={page === pageCount - 1} aria-label="다음 슬라이드" />
+      </nav>
+    </div>
+  );
+}

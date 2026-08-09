@@ -15,7 +15,7 @@ const [
 export function GallerySection() {
 	return (
 		<>
-			<section className="flex h-auto w-full flex-col bg-white px-[1em] py-[2.5em]">
+			<section className="invitation-slide gallery-slide gallery-hero-slide">
 				<Image
 					className="block h-auto w-full"
 					src={wedding.assets.main}
@@ -26,7 +26,7 @@ export function GallerySection() {
 				/>
 			</section>
 
-			<section className="flex w-full flex-col bg-white">
+			<section className="invitation-slide gallery-slide gallery-rings-slide">
 				<div className="relative -mt-[1em] flex h-[12em] flex-col">
 					<Image
 						className="absolute right-0 block h-auto w-[40%] px-[1em]"
@@ -49,7 +49,7 @@ export function GallerySection() {
 				</div>
 			</section>
 
-			<section className="flex w-full flex-col gap-[2.5em] bg-[var(--BG)] px-[1em] py-[2.5em]">
+			<section className="invitation-slide gallery-slide gallery-grid-slide">
 				<div className="flex w-full flex-row items-start gap-[2em]">
 					<div className="mr-[0.5em] flex h-full min-w-0 flex-[0_0_30%] flex-col">
 						<Image

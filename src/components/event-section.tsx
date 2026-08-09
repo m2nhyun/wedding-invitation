@@ -22,9 +22,9 @@ export function EventSection() {
 
 	return (
 		<section
-			className="relative flex h-[38em] flex-col bg-cover bg-center py-[2.6em]"
+			className="invitation-slide event-slide"
 			style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }}>
-			<h2 className="mb-4 text-[1.32em] leading-[1.75] tracking-[0.1em] text-[var(--olive)]">
+			<h2 className="event-heading">
 				{wedding.event.date}
 				<br />
 				{wedding.event.time}
@@ -33,18 +33,18 @@ export function EventSection() {
 			</h2>
 
 			<a
-				className="text-[1.1em] leading-[1.85] text-[var(--olive)] underline"
+				className="map-link"
 				href={wedding.event.naverMapUrl}
 				onClick={openNaverMap}>
 				{wedding.event.naverMapLabel}
 			</a>
 			<a
-				className="text-[1.1em] leading-[1.85] text-[var(--olive)] underline"
+				className="map-link"
 				href={wedding.event.kakaoMapUrl}>
 				{wedding.event.kakaoMapLabel}
 			</a>
 
-			<p className="absolute bottom-[2.1em] w-full text-[1.1em] leading-[1.7] text-white">
+			<p className="parking-note">
 				{wedding.event.parking}
 			</p>
 		</section>

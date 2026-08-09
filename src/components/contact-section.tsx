@@ -87,7 +87,7 @@ export function ContactSection() {
 
 	return (
 		<>
-			<section className="relative flex h-[11.5em] w-full flex-row">
+			<section className="contact-slide">
 				<div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[1.7] text-[var(--olive)]">
 						{wedding.couple.groom.parents}
