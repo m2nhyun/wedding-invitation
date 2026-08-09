@@ -371,7 +371,7 @@ body .div2 {
 body .div2-1 {
   min-height: 77%;
   flex: 1 1 auto;
-  padding: clamp(2.8rem, 10vh, 5rem) 1rem;
+  padding: clamp(1.7rem, 6vh, 3rem) 1rem;
   background-image: url("./assets/2_13130012.jpg");
   background-size: cover;
   background-position: center;
