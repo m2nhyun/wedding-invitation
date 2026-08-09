@@ -401,6 +401,12 @@ body .div3-2 .contact {
   background: var(--BG);
   color: var(--olive);
 }
+body .div3-2 .contact p {
+  margin-top: 0.16rem;
+}
+body .div3-2 .contact h2 {
+  margin-top: -0.22rem;
+}
 body .div3-2 .contact + .contact {
   border-left: 0.4px solid rgb(from var(--olive) r g b/60%);
 }
@@ -413,7 +419,7 @@ body .div3-2 .contact a {
 }
 body .div3-2 .contact button {
   position: static;
-  margin-top: 0.6rem;
+  margin-top: 0.36rem;
   width: 100%;
   border: 0;
   background: transparent;
