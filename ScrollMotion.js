@@ -37,6 +37,36 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (event.key === "ArrowLeft") goTo(Math.max(page - 1, 0));
 	});
 	document.getElementById("glyph03")?.addEventListener("click", () => goTo(0));
+	const giftModal = document.querySelector(".gift-modal");
+	const giftTitle = document.getElementById("gift-modal-title");
+	const giftList = document.querySelector(".gift-account-list");
+	const accounts = {
+		groom: { title: "신랑측", rows: [["김명국", "우리은행 025 102712 02 2501"], ["김정희", "신한은행 110 448 016880"], ["김제현", "카카오뱅크 3333 02 4025793"]] },
+		bride: { title: "신부측", rows: [["송두석", "SC제일은행 111-20-334083"], ["한정희", "농협은행 563-02-098074"], ["송영현", "신한은행 110-429-752632"]] },
+	};
+	const closeGiftModal = () => { if (giftModal) giftModal.hidden = true; };
+	document.querySelectorAll("[data-gift-side]").forEach((button) => {
+		button.addEventListener("click", () => {
+			const side = button.dataset.giftSide;
+			const detail = accounts[side];
+			if (!detail || !giftModal || !giftTitle || !giftList) return;
+			giftTitle.textContent = detail.title;
+			giftList.replaceChildren(...detail.rows.map(([name, account]) => {
+				const row = document.createElement("div");
+				const text = document.createElement("span");
+				text.textContent = `${name}  ${account}`;
+				const copy = document.createElement("button");
+				copy.type = "button";
+				copy.textContent = "복사";
+				copy.addEventListener("click", async () => { await navigator.clipboard.writeText(account); copy.textContent = "완료"; });
+				row.append(text, copy);
+				return row;
+			}));
+			giftModal.hidden = false;
+		});
+	});
+	document.querySelector(".gift-modal-close")?.addEventListener("click", closeGiftModal);
+	document.querySelector(".gift-modal-backdrop")?.addEventListener("click", closeGiftModal);
 	updatePager();
 
 	return;

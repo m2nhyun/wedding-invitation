@@ -79,12 +79,12 @@
 						<div class="contact JH">
 							<p>김명국 김정희의 아들</p>
 							<h2>김제현</h2>
-							<a href="#">마음 보내실 곳</a>
+							<button type="button" data-gift-side="groom">마음 보내실 곳</button>
 						</div>
 						<div class="contact YH">
 							<p>송두석 한정희의 딸</p>
 							<h2>송영현</h2>
-							<a href="#">마음 보내실 곳</a>
+							<button type="button" data-gift-side="bride">마음 보내실 곳</button>
 						</div>
 					</div>
 				</div>
@@ -116,6 +116,15 @@
 					<img id="glyph05" src="./assets/glyph05.svg" alt="" />
 					<img id="cats" src="./assets/11_20260511_6.jpg" alt="" />
 				</div>
+			</div>
+			<div class="gift-modal" hidden role="dialog" aria-modal="true" aria-labelledby="gift-modal-title">
+				<button class="gift-modal-backdrop" type="button" aria-label="닫기"></button>
+				<section class="gift-modal-panel">
+					<button class="gift-modal-close" type="button" aria-label="닫기">×</button>
+					<p>마음 보내실 곳</p>
+					<h2 id="gift-modal-title"></h2>
+					<div class="gift-account-list"></div>
+				</section>
 			</div>
 			<nav class="pager-controls" aria-label="슬라이드 이동">
 				<button

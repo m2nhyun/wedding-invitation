@@ -317,6 +317,7 @@ body .div2-2 { display: flex; min-height: 28%; flex: 0 0 28%; flex-direction: ro
 body .div2-2 .contact { flex: 1; justify-content: center; padding: 1rem .7rem 2.6rem; background: var(--BG); color: var(--olive); }
 body .div2-2 .contact + .contact { border-left: .4px solid rgb(from var(--olive) r g b / 60%); }
 body .div2-2 .contact a { position: absolute; bottom: 1rem; width: 100%; padding-bottom: .1em; text-decoration: underline; }
+body .div2-2 .contact button { position: absolute; bottom: 1rem; width: 100%; border: 0; background: transparent; color: inherit; font-size: 1.1em; text-decoration: underline; cursor: pointer; }
 body .div3 { height: 100%; align-items: stretch; }
 body .div3 .contact { justify-content: center; padding: 1.5rem .7rem 4.5rem; }
 body .div4 { height: 100%; justify-content: center; padding: 1rem; }
@@ -342,3 +343,13 @@ body .div6 #cats { width: 42%; max-height: 21vh; margin: 0 auto; object-fit: con
 .page-arrow::after { content: ""; display: inline-block; width: .55rem; height: .55rem; border-top: 1px solid currentColor; border-right: 1px solid currentColor; transform: rotate(45deg); }
 .page-arrow-previous::after { transform: rotate(-135deg); }
 .page-arrow:disabled { visibility: hidden; }
+.gift-modal[hidden] { display: none; }
+.gift-modal { position: fixed; inset: 0; z-index: 3000; display: flex; align-items: center; justify-content: center; padding: 1.4rem; }
+.gift-modal-backdrop { position: absolute; inset: 0; border: 0; background: rgb(55 54 43 / .34); }
+.gift-modal-panel { position: relative; z-index: 1; width: min(100%, 386px); padding: 1.5rem 1.1rem; border-radius: 12px; background: #f2f3f1; color: var(--olive); box-shadow: 0 1.2rem 3rem rgb(55 54 43 / .18); }
+.gift-modal-close { position: absolute; top: .65rem; right: .8rem; border: 0; background: transparent; color: inherit; font-size: 1.5rem; cursor: pointer; }
+.gift-modal-panel h2 { margin-bottom: 1rem; }
+.gift-account-list { display: flex; gap: .75rem; }
+.gift-account-list > div { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: .75rem; text-align: left; }
+.gift-account-list span { font-size: .9rem; text-align: left; }
+.gift-account-list button { flex: 0 0 auto; border: 1px solid rgb(from var(--olive) r g b / 40%); border-radius: 999px; background: transparent; padding: .35rem .55rem; color: inherit; cursor: pointer; }
