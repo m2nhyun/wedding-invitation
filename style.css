@@ -353,22 +353,25 @@ body .div1 #glyph01 {
   top: auto;
   transform: translateX(-50%);
 }
-body .div1-2 {
+body .div2 {
+  height: 100%;
+  padding: 0;
   justify-content: center;
   background: white;
 }
-body .div1-2 img {
+body .div2 img {
   width: 100%;
   max-height: 56vh;
   object-fit: cover;
   object-position: center;
 }
-body .div2 {
+body .div3 {
   height: 100%;
   padding: 0;
+  flex-direction: column;
   background: var(--BG);
 }
-body .div2-1 {
+body .div3-1 {
   min-height: calc(77% - 1em);
   flex: 1 1 auto;
   padding: clamp(1.7rem, 6vh, 3rem) 1rem;
@@ -376,39 +379,39 @@ body .div2-1 {
   background-size: cover;
   background-position: center;
 }
-body .div2-1 h2 {
+body .div3-1 h2 {
   margin-bottom: 1rem;
 }
-body .div2-1 a {
+body .div3-1 a {
   color: var(--olive);
   font-size: 1.1em;
   line-height: 1.85;
   text-decoration: underline;
 }
-body .div2-2 {
+body .div3-2 {
   display: flex;
   min-height: calc(23% + 1em);
   flex: 0 0 calc(23% + 1em);
   flex-direction: row;
 }
-body .div2-2 .contact {
+body .div3-2 .contact {
   flex: 1;
   justify-content: center;
   padding: 1.4rem 0.7rem 5.1rem;
   background: var(--BG);
   color: var(--olive);
 }
-body .div2-2 .contact + .contact {
+body .div3-2 .contact + .contact {
   border-left: 0.4px solid rgb(from var(--olive) r g b/60%);
 }
-body .div2-2 .contact a {
+body .div3-2 .contact a {
   position: static;
   margin-top: 0.6rem;
   width: 100%;
   padding-bottom: 0.1em;
   text-decoration: underline;
 }
-body .div2-2 .contact button {
+body .div3-2 .contact button {
   position: static;
   margin-top: 0.6rem;
   width: 100%;
