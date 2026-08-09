@@ -459,7 +459,7 @@ body {
 	}
 	.div1 #glyph01 {
 		position: absolute;
-		bottom: 3rem;
+		bottom: calc(5.25rem + env(safe-area-inset-bottom));
 		left: 50%;
 		margin: 0;
 		top: auto;
@@ -648,6 +648,10 @@ body {
 .page-arrow:disabled {
 	visibility: hidden;
 }
+.invitation-viewport > div > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity .7s var(--motion-ease), transform .7s var(--motion-ease); }
+.invitation-viewport > div.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
+.invitation-viewport > div.slide-visible > :nth-child(2) { transition-delay: .12s; }
+.invitation-viewport > div.slide-visible > :nth-child(3) { transition-delay: .24s; }
 .gift-modal[hidden] {
 	display: none;
 }
