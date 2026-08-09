@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const viewport = document.querySelector(".invitation-viewport");
 	if (!viewport) return;
 
-	const pages = Array.from(viewport.children);
+	const pages = Array.from(viewport.querySelectorAll(".pdf-slide"));
 	const dots = document.querySelector(".page-dots");
 	const previous = document.querySelector(".page-arrow-previous");
 	const next = document.querySelector(".page-arrow-next");
