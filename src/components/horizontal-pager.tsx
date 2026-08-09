@@ -19,6 +19,18 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
       setPage(Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1)));
     };
     const updatePageCount = () => setPageCount(viewport.children.length);
+    const slides = Array.from(
+      viewport.querySelectorAll<HTMLElement>(".invitation-slide"),
+    );
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("slide-visible");
+        });
+      },
+      { root: viewport, threshold: 0.55 },
+    );
+    slides.forEach((slide) => revealObserver.observe(slide));
     const onWheel = (event: WheelEvent) => {
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
       event.preventDefault();
@@ -45,6 +57,7 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
       window.removeEventListener("keydown", onKeyDown);
       viewport.removeEventListener("click", onTopButtonClick);
       window.removeEventListener("resize", updatePageCount);
+      revealObserver.disconnect();
     };
   }, []);
 

@@ -89,6 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 	document.querySelector(".gift-modal-close")?.addEventListener("click", closeGiftModal);
 	document.querySelector(".gift-modal-backdrop")?.addEventListener("click", closeGiftModal);
+	const revealObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) entry.target.classList.add("slide-visible");
+		});
+	}, { root: viewport, threshold: 0.55 });
+	pages.forEach((slide) => revealObserver.observe(slide));
 	updatePager();
 
 	return;
