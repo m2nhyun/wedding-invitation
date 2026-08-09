@@ -310,14 +310,14 @@ body .div1 #glyph01 { position: absolute; bottom: 3rem; left: 50%; margin: 0; to
 body .div1-2 { justify-content: center; background: white; }
 body .div1-2 img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
 body .div2 { height: 100%; padding: 0; background: var(--BG); }
-body .div2-1 { min-height: 72%; flex: 1 1 auto; padding: clamp(2.8rem, 10vh, 5rem) 1rem; background-image: url("./assets/2_13130012.jpg"); background-size: cover; background-position: center; }
+body .div2-1 { min-height: 77%; flex: 1 1 auto; padding: clamp(2.8rem, 10vh, 5rem) 1rem; background-image: url("./assets/2_13130012.jpg"); background-size: cover; background-position: center; }
 body .div2-1 h2 { margin-bottom: 1rem; }
 body .div2-1 a { color: var(--olive); font-size: 1.1em; line-height: 1.85; text-decoration: underline; }
-body .div2-2 { display: flex; min-height: 28%; flex: 0 0 28%; flex-direction: row; }
-body .div2-2 .contact { flex: 1; justify-content: center; padding: 1rem .7rem 2.6rem; background: var(--BG); color: var(--olive); }
+body .div2-2 { display: flex; min-height: 23%; flex: 0 0 23%; flex-direction: row; }
+body .div2-2 .contact { flex: 1; justify-content: flex-start; padding: .8rem .7rem 4.6rem; background: var(--BG); color: var(--olive); }
 body .div2-2 .contact + .contact { border-left: .4px solid rgb(from var(--olive) r g b / 60%); }
-body .div2-2 .contact a { position: absolute; bottom: 1rem; width: 100%; padding-bottom: .1em; text-decoration: underline; }
-body .div2-2 .contact button { position: absolute; bottom: 1rem; width: 100%; border: 0; background: transparent; color: inherit; font-size: 1.1em; text-decoration: underline; cursor: pointer; }
+body .div2-2 .contact a { position: absolute; bottom: 3.8rem; width: 100%; padding-bottom: .1em; text-decoration: underline; }
+body .div2-2 .contact button { position: absolute; bottom: 3.8rem; width: 100%; border: 0; background: transparent; color: inherit; font-size: 1.1em; text-decoration: underline; cursor: pointer; }
 body .div3 { height: 100%; align-items: stretch; }
 body .div3 .contact { justify-content: center; padding: 1.5rem .7rem 4.5rem; }
 body .div4 { height: 100%; justify-content: center; padding: 1rem; }

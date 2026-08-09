@@ -107,13 +107,14 @@ body {
 .intro-photo-slide img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
 
 .event-contact-slide { background: var(--BG); }
-.event-slide { display: flex; min-height: 72%; flex: 1 1 auto; flex-direction: column; justify-content: flex-start; padding: clamp(2.8rem, 10vh, 5rem) 1rem; background-size: cover; background-position: center; }
+.event-slide { display: flex; min-height: 77%; flex: 1 1 auto; flex-direction: column; justify-content: flex-start; padding: clamp(2.8rem, 10vh, 5rem) 1rem; background-size: cover; background-position: center; }
 .event-heading { margin-bottom: 1rem; font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; color: var(--olive); }
 .map-link { font-size: 1.1em; line-height: 1.85; color: var(--olive); text-decoration: underline; }
 .parking-note { display: none; }
 
-.contact-slide { display: flex; min-height: 28%; flex: 0 0 28%; flex-direction: row; align-items: stretch; background: var(--BG); }
-.contact-slide > div { justify-content: center; padding: 1rem .7rem 2.6rem; }
+.contact-slide { display: flex; min-height: 23%; flex: 0 0 23%; flex-direction: row; align-items: stretch; background: var(--BG); }
+.contact-slide > div { justify-content: flex-start; padding: .8rem .7rem 4.6rem; }
+.contact-slide > div button { bottom: 3.8rem; }
 .contact-slide h2 { font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; }
 
 .gallery-slide { padding: clamp(1rem, 4vh, 2.5rem) 1rem; }
