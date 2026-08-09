@@ -118,13 +118,10 @@ body {
 .contact-slide h2 { font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; }
 
 .gallery-slide { padding: clamp(1rem, 4vh, 2.5rem) 1rem; }
-.gallery-hero-slide { justify-content: center; background: white; }
-.gallery-hero-slide > img { width: 100%; max-height: 72vh; object-fit: contain; }
-.gallery-rings-slide { justify-content: center; background: white; }
-.gallery-rings-slide > div:first-child { height: 29vh; }
-.gallery-rings-slide > div:first-child img { top: 0; width: 50%; max-height: 29vh; object-fit: contain; }
-.gallery-rings-slide > div:nth-child(2) { width: 83%; }
-.gallery-rings-slide > div:nth-child(2) img { max-height: 48vh; object-fit: cover; }
+.gallery-combined-slide { justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); background: white; }
+.gallery-combined-slide .gallery-main { width: 100%; max-height: 31vh; object-fit: cover; }
+.gallery-combined-slide .gallery-hand { align-self: flex-end; width: 30%; max-height: 20vh; margin-right: 5%; object-fit: contain; }
+.gallery-combined-slide .gallery-portrait { width: 78%; max-height: 28vh; margin-left: 5%; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.85rem, 2.8vh, 1.8rem); background: var(--BG); }
 .gallery-grid-slide .div6-1 { max-height: 23vh; gap: 1rem; }
 .gallery-grid-slide > img { max-height: 19vh; object-fit: cover; }

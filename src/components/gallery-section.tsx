@@ -15,38 +15,17 @@ const [
 export function GallerySection() {
 	return (
 		<>
-			<section className="invitation-slide gallery-slide gallery-hero-slide">
+			<section className="invitation-slide gallery-slide gallery-combined-slide">
 				<Image
-					className="block h-auto w-full"
+					className="gallery-main"
 					src={wedding.assets.main}
 					alt=""
 					width={3089}
 					height={2048}
 					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
 				/>
-			</section>
-
-			<section className="invitation-slide gallery-slide gallery-rings-slide">
-				<div className="relative -mt-[1em] flex h-[12em] flex-col">
-					<Image
-						className="absolute right-0 block h-auto w-[40%] px-[1em]"
-						src={ringsPhoto}
-						alt=""
-						width={5354}
-						height={6634}
-						sizes="(max-width: 430px) 40vw, 172px"
-					/>
-				</div>
-				<div className="flex w-[83%] flex-col overflow-hidden">
-					<Image
-						className="mb-[2.5em] ml-[1em] block h-full w-full object-cover object-center"
-						src={landscapePhoto}
-						alt=""
-						width={2212}
-						height={1429}
-						sizes="(max-width: 430px) 83vw, 357px"
-					/>
-				</div>
+				<Image className="gallery-hand" src={ringsPhoto} alt="" width={5354} height={6634} sizes="(max-width: 430px) 30vw, 129px" />
+				<Image className="gallery-portrait" src={landscapePhoto} alt="" width={2212} height={1429} sizes="(max-width: 430px) 78vw, 335px" />
 			</section>
 
 			<section className="invitation-slide gallery-slide gallery-grid-slide">
