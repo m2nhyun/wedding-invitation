@@ -212,14 +212,11 @@ export function ContactSection() {
 				</div>
 			) : null}
 
-			<p
-				className={`pointer-events-none fixed bottom-12 left-1/2 z-[2100] w-max max-w-[calc(100%-2.64rem)] -translate-x-1/2 rounded-full bg-[rgba(55,54,43,0.84)] py-[0.616rem] px-[0.88rem] text-[0.88rem] leading-[1.7] text-white transition-[opacity,transform] duration-[180ms] ease-[ease] ${
-					toastMessage
-						? "translate-y-0 opacity-100"
-						: "translate-y-[0.44rem] opacity-0"
-				}`}>
-				{toastMessage}
-			</p>
+			{toastMessage ? (
+				<p className="pointer-events-none fixed bottom-12 left-1/2 z-[2100] w-max max-w-[calc(100%-2.64rem)] -translate-x-1/2 rounded-full bg-[rgba(55,54,43,0.84)] py-[0.616rem] px-[0.88rem] text-[0.88rem] leading-[1.7] text-white">
+					{toastMessage}
+				</p>
+			) : null}
 		</>
 	);
 }

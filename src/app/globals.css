@@ -144,10 +144,10 @@ body {
 .page-arrow-previous::after { transform: rotate(-135deg); }
 .page-arrow:disabled { visibility: hidden; }
 
-.invitation-slide > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity .7s var(--motion-ease), transform .7s var(--motion-ease); }
+.invitation-slide > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease); }
 .invitation-slide.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
-.invitation-slide.slide-visible > :nth-child(2) { transition-delay: .12s; }
-.invitation-slide.slide-visible > :nth-child(3) { transition-delay: .24s; }
+.invitation-slide.slide-visible > :nth-child(2) { transition-delay: .24s; }
+.invitation-slide.slide-visible > :nth-child(3) { transition-delay: .48s; }
 @media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div) { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {
