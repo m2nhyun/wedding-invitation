@@ -57,6 +57,11 @@ export default function RootLayout({
           href="https://bks0c7yrb0.execute-api.ap-northeast-2.amazonaws.com/v1/api/css/drop_fontstream_css/?sid=gAAAAABkxnFxeM_qWopEVVlR8coiZDz9q1FgQcINWnrSViPYGVG871sr6cKuYFz7pjoxmNeszFUTqBzTj23sdvTW7FmTCxgINZ9-Cju2mSEI8WHMbONbz5zFc0xhZFMGnnbGTYZLlM72fh7ai4lxT9DEAwv5941s56_lpsCoCk4LxGI6iY65WFLdtH3_Oyz2RybY70qtHL9CddZ0Bxv9U06CBm0P_tLugF5YlATEjVo6GsuSeHI5hCu5ejalyWj0qI0NvVOYXh-B"
           referrerPolicy="origin"
         />
+        <link
+          rel="stylesheet"
+          crossOrigin="anonymous"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
+        />
         <style
           dangerouslySetInnerHTML={{
             __html: `

@@ -261,10 +261,9 @@ body {
 	.div1 #glyph01 {
 		position: absolute;
 		bottom: calc(5.25rem + env(safe-area-inset-bottom));
-		left: 50%;
+		left: calc(50% - 1em);
 		margin: 0;
 		top: auto;
-		transform: translateX(-50%);
 	}
 	.div2 {
 		height: 100%;
@@ -354,6 +353,14 @@ body {
 		justify-content: center;
 		padding: 1.5rem 0.7rem 4.5rem;
 	}
+	.div3 :is(h2, p, a, button) {
+		font-family: "Pretendard", sans-serif;
+		font-weight: 400;
+	}
+	.div3 .contact h2 {
+		font-family: "Resonay-Text", "SD Jan", serif;
+		font-weight: 100;
+	}
 
 	.div4 {
 		height: 100%;
@@ -431,8 +438,8 @@ body {
 		object-fit: contain;
 	}
 	.div7 #img6-5 img {
-		width: 52%;
-		max-height: 20vh;
+		width: 47%;
+		max-height: 18vh;
 		object-fit: cover;
 	}
 	.div7 #img6-6 {
@@ -473,8 +480,7 @@ body {
 	isolation: isolate;
 	padding: 0.48rem 0.68rem;
 	border-radius: 999px;
-	background: rgb(255 255 255 / 0.5);
-	backdrop-filter: blur(5px);
+	background: transparent;
 	pointer-events: auto;
 }
 .page-dots button {
