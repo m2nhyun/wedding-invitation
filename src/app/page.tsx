@@ -11,8 +11,10 @@ export default function Page() {
       <HorizontalPager>
         <IntroSection />
         <IntroPhotoSlide />
-        <section className="invitation-slide event-contact-slide">
+        <section className="invitation-slide event-only-slide">
           <EventSection />
+        </section>
+        <section className="invitation-slide contact-only-slide">
           <ContactSection />
         </section>
         <GallerySection />

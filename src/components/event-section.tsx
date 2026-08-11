@@ -21,28 +21,27 @@ export function EventSection() {
 	};
 
 	return (
-		<section
-			className="event-slide"
-			style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }}>
+		<section className="event-slide">
+			<div
+				className="event-photo"
+				style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }}>
+				<a
+					className="map-link"
+					href={wedding.event.naverMapUrl}
+					onClick={openNaverMap}>
+					{wedding.event.naverMapLabel}
+				</a>
+				<a className="map-link" href={wedding.event.kakaoMapUrl}>
+					{wedding.event.kakaoMapLabel}
+				</a>
+			</div>
 			<h2 className="event-heading">
 				{wedding.event.date}
 				<br />
 				{wedding.event.time}
 				<br />
-				{wedding.event.venue}
+				{wedding.event.venue.replace(", ", " (")})
 			</h2>
-
-			<a
-				className="map-link"
-				href={wedding.event.naverMapUrl}
-				onClick={openNaverMap}>
-				{wedding.event.naverMapLabel}
-			</a>
-			<a
-				className="map-link"
-				href={wedding.event.kakaoMapUrl}>
-				{wedding.event.kakaoMapLabel}
-			</a>
 
 			<p className="parking-note">
 				{wedding.event.parking}
