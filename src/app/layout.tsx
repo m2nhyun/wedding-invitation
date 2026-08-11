@@ -64,7 +64,7 @@ export default function RootLayout({
                 font-family: "Resonay-Text";
                 src: url("${assetPath("/assets/Resonay-Text-Variable-Demo.ttf")}");
                 font-weight: 100;
-                size-adjust: 103%;
+                size-adjust: 102%;
               }
             `,
           }}

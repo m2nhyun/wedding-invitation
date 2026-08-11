@@ -13,7 +13,7 @@
 	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
-	size-adjust: 103%;
+	size-adjust: 102%;
 }
 
 // 기본 설정
@@ -71,66 +71,6 @@ body {
 	background: var(--bodyBG);
 	overflow-anchor: none;
 
-	// 텍스트 등장 전
-	h2.scroll-hidden,
-	p.scroll-hidden,
-	a.scroll-hidden {
-		opacity: 0;
-		transform: translateY(28px);
-
-		transition:
-			opacity 1.1s var(--motion-ease) var(--scroll-delay, 0ms),
-			transform 1.1s var(--motion-ease) var(--scroll-delay, 0ms);
-
-		will-change: opacity, transform;
-	}
-
-	// 일반 이미지 등장 전
-	img.scroll-hidden:not(.scroll-svg) {
-		opacity: 0;
-		transform: translateY(45px);
-
-		transition:
-			opacity 1.2s var(--motion-ease) var(--scroll-delay, 0ms),
-			transform 1.2s var(--motion-ease) var(--scroll-delay, 0ms);
-
-		will-change: opacity, transform;
-	}
-
-	// 텍스트 및 일반 이미지 등장 후
-	h2.scroll-hidden.show,
-	p.scroll-hidden.show,
-	a.scroll-hidden.show,
-	img.scroll-hidden:not(.scroll-svg).show {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	// SVG 장식 요소
-	.glyph-wrap {
-		animation: floatY 2.6s ease-out forwards;
-	}
-
-	.glyph-wrap img {
-		animation: sway 2.6s ease-in-out forwards;
-	}
-
-	img.scroll-svg {
-		opacity: 0;
-		transform: translateY(-18px);
-
-		transition:
-			opacity 2.1s cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-delay),
-			transform 2.1s cubic-bezier(0.22, 1, 0.36, 1) var(--scroll-delay);
-
-		will-change: opacity, transform;
-	}
-
-	img.scroll-svg.show {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
 	h2 {
 		font-size: 1.32em;
 		color: var(--olive);
@@ -176,33 +116,6 @@ body {
 		}
 	}
 
-	.div2 {
-		height: 38em;
-		padding: 2.6em 0;
-
-		background-image: url("./assets/2_13130012.jpg");
-		background-size: cover;
-		background-position: center;
-
-		h2 {
-			margin-bottom: 1rem;
-		}
-
-		a {
-			color: var(--olive);
-			line-height: 1.85;
-			text-decoration: underline;
-		}
-
-		#parking {
-			position: absolute;
-			bottom: 2.1em;
-
-			width: 100%;
-			color: white;
-		}
-	}
-
 	.div3 {
 		width: 100%;
 		height: 11.5em;
@@ -237,63 +150,6 @@ body {
 
 				text-decoration: underline;
 			}
-		}
-	}
-
-	.YH {
-		border-left: 0.4px solid rgb(from var(--olive) r g b / 60%);
-	}
-
-	.div4 {
-		width: 100%;
-		height: auto;
-		padding: 2.5em 1em;
-		background: white;
-	}
-
-	.div5 {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		background: white;
-
-		#rings {
-			height: 12em;
-			margin-top: -1em;
-
-			img {
-				position: absolute;
-				padding: 0 1em;
-				right: 0;
-				width: 40%;
-				height: auto;
-			}
-		}
-
-		// 첫 번째 이미지
-		> div:nth-child(2) {
-			overflow: hidden;
-			width: 83%;
-			img {
-				margin-left: 1em;
-				margin-bottom: 2.5em;
-				width: 100%;
-				height: 100%;
-
-				object-fit: cover;
-				object-position: center;
-			}
-		}
-
-		// 오리
-		#glyph04 {
-			width: 4.9em;
-
-			position: absolute;
-			top: -1.1em;
-			left: 1.7em;
-
-			z-index: 1000;
 		}
 	}
 
@@ -337,68 +193,12 @@ body {
 			}
 		}
 
-		#img6-4gif {
-			img {
-				width: 74%;
-			}
-		}
-
-		#img6-5 {
-			img {
-				display: block;
-
-				width: 68%;
-				margin-top: 1em;
-				margin-left: auto;
-			}
-		}
-
-		#img6-6 {
-			display: block;
-
-			width: 33%;
-			margin: 1em auto;
-		}
-
-		#glyph03 {
-			width: 1.8em;
-			margin: 1em auto;
-
-			transition: transform 0.2s ease;
-
-			&:active {
-				transform: scale(0.94);
-			}
-		}
-		#glyph05 {
-			width: 0.6em;
-			margin: 5em auto;
-		}
-		#cats {
-			width: 80%;
-			margin: 0 auto 15vh;
-		}
 	}
 }
 
 @media (max-width: 430px) {
 	html {
 		font-size: 3.8vw;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	body {
-		h2.scroll-hidden,
-		p.scroll-hidden,
-		a.scroll-hidden,
-		img.scroll-hidden,
-		img.scroll-svg {
-			opacity: 1;
-			transform: none;
-			transition: none;
-			animation: none;
-		}
 	}
 }
 
@@ -420,6 +220,7 @@ body {
 	}
 	.invitation-viewport {
 		display: flex;
+		flex-direction: row;
 		overflow-x: auto;
 		overflow-y: hidden;
 		scroll-snap-type: x mandatory;
@@ -443,7 +244,7 @@ body {
 		padding: 0 0.75rem;
 	}
 	.div1 h2 {
-		margin: 0 0 clamp(3.5rem, 9vh, 5.5rem);
+		margin: -1em 0 clamp(3rem, 6vh, 5rem);
 		padding: 0;
 		font-size: 1.386em;
 	}
@@ -554,17 +355,44 @@ body {
 		padding: 1.5rem 0.7rem 4.5rem;
 	}
 
-	.div4 { height: 100%; justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); padding: clamp(.55rem, 2vh, 1rem) .75rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-	.div4 .gallery-main { width: 100%; height: auto; max-height: 34vh; object-fit: contain; object-position: center; }
-	.div4 .gallery-hand { align-self: flex-end; width: 30%; max-height: 20vh; margin-right: 0; object-fit: contain; }
-	.div4 .gallery-portrait { align-self: flex-start; width: 84%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
+	.div4 {
+		height: 100%;
+		justify-content: flex-start;
+		gap: clamp(0.8rem, 2vh, 1.3rem);
+		padding: clamp(0.55rem, 2vh, 1rem) 0.75rem
+			calc(4.75rem + env(safe-area-inset-bottom));
+		background: white;
+	}
+	.div4 .gallery-main {
+		width: 100%;
+		height: auto;
+		max-height: 34vh;
+		object-fit: contain;
+		object-position: center;
+	}
+	.div4 .gallery-hand {
+		align-self: flex-end;
+		width: calc(36% + 0.75rem);
+		max-height: 24vh;
+		margin-right: -0.75rem;
+		object-fit: contain;
+	}
+	.div4 .gallery-portrait {
+		align-self: flex-start;
+		width: calc(84% + 0.75rem);
+		max-height: 31vh;
+		margin-left: -0.75rem;
+		object-fit: cover;
+		object-position: center;
+	}
 
 	.div6,
 	.div7,
 	.div8 {
 		height: 100%;
 		justify-content: center;
-		padding: max(0.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom));
+		padding: max(0.75rem, env(safe-area-inset-top)) 1rem
+			calc(4.75rem + env(safe-area-inset-bottom));
 		gap: clamp(0.45rem, 1.4vh, 0.8rem);
 		background: var(--BG);
 	}
@@ -670,6 +498,8 @@ body {
 	background: var(--olive);
 }
 .page-arrow {
+	display: grid;
+	place-items: center;
 	width: 2.7rem;
 	height: 2.7rem;
 	border: 0;
@@ -680,23 +510,36 @@ body {
 }
 .page-arrow::after {
 	content: "";
-	display: inline-block;
-	width: 0.55rem;
-	height: 0.55rem;
+	display: block;
+	width: 0.605rem;
+	height: 0.605rem;
 	border-top: 1px solid currentColor;
 	border-right: 1px solid currentColor;
-	transform: rotate(45deg);
+	transform: translateX(0.04rem) rotate(45deg);
 }
 .page-arrow-previous::after {
-	transform: rotate(-135deg);
+	transform: translateX(-0.04rem) rotate(-135deg);
 }
 .page-arrow:disabled {
 	visibility: hidden;
 }
-.invitation-viewport > div > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease); }
-.invitation-viewport > div.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
-.invitation-viewport > div.slide-visible > :nth-child(2) { transition-delay: .24s; }
-.invitation-viewport > div.slide-visible > :nth-child(3) { transition-delay: .48s; }
+.invitation-viewport > div > :is(h2, p, a, button, img, div) {
+	opacity: 0;
+	transform: translateY(1.25rem);
+	transition:
+		opacity 1.4s var(--motion-ease),
+		transform 1.4s var(--motion-ease);
+}
+.invitation-viewport > div.slide-visible > :is(h2, p, a, button, img, div) {
+	opacity: 1;
+	transform: translateY(0);
+}
+.invitation-viewport > div.slide-visible > :nth-child(2) {
+	transition-delay: 0.24s;
+}
+.invitation-viewport > div.slide-visible > :nth-child(3) {
+	transition-delay: 0.48s;
+}
 .gift-modal[hidden] {
 	display: none;
 }
