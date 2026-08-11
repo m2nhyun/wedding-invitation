@@ -1,550 +1,569 @@
 :root {
-  --olive: hsl(52, 18%, 35%);
-  --BG: hsl(76, 36%, 92%);
-  --bodyBG: #f7f7f7;
-  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+	--olive: hsl(52, 18%, 35%);
+	--BG: hsl(76, 36%, 92%);
+	--bodyBG: #f7f7f7;
+	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @font-face {
-  font-family: "Resonay-Text";
-  src: url("./assets/Resonay-Text-Variable-Demo.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-  size-adjust: 102%;
+	font-family: "Resonay-Text";
+	src: url("./assets/Resonay-Text-Variable-Demo.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+	size-adjust: 102%;
 }
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-decoration: none;
-  position: relative;
-  font-family: "Resonay-Text", "SD Jan", serif;
-  font-weight: 100;
-  word-break: keep-all;
-  text-align: center;
-  touch-action: pan-y;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+	position: relative;
+	font-family: "Resonay-Text", "SD Jan", serif;
+	font-weight: 100;
+	word-break: keep-all;
+	text-align: center;
+	touch-action: pan-y;
 }
 
 a,
 a:link,
 a:visited {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
 }
 
 html {
-  width: 100%;
-  min-height: 100%;
-  font-size: 16px;
-  letter-spacing: 0.05em;
-  overflow-anchor: none;
+	width: 100%;
+	min-height: 100%;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	overflow-anchor: none;
 }
 
 body {
-  max-width: 430px;
-  margin: 0 auto;
-  background: var(--bodyBG);
-  overflow-anchor: none;
+	max-width: 430px;
+	margin: 0 auto;
+	background: var(--bodyBG);
+	overflow-anchor: none;
 }
 body h2 {
-  font-size: 1.32em;
-  color: var(--olive);
-  letter-spacing: 0.1em;
-  line-height: 1.75;
+	font-size: 1.32em;
+	color: var(--olive);
+	letter-spacing: 0.1em;
+	line-height: 1.75;
 }
 body p {
-  font-size: 1.15em;
-  color: var(--olive);
-  line-height: 1.7;
+	font-size: 1.15em;
+	color: var(--olive);
+	line-height: 1.7;
 }
 body a {
-  font-size: 1.1em;
+	font-size: 1.1em;
 }
 body div {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 body .div1 {
-  background-color: var(--BG);
+	background-color: var(--BG);
 }
 body .div1 h2 {
-  padding: 4em 0;
+	padding: 4em 0;
 }
 body .div1 p {
-  margin: 2.5em 0 7em;
+	margin: 2.5em 0 7em;
 }
 body .div1 #glyph01 {
-  width: 2em;
-  height: auto;
-  position: relative;
-  margin: 0 auto;
-  top: -3.9em;
-  z-index: 1000;
+	width: 2em;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	top: -3.9em;
+	z-index: 1000;
 }
 body .div3 {
-  width: 100%;
-  height: 11.5em;
-  flex-direction: row;
+	width: 100%;
+	height: 11.5em;
+	flex-direction: row;
 }
 body .div3 .contact {
-  flex: 1;
-  display: flex;
-  gap: 0.4em;
-  padding: 1.8em 0;
-  background: var(--BG);
-  color: var(--olive);
+	flex: 1;
+	display: flex;
+	gap: 0.4em;
+	padding: 1.8em 0;
+	background: var(--BG);
+	color: var(--olive);
 }
 body .div3 .contact a {
-  position: absolute;
-  bottom: 1.7em;
-  width: 100%;
-  padding-bottom: 0.1em;
-  text-decoration: underline;
+	position: absolute;
+	bottom: 1.7em;
+	width: 100%;
+	padding-bottom: 0.1em;
+	text-decoration: underline;
 }
-body .div6 {
-  width: 100%;
-  padding: 2.5em 1em;
-  gap: 2.5em;
-  background: var(--BG);
+body .div5 {
+	width: 100%;
+	padding: 2.5em 1em;
+	gap: 2.5em;
+	background: var(--BG);
 }
-body .div6 .div6-1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  gap: 2em;
+body .div5 .div5-1 {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	width: 100%;
+	gap: 2em;
 }
-body .div6 .div6-1 > div {
-  min-width: 0;
-  height: 100%;
+body .div5 .div5-1 > div {
+	min-width: 0;
+	height: 100%;
 }
-body .div6 .div6-1 > div:first-child {
-  flex: 0 0 30%;
-  margin-right: 0.5em;
+body .div5 .div5-1 > div:first-child {
+	flex: 0 0 30%;
+	margin-right: 0.5em;
 }
-body .div6 .div6-1 > div:last-child {
-  flex: 1;
+body .div5 .div5-1 > div:last-child {
+	flex: 1;
 }
-body .div6 .div6-1 img {
-  display: block;
-  min-width: 0;
-  height: auto;
-  object-fit: cover;
+body .div5 .div5-1 img {
+	display: block;
+	min-width: 0;
+	height: auto;
+	object-fit: cover;
 }
 @media (max-width: 430px) {
-  html {
-    font-size: 3.8vw;
-  }
+	html {
+		font-size: 3.8vw;
+	}
 }
 html,
 body {
-  height: 100%;
-  overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
 
 body .invitation,
 body .invitation-viewport {
-  height: 100%;
+	height: 100%;
 }
 body .invitation {
-  position: relative;
+	position: relative;
 }
 body .invitation-viewport {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  touch-action: pan-x;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	touch-action: pan-x;
+	cursor: grab;
+	-webkit-overflow-scrolling: touch;
 }
 body .invitation-viewport > div {
-  min-width: 100%;
-  height: 100%;
-  flex: 0 0 100%;
-  overflow: hidden;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+	min-width: 100%;
+	height: 100%;
+	flex: 0 0 100%;
+	overflow: hidden;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
 }
 body .div1 {
-  justify-content: center;
-  padding: 0 0.75rem;
+	justify-content: center;
+	padding: 0 0.75rem;
 }
 body .div1 h2 {
-  margin: -1em 0 clamp(3rem, 6vh, 5rem);
-  padding: 0;
-  font-size: 1.386em;
+	margin: -1em 0 clamp(3rem, 6vh, 5rem);
+	padding: 0;
+	font-size: 1.386em;
 }
 body .div1 > img:not(#glyph01) {
-  max-height: 31vh;
-  object-fit: cover;
+	max-height: 31vh;
+	object-fit: cover;
 }
 body .div1 p {
-  width: min(100%, 100vw - 1.5rem);
-  margin: 0 auto;
-  font-size: clamp(1rem, 4.15vw, 1.15rem);
-  line-height: 1.73;
+	width: min(100%, 100vw - 1.5rem);
+	margin: 0 auto;
+	font-size: clamp(1rem, 4.15vw, 1.15rem);
+	line-height: 1.73;
+}
+body .div1 :is(h2, p) {
+	position: relative;
+	top: -0.5em;
 }
 body .div1 #glyph01 {
-  position: absolute;
-  bottom: calc(6rem + env(safe-area-inset-bottom));
-  left: calc(50% - 1em);
-  margin: 0;
-  top: auto;
+	position: absolute;
+	bottom: calc(6rem + env(safe-area-inset-bottom));
+	left: calc(50% - 1em);
+	margin: 0;
+	top: auto;
 }
 body .div2 {
-  height: 100%;
-  padding: 0;
-  justify-content: center;
-  background: white;
+	height: 100%;
+	padding: 0;
+	justify-content: center;
+	background: white;
 }
 body .div2 img {
-  width: 100%;
-  max-height: 56vh;
-  object-fit: cover;
-  object-position: center;
+	width: 100%;
+	max-height: 56vh;
+	object-fit: cover;
+	object-position: center;
 }
 body .div3 {
-  height: 100%;
-  padding: clamp(1.5rem, 4vh, 2.5rem) 1.5rem calc(4.75rem + env(safe-area-inset-bottom));
-  flex-direction: column;
-  background: white;
+	height: 100%;
+	padding: max(0.75rem, env(safe-area-inset-top)) 1.5rem
+		calc(3.75rem + env(safe-area-inset-bottom));
+	flex-direction: column;
+	background: white;
 }
 body .div3-1 {
-  flex: 1 1 auto;
-  justify-content: flex-end;
-  min-height: 0;
-  padding: 0 1rem clamp(2rem, 6vh, 3rem);
-  background-image: url("./assets/2_13130012.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
+	flex: 1 1 auto;
+	justify-content: flex-end;
+	min-height: 0;
+	padding: 0 1rem clamp(2rem, 6vh, 3rem);
+	background-image: url("./assets/2_13130012.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
 }
 body .div3-1 a {
-  position: relative;
-  top: 0.7em;
-  color: white;
+	position: relative;
+	top: 0.7em;
+	color: white;
+	text-decoration: underline;
 }
 body .div3 > .event-heading {
-  flex: 0 0 auto;
-  margin: 0;
-  padding: clamp(1.6rem, 4vh, 2.25rem) 0 0.5rem;
+	flex: 0 0 auto;
+	margin: 0;
+	padding: clamp(1.6rem, 4vh, 2.25rem) 0 0.5rem;
 }
 body .div3 :is(.event-heading, a) {
-  font-size: clamp(1rem, 4.15vw, 1.15rem);
-  line-height: 1.73;
-  letter-spacing: 0.05em;
+	font-size: clamp(1rem, 4.15vw, 1.15rem);
+	line-height: 1.73;
+	letter-spacing: 0.05em;
+}
+.lowered-digits {
+	display: inline-block;
+	transform: translateY(0.15em);
 }
 body .div3-contact {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  gap: 1px;
-  padding: clamp(2.5rem, 8vh, 4rem) 1.5rem calc(4.75rem + env(safe-area-inset-bottom));
-  background: white;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	gap: 0.6rem;
+	padding: clamp(2rem, 5vh, 2.75rem) 1.5rem
+		calc(4.25rem + env(safe-area-inset-bottom));
+	background: white;
 }
 body .div3-contact .contact {
-  flex: 1 1 50%;
-  justify-content: center;
-  gap: 0.55rem;
-  padding: 1rem;
-  background: var(--BG);
-  color: var(--olive);
+	flex: 1 1 50%;
+	justify-content: center;
+	gap: 0.55rem;
+	padding: 1rem;
+	background: var(--BG);
+	color: var(--olive);
 }
 body .div3-contact .contact button {
-  position: static;
-  margin-top: clamp(1.35rem, 3vh, 2rem);
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font-size: 1.1em;
-  text-decoration: underline;
-  cursor: pointer;
+	position: static;
+	margin-top: clamp(1.35rem, 3vh, 2rem);
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font-size: 1.1em;
+	text-decoration: underline;
+	cursor: pointer;
 }
 body .div4 {
-  height: 100%;
-  justify-content: flex-start;
-  gap: clamp(0.8rem, 2vh, 1.3rem);
-  padding: clamp(0.55rem, 2vh, 1rem) 0.75rem calc(4.75rem + env(safe-area-inset-bottom));
-  background: white;
+	height: 100%;
+	justify-content: flex-start;
+	gap: clamp(0.8rem, 2vh, 1.3rem);
+	padding: clamp(0.55rem, 2vh, 1rem) 0.75rem
+		calc(4.75rem + env(safe-area-inset-bottom));
+	background: white;
 }
 body .div4 .gallery-main {
-  width: calc(100% + 1.5rem);
-  height: auto;
-  margin-left: -0.75rem;
-  max-height: 34vh;
-  object-fit: contain;
-  object-position: center;
+	width: 100%;
+	height: auto;
+	max-height: 34vh;
+	object-fit: contain;
+	object-position: center;
 }
 body .div4 .gallery-hand {
-  flex-shrink: 0;
-  align-self: flex-end;
-  width: calc(45% + 0.75rem);
-  max-height: 28vh;
-  margin-right: 0;
-  object-fit: contain;
+	flex-shrink: 0;
+	align-self: flex-end;
+	width: 45%;
+	max-height: 28vh;
+	margin-right: 0;
+	object-fit: contain;
 }
 body .div4 .gallery-portrait {
-  align-self: flex-start;
-  width: calc(84% + 0.75rem);
-  max-height: 31vh;
-  margin-left: 0;
-  object-fit: cover;
-  object-position: center;
+	align-self: flex-start;
+	width: 84%;
+	max-height: 31vh;
+	margin-left: 0;
+	object-fit: cover;
+	object-position: center;
 }
-body .div6,
+body .div5,
 body .div7,
 body .div8 {
-  height: 100%;
-  justify-content: center;
-  padding: max(0.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom));
-  gap: clamp(0.45rem, 1.4vh, 0.8rem);
-  background: var(--BG);
+	height: 100%;
+	justify-content: center;
+	padding: max(0.75rem, env(safe-area-inset-top)) 1rem
+		calc(4.75rem + env(safe-area-inset-bottom));
+	gap: clamp(0.45rem, 1.4vh, 0.8rem);
+	background: var(--BG);
 }
-body .div6 {
-  justify-content: space-between;
+body .div5 {
+	justify-content: space-between;
 }
-body .div6 .div6-1 {
-  flex: 0 0 30vh;
-  height: 30vh;
-  max-height: none;
-  gap: 0.75rem;
+body .div5 .div5-1 {
+	flex: 0 0 30vh;
+	height: 40vh;
+	max-height: none;
 }
-body .div6 .div6-1 img {
-  height: 100%;
-  object-fit: contain;
+body .div5 .div5-1 img {
+	height: 100%;
+	object-fit: contain;
+	object-position: top center;
 }
-body .div6 > img {
-  align-self: stretch;
-  max-height: 27vh;
-  object-fit: cover;
+body .div5 > img {
+	align-self: stretch;
+	object-fit: cover;
 }
 body .div7 {
-  justify-content: flex-start;
-  gap: clamp(0.22rem, 0.7vh, 0.4rem);
-  padding-top: max(0.45rem, env(safe-area-inset-top));
+	justify-content: flex-start;
+	gap: clamp(0.22rem, 0.7vh, 0.4rem);
+	padding-top: max(0.45rem, env(safe-area-inset-top));
 }
 body .div7 #img6-5 {
-  margin-top: 0.2rem !important;
+	margin-top: 0.2rem !important;
 }
 body .div7 #img6-6 {
-  margin: 0.2rem auto 0 !important;
+	margin: 0.2rem auto 0 !important;
 }
 body .div7 #img6-4gif img {
-  width: 56%;
-  max-height: 25vh;
-  object-fit: contain;
+	width: 74%;
+	height: auto;
+	object-fit: contain;
 }
 body .div7 #img6-5 img {
-  width: 47%;
-  max-height: 18vh;
-  object-fit: cover;
+	display: block;
+	width: 68%;
+	height: auto;
+	margin-left: auto;
+	object-fit: cover;
 }
 body .div7 #img6-6 {
-  width: 20%;
-  margin: 0 auto;
+	width: 33%;
+	margin: 0 auto;
+}
+body .div7 #img6-6 img {
+	width: 100%;
+	height: auto;
 }
 body .div7 #glyph03,
 body .div7 #glyph05 {
-  display: none;
+	display: none;
 }
 body .div8 #cats {
-  position: relative;
-  top: 1em;
-  width: min(56%, 15rem);
-  max-height: 56vh;
-  margin: 0 auto;
-  object-fit: contain;
+	position: relative;
+	top: 1em;
+	width: min(56%, 15rem);
+	max-height: 56vh;
+	margin: 0 auto;
+	object-fit: contain;
 }
 
 .pager-controls {
-  position: fixed;
-  right: 0;
-  bottom: max(1rem, env(safe-area-inset-bottom));
-  left: 0;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.9rem;
-  pointer-events: auto;
+	position: fixed;
+	right: 0;
+	bottom: max(1rem, env(safe-area-inset-bottom));
+	left: 0;
+	z-index: 20;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.9rem;
+	pointer-events: auto;
 }
 
 .page-dots {
-  display: flex;
-  flex-direction: row;
-  gap: 0.42rem;
-  overflow: hidden;
-  isolation: isolate;
-  padding: 0.48rem 0.68rem;
-  border-radius: 999px;
-  background: transparent;
-  pointer-events: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 0.42rem;
+	overflow: hidden;
+	isolation: isolate;
+	padding: 0.48rem 0.68rem;
+	border-radius: 999px;
+	background: transparent;
+	pointer-events: auto;
 }
 
 .page-dots button {
-  display: block;
-  flex: 0 0 0.38rem;
-  width: 0.38rem;
-  min-width: 0;
-  height: 0.38rem;
-  min-height: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  appearance: none;
-  -webkit-appearance: none;
-  background: rgb(from var(--olive) r g b/0.32);
-  box-shadow: none;
-  line-height: 1;
+	display: block;
+	flex: 0 0 0.38rem;
+	width: 0.38rem;
+	min-width: 0;
+	height: 0.38rem;
+	min-height: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	appearance: none;
+	-webkit-appearance: none;
+	background: rgb(from var(--olive) r g b/0.32);
+	box-shadow: none;
+	line-height: 1;
 }
 
 .page-dots button.is-active {
-  transform: none;
-  background: var(--olive);
+	transform: none;
+	background: var(--olive);
 }
 
 .page-arrow {
-  display: grid;
-  place-items: center;
-  width: 2.7rem;
-  height: 2.7rem;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--olive);
-  pointer-events: auto;
+	display: grid;
+	place-items: center;
+	width: 2.7rem;
+	height: 2.7rem;
+	border: 0;
+	border-radius: 50%;
+	background: transparent;
+	color: var(--olive);
+	pointer-events: auto;
 }
 
 .page-arrow::after {
-  content: "";
-  display: block;
-  width: 0.605rem;
-  height: 0.605rem;
-  border-top: 1px solid currentColor;
-  border-right: 1px solid currentColor;
-  transform: translateX(0.04rem) rotate(45deg);
+	content: "";
+	display: block;
+	width: 0.605rem;
+	height: 0.605rem;
+	border-top: 1px solid currentColor;
+	border-right: 1px solid currentColor;
+	transform: translateX(0.04rem) rotate(45deg);
 }
 
 .page-arrow-previous::after {
-  transform: translateX(-0.04rem) rotate(-135deg);
+	transform: translateX(-0.04rem) rotate(-135deg);
 }
 
 .page-arrow:disabled {
-  visibility: hidden;
+	visibility: hidden;
 }
 @media (max-width: 430px) {
-  .page-arrow {
-    display: none;
-  }
+	.page-arrow {
+		display: none;
+	}
 }
 
 .invitation-viewport > div > :is(h2, p, a, button, img, div) {
-  opacity: 0;
-  transform: translateY(1.25rem);
-  transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease);
+	opacity: 0;
+	transform: translateY(1.25rem);
+	transition:
+		opacity 1.4s var(--motion-ease),
+		transform 1.4s var(--motion-ease);
 }
 
 .invitation-viewport > div.slide-visible > :is(h2, p, a, button, img, div) {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .invitation-viewport > div.slide-visible > :nth-child(2) {
-  transition-delay: 0.24s;
+	transition-delay: 0.24s;
 }
 
 .invitation-viewport > div.slide-visible > :nth-child(3) {
-  transition-delay: 0.48s;
+	transition-delay: 0.48s;
 }
 
 .gift-modal[hidden] {
-  display: none;
+	display: none;
 }
 
 .gift-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 3000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.4rem;
+	position: fixed;
+	inset: 0;
+	z-index: 3000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.4rem;
 }
 
 .gift-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  border: 0;
-  background: rgba(55, 54, 43, 0.34);
+	position: absolute;
+	inset: 0;
+	border: 0;
+	background: rgba(55, 54, 43, 0.34);
 }
 
 .gift-modal-panel {
-  position: relative;
-  z-index: 1;
-  width: min(100%, 386px);
-  padding: 1.5rem 1.1rem;
-  border-radius: 12px;
-  background: #f2f3f1;
-  color: var(--olive);
-  box-shadow: 0 1.2rem 3rem rgba(55, 54, 43, 0.18);
+	position: relative;
+	z-index: 1;
+	width: min(100%, 386px);
+	padding: 1.5rem 1.1rem;
+	border-radius: 12px;
+	background: #f2f3f1;
+	color: var(--olive);
+	box-shadow: 0 1.2rem 3rem rgba(55, 54, 43, 0.18);
 }
 
 .gift-modal-close {
-  position: absolute;
-  top: 0.65rem;
-  right: 0.8rem;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font-size: 1.5rem;
-  cursor: pointer;
+	position: absolute;
+	top: 0.65rem;
+	right: 0.8rem;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font-size: 1.5rem;
+	cursor: pointer;
 }
 
 .gift-modal-panel h2 {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .gift-account-list {
-  display: flex;
-  gap: 0.75rem;
+	display: flex;
+	gap: 0.75rem;
 }
 
 .gift-account-list > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  text-align: left;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	text-align: left;
 }
 
 .gift-account-list span {
-  font-size: 0.9rem;
-  text-align: left;
+	font-size: 0.9rem;
+	text-align: left;
 }
 
 .gift-account-list button {
-  flex: 0 0 auto;
-  border: 1px solid rgb(from var(--olive) r g b/40%);
-  border-radius: 999px;
-  background: transparent;
-  padding: 0.35rem 0.55rem;
-  color: inherit;
-  cursor: pointer;
+	flex: 0 0 auto;
+	border: 1px solid rgb(from var(--olive) r g b/40%);
+	border-radius: 999px;
+	background: transparent;
+	padding: 0.35rem 0.55rem;
+	color: inherit;
+	cursor: pointer;
 }

@@ -2,6 +2,17 @@
 
 import { wedding } from "@/data/wedding";
 
+const lowerDigits = (text: string) =>
+	text.split(/(\d+)/).map((part, index) =>
+		/^\d+$/.test(part) ? (
+			<span className="lowered-digits" key={`${part}-${index}`}>
+				{part}
+			</span>
+		) : (
+			part
+		),
+	);
+
 export function EventSection() {
 	const openNaverMap = (event: React.MouseEvent<HTMLAnchorElement>) => {
 		const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -36,11 +47,11 @@ export function EventSection() {
 				</a>
 			</div>
 			<h2 className="event-heading">
-				{wedding.event.date}
+				{lowerDigits(wedding.event.date)}
 				<br />
-				{wedding.event.time}
+				{lowerDigits(wedding.event.time)}
 				<br />
-				{wedding.event.venue.replace(", ", " (")})
+				{lowerDigits(`${wedding.event.venue.replace(", ", " (")})`)}
 			</h2>
 
 			<p className="parking-note">
