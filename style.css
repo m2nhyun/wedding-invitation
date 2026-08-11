@@ -339,7 +339,12 @@ body .div5 .div5-1 {
 body .div5 .div5-1 img {
 	height: 100%;
 	object-fit: contain;
-	object-position: top center;
+}
+body .div5 .div5-1 > div:first-child img {
+	object-position: left top;
+}
+body .div5 .div5-1 > div:last-child img {
+	object-position: right top;
 }
 body .div5 > img {
 	align-self: stretch;
