@@ -2,17 +2,6 @@
 
 import { wedding } from "@/data/wedding";
 
-const lowerDigits = (text: string) =>
-	text.split(/(\d+)/).map((part, index) =>
-		/^\d+$/.test(part) ? (
-			<span className="lowered-digits" key={`${part}-${index}`}>
-				{part}
-			</span>
-		) : (
-			part
-		),
-	);
-
 export function EventSection() {
 	const openNaverMap = (event: React.MouseEvent<HTMLAnchorElement>) => {
 		const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -33,9 +22,18 @@ export function EventSection() {
 
 	return (
 		<section className="event-slide">
+			<h2 className="event-heading event-date">
+				{wedding.event.date}
+				<br />
+				{wedding.event.time}
+			</h2>
 			<div
 				className="event-photo"
-				style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }}>
+				style={{ backgroundImage: `url("${wedding.assets.eventBackground}")` }} />
+			<div className="event-details">
+				<h2 className="event-heading event-location">
+					{`${wedding.event.venue.replace(", ", "(")})`}
+				</h2>
 				<a
 					className="map-link"
 					href={wedding.event.naverMapUrl}
@@ -46,13 +44,6 @@ export function EventSection() {
 					{wedding.event.kakaoMapLabel}
 				</a>
 			</div>
-			<h2 className="event-heading">
-				{lowerDigits(wedding.event.date)}
-				<br />
-				{lowerDigits(wedding.event.time)}
-				<br />
-				{lowerDigits(`${wedding.event.venue.replace(", ", " (")})`)}
-			</h2>
 
 			<p className="parking-note">
 				{wedding.event.parking}

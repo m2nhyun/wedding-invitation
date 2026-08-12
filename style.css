@@ -12,7 +12,9 @@
 	font-style: normal;
 	font-display: swap;
 	size-adjust: 102%;
+	transform: translateY(0.2em);
 }
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -231,35 +233,43 @@ body .div3 {
 	background: white;
 }
 body .div3-1 {
-	flex: 1 1 auto;
-	justify-content: flex-end;
+	flex: 0 1 48vh;
+	height: 48vh;
+	max-height: 23rem;
 	min-height: 0;
-	padding: 0 1rem clamp(2rem, 6vh, 3rem);
 	background-image: url("./assets/2_13130012.jpg");
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: center bottom;
+	background-position: center;
 }
-body .div3-1 a {
-	position: relative;
-	top: 0.7em;
-	color: white;
+body .div3 .event-date {
+	padding: clamp(0.6rem, 2vh, 1rem) 0 clamp(0.8rem, 2.5vh, 1.25rem);
+}
+body .div3 .event-details {
+	flex: 0 0 auto;
+	align-items: center;
+	padding: clamp(0.8rem, 2.5vh, 1.25rem) 0 0.25rem;
+}
+body .div3 .event-location {
+	padding-bottom: 0.35rem;
+}
+body .div3 .event-details a {
+	color: var(--olive);
+	font-size: clamp(1rem, 4.15vw, 1.15rem);
+	line-height: 1.73;
+	letter-spacing: 0.05em;
 	text-decoration: underline;
 }
 body .div3 > .event-heading {
 	flex: 0 0 auto;
 	margin: 0;
-	padding: clamp(1.6rem, 4vh, 2.25rem) 0 0.5rem;
 }
 body .div3 :is(.event-heading, a) {
 	font-size: clamp(1rem, 4.15vw, 1.15rem);
 	line-height: 1.73;
 	letter-spacing: 0.05em;
 }
-.lowered-digits {
-	display: inline-block;
-	transform: translateY(0.15em);
-}
+
 body .div3-contact {
 	display: flex;
 	height: 100%;
@@ -396,9 +406,10 @@ body .div8 #cats {
 
 .pager-controls {
 	position: fixed;
-	right: 0;
 	bottom: max(1rem, env(safe-area-inset-bottom));
-	left: 0;
+	left: 50%;
+	width: min(100%, 430px);
+	transform: translateX(-50%);
 	z-index: 20;
 	display: flex;
 	align-items: center;
@@ -431,6 +442,7 @@ body .div8 #cats {
 	border-radius: 999px;
 	appearance: none;
 	-webkit-appearance: none;
+	background: rgba(106, 102, 73, 0.32);
 	background: rgb(from var(--olive) r g b/0.32);
 	box-shadow: none;
 	line-height: 1;
@@ -470,7 +482,7 @@ body .div8 #cats {
 .page-arrow:disabled {
 	visibility: hidden;
 }
-@media (max-width: 430px) {
+@media (hover: none) and (pointer: coarse) {
 	.page-arrow {
 		display: none;
 	}
