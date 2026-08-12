@@ -230,10 +230,11 @@ body .div2 img {
 body .div3 {
 	height: 100%;
 	display: grid;
-	grid-template-rows: minmax(0, 1fr) min(40vh, 21rem) minmax(0, 1fr);
+	grid-template-rows: minmax(0, 1fr) min(44vh, 23.1rem) minmax(0, 1fr);
 	padding: max(0.75rem, env(safe-area-inset-top)) 1.5rem
 		calc(4.75rem + env(safe-area-inset-bottom));
 	background: white;
+	top: 1rem;
 }
 body .div3-1 {
 	grid-row: 2;
