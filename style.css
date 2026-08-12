@@ -226,9 +226,13 @@ body .div2 img {
 	object-position: center;
 }
 body .div3 {
+	--event-photo-height: min(44vh, 23rem);
 	height: 100%;
 	display: grid;
-	grid-template-rows: minmax(0, 1fr) min(44vh, 23rem) minmax(0, 1fr);
+	grid-template-rows:
+		max(0px, calc((100% - var(--event-photo-height)) / 2 - 1em))
+		var(--event-photo-height)
+		max(0px, calc((100% - var(--event-photo-height)) / 2 + 1em));
 	padding: max(0.75rem, env(safe-area-inset-top)) 1.5rem
 		max(0.75rem, env(safe-area-inset-bottom));
 	background: white;
@@ -243,14 +247,14 @@ body .div3-1 {
 	background-position: center;
 }
 body .div3 .event-date {
-	align-self: end;
-	padding: 0 0 clamp(0.8rem, 2.5vh, 1.25rem);
+	align-self: center;
+	padding: 0;
 }
 body .div3 .event-details {
 	flex-direction: column;
 	align-items: center;
-	align-self: start;
-	padding: clamp(0.8rem, 2.5vh, 1.25rem) 0 0;
+	align-self: center;
+	padding: 0;
 }
 body .div3 .event-location {
 	padding-bottom: 0.35rem;
