@@ -111,12 +111,18 @@ body {
 .intro-map-links { flex-direction: row; align-items: center; gap: .35em; }
 .intro-map-links a { text-decoration: underline; }
 
-.event-contact-slide { flex-direction: column; gap: clamp(.8rem, 2vh, 1.1rem); padding: clamp(1.25rem, 3vh, 2rem) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.event-photo { display: flex; min-height: 0; flex: 1 1 auto; align-items: center; justify-content: center; }
+.event-only-slide { padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
+.event-slide { display: grid; min-height: 0; flex: 1 1 auto; grid-template-rows: minmax(0, 1fr) min(44vh, 23rem) minmax(0, 1fr); }
+.event-photo { grid-row: 2; display: flex; min-height: 0; align-items: center; justify-content: center; }
 .event-photo img { width: 100%; height: 100%; object-fit: contain; }
-.contact-slide { display: flex; min-height: 0; flex: 0 0 min(29vh, 15rem); flex-direction: row; gap: .6rem; background: white; }
+.event-details { grid-row: 3; align-items: center; align-self: center; color: var(--olive); }
+.event-heading, .map-link, .event-map-links { font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
+.event-map-links { flex-direction: row; align-items: center; gap: .35em; }
+.map-link { text-decoration: underline; }
+.contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) 1.5rem calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
+.contact-slide { display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
 .contact-slide > div { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: var(--BG); }
-.event-contact-slide .contact-slide > div { background: #f7f7f7; }
+.contact-slide > div { background: #f7f7f7; }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
 .contact-slide h2 { font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; }
 
