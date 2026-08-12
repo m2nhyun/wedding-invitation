@@ -1,7 +1,6 @@
 :root {
 	--olive: hsl(52, 18%, 35%);
 	--BG: hsl(76, 36%, 92%);
-	--bodyBG: #f7f7f7;
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -63,7 +62,7 @@ html {
 body {
 	max-width: 430px;
 	margin: 0 auto;
-	background: var(--bodyBG);
+	background: #f7f7f7;
 	overflow-anchor: none;
 }
 body h2 {
@@ -272,6 +271,7 @@ body
 	:is(
 		.event-date-details p,
 		.event-heading,
+		.event-details p,
 		.event-details a,
 		.event-date-details a,
 		.event-map-links
@@ -334,14 +334,14 @@ body .div-img1 .gallery-main {
 body .div-img1 .gallery-hand {
 	flex-shrink: 0;
 	align-self: flex-end;
-	width: 45%;
-	max-height: 28vh;
+	width: 38%;
+	max-height: 22vh;
 	margin-right: 0;
 	object-fit: contain;
 }
 body .div-img1 .gallery-portrait {
 	align-self: flex-start;
-	width: 84%;
+	width: 70%;
 	max-height: 31vh;
 	margin-left: 0;
 	object-fit: cover;
@@ -379,6 +379,8 @@ body .div-img2 .div-img2-1 > div:first-child img {
 }
 body .div-img2 .div-img2-1 > div:last-child img {
 	object-position: right top;
+	scale: 1.12;
+	transform-origin: right top;
 }
 body .div-img2 > img {
 	align-self: stretch;
@@ -386,7 +388,7 @@ body .div-img2 > img {
 }
 body .div-img3 {
 	justify-content: flex-start;
-	gap: clamp(0.22rem, 0.7vh, 0.4rem);
+	gap: clamp(0.4rem, 1.1vh, 0.65rem);
 	padding-top: max(0.45rem, env(safe-area-inset-top));
 	background: white;
 }
@@ -397,19 +399,19 @@ body .div-img3 #img6-6 {
 	margin: 0.2rem auto 0 !important;
 }
 body .div-img3 #img6-4gif img {
-	width: 74%;
+	width: 56%;
 	height: auto;
 	object-fit: contain;
 }
 body .div-img3 #img6-5 img {
 	display: block;
-	width: 68%;
+	width: 47%;
 	height: auto;
 	margin-left: auto;
 	object-fit: cover;
 }
 body .div-img3 #img6-6 {
-	width: 33%;
+	width: 20%;
 	margin: 0 auto;
 }
 body .div-img3 #img6-6 img {
@@ -423,7 +425,7 @@ body .div-img3 #glyph05 {
 body .div8 #cats {
 	position: relative;
 	top: 1em;
-	width: min(56%, 15rem);
+	width: min(58.8%, 15.75rem);
 	max-height: 56vh;
 	margin: 0 auto;
 	object-fit: contain;
@@ -441,6 +443,7 @@ body .div8 #cats {
 	justify-content: center;
 	gap: 0.9rem;
 	pointer-events: auto;
+	opacity: 0.7;
 }
 
 .page-dots {
@@ -533,6 +536,23 @@ body .div8 #cats {
 .invitation-viewport > div.slide-visible > :nth-child(3) {
 	transition-delay: 0.48s;
 }
+.invitation-viewport > .div3-contact > .contact {
+	opacity: 0;
+	transform: translateY(2.5rem);
+	transition:
+		opacity 1.6s var(--motion-ease),
+		transform 1.6s var(--motion-ease);
+}
+.invitation-viewport > .div3-contact.slide-visible > .contact {
+	opacity: 1;
+	transform: translateY(0);
+}
+.invitation-viewport > .div3-contact.slide-visible > .contact:first-child {
+	transition-delay: 0.15s;
+}
+.invitation-viewport > .div3-contact.slide-visible > .contact:last-child {
+	transition-delay: 0.85s;
+}
 .invitation-viewport
 	> .div3
 	> :is(.event-date-details, .div3-1, .event-details) {
@@ -558,6 +578,7 @@ body .div8 #cats {
 	transition-delay: 0.8s;
 }
 @media (prefers-reduced-motion: reduce) {
+	.invitation-viewport > .div3-contact > .contact,
 	.invitation-viewport
 		> .div3
 		> :is(.event-date-details, .div3-1, .event-details) {

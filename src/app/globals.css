@@ -4,7 +4,6 @@
 :root {
 	--olive: hsl(52, 18%, 35%);
 	--BG: hsl(76, 36%, 92%);
-	--bodyBG: #f7f7f7;
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -71,7 +70,7 @@ img {
 .invitation {
 	min-height: 100%;
 	height: 100%;
-	background: var(--bodyBG);
+	background: #f7f7f7;
 }
 
 .invitation-pager,
@@ -121,7 +120,7 @@ img {
 .event-photo { grid-row: 2; display: flex; min-height: 0; align-items: center; justify-content: center; }
 .event-photo img { width: 100%; height: 100%; object-fit: contain; }
 .event-details { grid-row: 3; align-items: center; align-self: center; color: var(--olive); }
-.event-date-details p, .event-heading, .map-link, .event-map-links { font-size: 1.15em; line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
+.event-date-details p, .event-heading, .event-details p, .map-link, .event-map-links { font-size: 1.15em; line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
 .event-map-links { flex-direction: row; align-items: center; gap: .35em; }
 .map-link { text-decoration: underline; }
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) 1.5rem calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
@@ -134,8 +133,8 @@ img {
 .gallery-slide { padding: clamp(1rem, 4vh, 2.5rem) 1rem; }
 .gallery-combined-slide { justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); padding: clamp(.55rem, 2vh, 1rem) .75rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-combined-slide .gallery-main { width: 100%; height: auto; max-height: 34vh; margin-left: 0; object-fit: contain; object-position: center; }
-.gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 45%; max-height: 28vh; margin-right: 0; object-fit: contain; }
-.gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 84%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
+.gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 38%; max-height: 22vh; margin-right: 0; object-fit: contain; }
+.gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 70%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-triptych-slide { justify-content: space-between; padding-right: 1.25rem; padding-left: 1.25rem; }
 .gallery-triptych-slide img { scale: .99; }
@@ -143,17 +142,18 @@ img {
 .gallery-triptych-slide > div:first-child img { height: 100%; object-fit: contain; }
 .gallery-triptych-slide > div:first-child > div:first-child img { object-position: left top; }
 .gallery-triptych-slide > div:first-child > div:last-child img { object-position: right top; }
+.gallery-triptych-slide > div:first-child > div:last-child img { scale: 1.12; transform-origin: right top; }
 .gallery-triptych-slide > img { align-self: stretch; max-height: 27vh; object-fit: cover; }
-.gallery-extra-slide { justify-content: flex-start; gap: clamp(.22rem, .7vh, .4rem); padding-top: max(.45rem, env(safe-area-inset-top)); background: white; }
+.gallery-extra-slide { justify-content: flex-start; gap: clamp(.4rem, 1.1vh, .65rem); padding-top: max(.45rem, env(safe-area-inset-top)); background: white; }
 .gallery-extra-slide > div:nth-of-type(2) { margin-top: .2rem !important; }
 .gallery-extra-slide > div:nth-of-type(3) { margin: .2rem auto 0 !important; }
 .gallery-extra-slide #img6-4gif img { width: 56%; max-height: 25vh; object-fit: contain; }
 .gallery-extra-slide #img6-5 img { width: 47%; max-height: 18vh; object-fit: cover; }
 .gallery-extra-slide #img6-6 { width: 20%; margin: 0 auto; }
 .gallery-cat-slide { align-items: center; justify-content: center; padding: 1rem 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.gallery-cat-slide img { position: relative; top: 1em; width: min(56%, 15rem); max-height: 56vh; object-fit: contain; }
+.gallery-cat-slide img { position: relative; top: 1em; width: min(58.8%, 15.75rem); max-height: 56vh; object-fit: contain; }
 
-.pager-controls { position: fixed; z-index: 40; bottom: max(1rem, env(safe-area-inset-bottom)); left: 50%; width: min(100%, 430px); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: .9rem; pointer-events: auto; }
+.pager-controls { position: fixed; z-index: 40; bottom: max(1rem, env(safe-area-inset-bottom)); left: 50%; width: min(100%, 430px); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: .9rem; pointer-events: auto; opacity: .7; }
 .page-dots { display: flex; flex-direction: row; gap: .42rem; overflow: hidden; isolation: isolate; padding: .48rem .68rem; border-radius: 999px; background: transparent; pointer-events: auto; }
 .page-dots button { display: block; flex: 0 0 .38rem; width: .38rem; min-width: 0; height: .38rem; min-height: 0; padding: 0; border: 0; border-radius: 999px; appearance: none; -webkit-appearance: none; background: rgba(106, 102, 73, .32); background: rgb(from var(--olive) r g b / .32); box-shadow: none; line-height: 1; transition: transform .2s ease, background .2s ease; }
 .page-dots button.is-active { transform: none; background: var(--olive); }
@@ -167,12 +167,16 @@ img {
 .invitation-slide.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
 .invitation-slide.slide-visible > :nth-child(2) { transition-delay: .24s; }
 .invitation-slide.slide-visible > :nth-child(3) { transition-delay: .48s; }
+.contact-only-slide .contact-slide > div { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
+.contact-only-slide.slide-visible .contact-slide > div { opacity: 1; transform: translateY(0); }
+.contact-only-slide.slide-visible .contact-slide > div:first-child { transition-delay: .15s; }
+.contact-only-slide.slide-visible .contact-slide > div:last-child { transition-delay: .85s; }
 .event-only-slide > .event-slide { opacity: 1; transform: none; transition: none; }
 .event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease); }
 .event-only-slide.slide-visible .event-date-details { opacity: 1; transform: translateY(0); transition-delay: .2s; }
 .event-only-slide.slide-visible .event-photo { opacity: 1; transform: translateY(0); transition-delay: .5s; }
 .event-only-slide.slide-visible .event-details { opacity: 1; transform: translateY(0); transition-delay: .8s; }
-@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details) { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details), .contact-only-slide .contact-slide > div { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {
 	from {
