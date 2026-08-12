@@ -227,29 +227,6 @@ body .div2 img {
 	object-fit: cover;
 	object-position: center;
 }
-body .div2 .intro-event-details {
-	grid-row: 3;
-	align-items: center;
-	align-self: center;
-	padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
-	color: var(--olive);
-}
-body
-	.div2
-	:is(.intro-event-details p, .intro-event-details a, .intro-map-links) {
-	font-size: clamp(1rem, 4.15vw, 1.15rem);
-	line-height: 1.73;
-	letter-spacing: 0.05em;
-	color: var(--olive);
-}
-body .div2 .intro-map-links {
-	flex-direction: row;
-	align-items: center;
-	gap: 0.35em;
-}
-body .div2 .intro-map-links a {
-	text-decoration: underline;
-}
 body .div3 {
 	height: 100%;
 	display: grid;
@@ -284,7 +261,15 @@ body .div3 .event-date-details {
 	align-self: center;
 	color: var(--olive);
 }
-body .div3 :is(.event-date-details p, .event-heading, .event-details a, .event-date-details a, .event-map-links) {
+body
+	.div3
+	:is(
+		.event-date-details p,
+		.event-heading,
+		.event-details a,
+		.event-date-details a,
+		.event-map-links
+	) {
 	font-size: 1.15em;
 	line-height: 1.73;
 	letter-spacing: 0.05em;
@@ -542,7 +527,9 @@ body .div8 #cats {
 .invitation-viewport > div.slide-visible > :nth-child(3) {
 	transition-delay: 0.48s;
 }
-.invitation-viewport > .div3 > :is(.event-date-details, .div3-1, .event-details) {
+.invitation-viewport
+	> .div3
+	> :is(.event-date-details, .div3-1, .event-details) {
 	opacity: 0;
 	transform: translateY(1.25rem);
 	transition:
@@ -565,7 +552,9 @@ body .div8 #cats {
 	transition-delay: 0.8s;
 }
 @media (prefers-reduced-motion: reduce) {
-	.invitation-viewport > .div3 > :is(.event-date-details, .div3-1, .event-details) {
+	.invitation-viewport
+		> .div3
+		> :is(.event-date-details, .div3-1, .event-details) {
 		opacity: 1;
 		transform: none;
 		transition: none;
