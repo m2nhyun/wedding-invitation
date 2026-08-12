@@ -226,65 +226,26 @@ body .div2 img {
 	object-position: center;
 }
 body .div3 {
-	--event-photo-height: min(44vh, 23rem);
 	height: 100%;
-	display: grid;
-	grid-template-rows:
-		max(0px, calc((100% - var(--event-photo-height)) / 2 - 1em))
-		var(--event-photo-height)
-		max(0px, calc((100% - var(--event-photo-height)) / 2 + 1em));
-	padding: max(0.75rem, env(safe-area-inset-top)) 1.5rem
-		max(0.75rem, env(safe-area-inset-bottom));
+	display: flex;
+	flex-direction: column;
+	gap: clamp(0.8rem, 2vh, 1.1rem);
+	padding: clamp(1.25rem, 3vh, 2rem) 1.5rem
+		calc(4.75rem + env(safe-area-inset-bottom));
 	background: white;
 }
 body .div3-1 {
-	grid-row: 2;
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 0;
+}
+body .div3-1 img {
 	width: 100%;
 	height: 100%;
-	min-height: 0;
-	background-image: url("./assets/2_13130012.jpg");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-}
-body .div3 .event-date {
-	padding: 0 0 0.35rem;
-}
-body .div3 .event-details {
-	grid-row: 3;
-	flex-direction: column;
-	align-items: center;
-	align-self: center;
-	padding: 0;
-}
-body .div3 .event-location {
-	padding-bottom: 0.35rem;
-}
-body .div3 .event-details a {
-	display: block;
-	color: var(--olive);
-	font-size: clamp(1rem, 4.15vw, 1.15rem);
-	line-height: 1.73;
-	letter-spacing: 0.05em;
-	text-decoration: underline;
-}
-body .div3 .event-map-links {
-	flex-direction: row;
-	align-items: center;
-	gap: 0.35em;
-	color: var(--olive);
-	font-size: clamp(1rem, 4.15vw, 1.15rem);
-	line-height: 1.73;
-	letter-spacing: 0.05em;
-}
-body .div3 > .event-heading {
-	flex: 0 0 auto;
-	margin: 0;
-}
-body .div3 :is(.event-heading, a) {
-	font-size: clamp(1rem, 4.15vw, 1.15rem);
-	line-height: 1.73;
-	letter-spacing: 0.05em;
+	object-fit: contain;
 }
 
 body .div3-contact {
@@ -303,6 +264,17 @@ body .div3-contact .contact {
 	padding: 1rem;
 	background: var(--BG);
 	color: var(--olive);
+}
+body .div3 .div3-contact {
+	flex: 0 0 min(29vh, 15rem);
+	height: auto;
+	flex-direction: row;
+	gap: 0.6rem;
+	padding: 0;
+}
+body .div3 .div3-contact .contact {
+	min-width: 0;
+	padding: 1rem 0.35rem;
 }
 body .div3-contact .contact button {
 	position: static;
