@@ -27,6 +27,9 @@
 	word-break: keep-all;
 	text-align: center;
 	touch-action: pan-y;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 a,
@@ -45,6 +48,8 @@ img {
 	width: 100%;
 	height: auto;
 	margin: 0;
+	-webkit-user-drag: none;
+	user-drag: none;
 }
 
 html {

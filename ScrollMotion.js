@@ -2,6 +2,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	const viewport = document.querySelector(".invitation-viewport");
 	if (!viewport) return;
 
+	const preventGesture = (event) => event.preventDefault();
+	const preventMultiTouch = (event) => {
+		if (event.touches.length > 1) event.preventDefault();
+	};
+	["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
+		document.addEventListener(eventName, preventGesture, { passive: false });
+	});
+	document.addEventListener("touchmove", preventMultiTouch, { passive: false });
+	document.addEventListener("contextmenu", (event) => {
+		if (event.target.closest("img")) event.preventDefault();
+	});
+
 	const pages = Array.from(viewport.children);
 	const dots = document.querySelector(".page-dots");
 	const previous = document.querySelector(".page-arrow-previous");

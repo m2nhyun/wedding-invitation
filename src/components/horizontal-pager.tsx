@@ -36,9 +36,23 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
       event.preventDefault();
       viewport.scrollBy({ left: event.deltaY, behavior: "smooth" });
     };
+		const preventGesture = (event: Event) => event.preventDefault();
+		const preventMultiTouch = (event: TouchEvent) => {
+			if (event.touches.length > 1) event.preventDefault();
+		};
+		const preventImageMenu = (event: MouseEvent) => {
+			if (event.target instanceof Element && event.target.closest("img")) {
+				event.preventDefault();
+			}
+		};
 
     viewport.addEventListener("scroll", updatePage, { passive: true });
     viewport.addEventListener("wheel", onWheel, { passive: false });
+		["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
+			document.addEventListener(eventName, preventGesture, { passive: false });
+		});
+		document.addEventListener("touchmove", preventMultiTouch, { passive: false });
+		document.addEventListener("contextmenu", preventImageMenu);
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") viewport.scrollBy({ left: viewport.clientWidth, behavior: "smooth" });
       if (event.key === "ArrowLeft") viewport.scrollBy({ left: -viewport.clientWidth, behavior: "smooth" });
@@ -54,6 +68,11 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
     return () => {
       viewport.removeEventListener("scroll", updatePage);
       viewport.removeEventListener("wheel", onWheel);
+			["gesturestart", "gesturechange", "gestureend"].forEach((eventName) => {
+				document.removeEventListener(eventName, preventGesture);
+			});
+			document.removeEventListener("touchmove", preventMultiTouch);
+			document.removeEventListener("contextmenu", preventImageMenu);
       window.removeEventListener("keydown", onKeyDown);
       viewport.removeEventListener("click", onTopButtonClick);
       window.removeEventListener("resize", updatePageCount);
