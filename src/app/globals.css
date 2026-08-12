@@ -104,8 +104,12 @@ body {
 .intro-slide :is(h2, .intro-message) { position: relative; top: -.5em; }
 .intro-glyph { position: absolute; bottom: calc(6rem + env(safe-area-inset-bottom)); left: calc(50% - 1em); width: 2em; height: auto; margin: 0; }
 
-.intro-photo-slide { justify-content: center; background: white; }
+.intro-photo-slide { justify-content: center; gap: clamp(1.5rem, 4vh, 2.5rem); padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .intro-photo-slide img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
+.intro-event-details { align-items: center; color: var(--olive); }
+.intro-event-details p, .intro-event-details a, .intro-map-links { font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
+.intro-map-links { flex-direction: row; align-items: center; gap: .35em; }
+.intro-map-links a { text-decoration: underline; }
 
 .event-contact-slide { flex-direction: column; gap: clamp(.8rem, 2vh, 1.1rem); padding: clamp(1.25rem, 3vh, 2rem) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .event-photo { display: flex; min-height: 0; flex: 1 1 auto; align-items: center; justify-content: center; }
