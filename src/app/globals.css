@@ -132,7 +132,8 @@ body {
 .gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 45%; max-height: 28vh; margin-right: 0; object-fit: contain; }
 .gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 84%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.gallery-triptych-slide { justify-content: space-between; }
+.gallery-triptych-slide { justify-content: space-between; padding-right: 1.25rem; padding-left: 1.25rem; }
+.gallery-triptych-slide img { scale: .99; }
 .gallery-triptych-slide > div:first-child { flex: 0 0 30vh; height: 30vh; max-height: none; gap: .75rem; }
 .gallery-triptych-slide > div:first-child img { height: 100%; object-fit: contain; }
 .gallery-triptych-slide > div:first-child > div:first-child img { object-position: left top; }
