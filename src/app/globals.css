@@ -132,7 +132,7 @@ body {
 .gallery-triptych-slide > div:first-child > div:first-child img { object-position: left top; }
 .gallery-triptych-slide > div:first-child > div:last-child img { object-position: right top; }
 .gallery-triptych-slide > img { align-self: stretch; max-height: 27vh; object-fit: cover; }
-.gallery-extra-slide { justify-content: flex-start; gap: clamp(.22rem, .7vh, .4rem); padding-top: max(.45rem, env(safe-area-inset-top)); }
+.gallery-extra-slide { justify-content: flex-start; gap: clamp(.22rem, .7vh, .4rem); padding-top: max(.45rem, env(safe-area-inset-top)); background: white; }
 .gallery-extra-slide > div:nth-of-type(2) { margin-top: .2rem !important; }
 .gallery-extra-slide > div:nth-of-type(3) { margin: .2rem auto 0 !important; }
 .gallery-extra-slide #img6-4gif img { width: 56%; max-height: 25vh; object-fit: contain; }

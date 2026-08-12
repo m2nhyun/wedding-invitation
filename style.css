@@ -373,6 +373,7 @@ body .div7 {
 	justify-content: flex-start;
 	gap: clamp(0.22rem, 0.7vh, 0.4rem);
 	padding-top: max(0.45rem, env(safe-area-inset-top));
+	background: white;
 }
 body .div7 #img6-5 {
 	margin-top: 0.2rem !important;
