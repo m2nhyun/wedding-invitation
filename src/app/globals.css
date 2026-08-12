@@ -116,6 +116,7 @@ body {
 .event-photo img { width: 100%; height: 100%; object-fit: contain; }
 .contact-slide { display: flex; min-height: 0; flex: 0 0 min(29vh, 15rem); flex-direction: row; gap: .6rem; background: white; }
 .contact-slide > div { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: var(--BG); }
+.event-contact-slide .contact-slide > div { background: #f7f7f7; }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
 .contact-slide h2 { font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; }
 

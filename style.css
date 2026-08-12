@@ -294,6 +294,7 @@ body .div3 .div3-contact {
 body .div3 .div3-contact .contact {
 	min-width: 0;
 	padding: 1rem 0.35rem;
+	background: #f7f7f7;
 }
 body .div3-contact .contact button {
 	position: static;
