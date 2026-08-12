@@ -104,9 +104,9 @@ body {
 .intro-slide :is(h2, .intro-message) { position: relative; top: -.5em; }
 .intro-glyph { position: absolute; bottom: calc(6rem + env(safe-area-inset-bottom)); left: calc(50% - 1em); width: 2em; height: auto; margin: 0; }
 
-.intro-photo-slide { justify-content: center; gap: clamp(1.5rem, 4vh, 2.5rem); padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.intro-photo-slide img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
-.intro-event-details { align-items: center; color: var(--olive); }
+.intro-photo-slide { display: grid; grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr); padding: 0; background: white; }
+.intro-photo-slide img { grid-row: 2; width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
+.intro-event-details { grid-row: 3; align-items: center; align-self: center; padding-bottom: calc(3.75rem + env(safe-area-inset-bottom)); color: var(--olive); }
 .intro-event-details p, .intro-event-details a, .intro-map-links { font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
 .intro-map-links { flex-direction: row; align-items: center; gap: .35em; }
 .intro-map-links a { text-decoration: underline; }
