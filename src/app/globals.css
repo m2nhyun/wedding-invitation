@@ -104,19 +104,15 @@ body {
 .intro-slide :is(h2, .intro-message) { position: relative; top: -.5em; }
 .intro-glyph { position: absolute; bottom: calc(6rem + env(safe-area-inset-bottom)); left: calc(50% - 1em); width: 2em; height: auto; margin: 0; }
 
-.intro-photo-slide { display: grid; grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr); padding: 0; background: white; }
-.intro-photo-slide img { grid-row: 2; width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
-.intro-event-details { grid-row: 3; align-items: center; align-self: center; padding-bottom: calc(3.75rem + env(safe-area-inset-bottom)); color: var(--olive); }
-.intro-event-details p, .intro-event-details a, .intro-map-links { font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
-.intro-map-links { flex-direction: row; align-items: center; gap: .35em; }
-.intro-map-links a { text-decoration: underline; }
-
+.intro-photo-slide { align-items: center; justify-content: center; padding: 0; background: white; }
+.intro-photo-slide img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
 .event-only-slide { padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.event-slide { display: grid; min-height: 0; flex: 1 1 auto; grid-template-rows: minmax(0, 1fr) min(44vh, 23rem) minmax(0, 1fr); }
+.event-slide { display: grid; min-height: 0; flex: 1 1 auto; grid-template-rows: minmax(0, 1fr) min(40vh, 21rem) minmax(0, 1fr); }
+.event-date-details { grid-row: 1; align-items: center; align-self: center; color: var(--olive); }
 .event-photo { grid-row: 2; display: flex; min-height: 0; align-items: center; justify-content: center; }
 .event-photo img { width: 100%; height: 100%; object-fit: contain; }
 .event-details { grid-row: 3; align-items: center; align-self: center; color: var(--olive); }
-.event-heading, .map-link, .event-map-links { font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
+.event-date-details p, .event-heading, .map-link, .event-map-links { font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
 .event-map-links { flex-direction: row; align-items: center; gap: .35em; }
 .map-link { text-decoration: underline; }
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) 1.5rem calc(4.25rem + env(safe-area-inset-bottom)); background: white; }

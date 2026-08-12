@@ -12,20 +12,6 @@ export function IntroPhotoSlide() {
         sizes="(max-width: 430px) 100vw, 430px"
         preload
       />
-      <div className="intro-event-details">
-        <p>
-          {wedding.event.date}
-          <br />
-          {wedding.event.time}
-          <br />
-          {`${wedding.event.venue.replace(", ", "(")})`}
-        </p>
-        <div className="intro-map-links">
-          <a href={wedding.event.naverMapUrl}>{wedding.event.naverMapLabel}</a>
-          <span aria-hidden="true">/</span>
-          <a href={wedding.event.kakaoMapUrl}>{wedding.event.kakaoMapLabel}</a>
-        </div>
-      </div>
     </section>
   );
 }
