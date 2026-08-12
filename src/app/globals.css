@@ -158,7 +158,12 @@ body {
 .invitation-slide.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
 .invitation-slide.slide-visible > :nth-child(2) { transition-delay: .24s; }
 .invitation-slide.slide-visible > :nth-child(3) { transition-delay: .48s; }
-@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div) { opacity: 1; transform: none; transition: none; } }
+.event-only-slide > .event-slide { opacity: 1; transform: none; transition: none; }
+.event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease); }
+.event-only-slide.slide-visible .event-date-details { opacity: 1; transform: translateY(0); transition-delay: .2s; }
+.event-only-slide.slide-visible .event-photo { opacity: 1; transform: translateY(0); transition-delay: .5s; }
+.event-only-slide.slide-visible .event-details { opacity: 1; transform: translateY(0); transition-delay: .8s; }
+@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details) { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {
 	from {
