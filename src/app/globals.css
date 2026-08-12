@@ -128,9 +128,9 @@ body {
 
 .gallery-slide { padding: clamp(1rem, 4vh, 2.5rem) 1rem; }
 .gallery-combined-slide { justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); padding: clamp(.55rem, 2vh, 1rem) .75rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.gallery-combined-slide .gallery-main { width: calc(100% + 1.5rem); height: auto; max-height: 34vh; margin-left: -.75rem; object-fit: contain; object-position: center; }
-.gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: calc(45% + .75rem); max-height: 28vh; margin-right: 0; object-fit: contain; }
-.gallery-combined-slide .gallery-portrait { align-self: flex-start; width: calc(84% + .75rem); max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
+.gallery-combined-slide .gallery-main { width: 100%; height: auto; max-height: 34vh; margin-left: 0; object-fit: contain; object-position: center; }
+.gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 45%; max-height: 28vh; margin-right: 0; object-fit: contain; }
+.gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 84%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-triptych-slide { justify-content: space-between; }
 .gallery-triptych-slide > div:first-child { flex: 0 0 30vh; height: 30vh; max-height: none; gap: .75rem; }
