@@ -366,6 +366,7 @@ body .div-img2 .div-img2-1 > div:first-child {
 body .div-img2 .div-img2-1 > div:last-child {
 	position: relative;
 	z-index: 1;
+	align-items: flex-end;
 	overflow: visible;
 }
 body .div-img2 .div-img2-1 img {
@@ -376,9 +377,10 @@ body .div-img2 .div-img2-1 > div:first-child img {
 	object-position: left top;
 }
 body .div-img2 .div-img2-1 > div:last-child img {
+	width: min(50vw, 13.4375rem);
+	height: auto;
 	object-position: right top;
-	scale: 1.28;
-	transform-origin: right top;
+	scale: 1;
 }
 body .div-img2 > img {
 	align-self: stretch;
