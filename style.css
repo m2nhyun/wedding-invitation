@@ -369,6 +369,16 @@ body .div-img2 .div-img2-1 {
 	flex: 0 0 30vh;
 	height: 40vh;
 	max-height: none;
+	gap: 0.75rem;
+}
+body .div-img2 .div-img2-1 > div:first-child {
+	flex: 0 0 22%;
+	margin-right: 0;
+}
+body .div-img2 .div-img2-1 > div:last-child {
+	position: relative;
+	z-index: 1;
+	overflow: visible;
 }
 body .div-img2 .div-img2-1 img {
 	height: 100%;
@@ -379,7 +389,7 @@ body .div-img2 .div-img2-1 > div:first-child img {
 }
 body .div-img2 .div-img2-1 > div:last-child img {
 	object-position: right top;
-	scale: 1.12;
+	scale: 1.28;
 	transform-origin: right top;
 }
 body .div-img2 > img {
