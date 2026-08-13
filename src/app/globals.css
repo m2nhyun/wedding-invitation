@@ -114,15 +114,13 @@ img {
 
 .intro-photo-slide { align-items: center; justify-content: center; padding: 0; background: white; }
 .intro-photo-slide img { width: 100%; max-height: 56vh; object-fit: cover; object-position: center; }
-.event-only-slide { padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.event-slide { display: grid; min-height: 0; flex: 1 1 auto; grid-template-rows: minmax(0, 1fr) min(44vh, 23.1rem) minmax(0, 1fr); top: 1rem; }
-.event-date-details { grid-row: 1; align-items: center; align-self: center; color: var(--olive); }
-.event-photo { grid-row: 2; display: flex; min-height: 0; align-items: center; justify-content: center; }
-.event-photo img { width: 100%; height: 100%; object-fit: contain; }
-.event-details { grid-row: 3; align-items: center; align-self: center; color: var(--olive); }
-.event-date-details p, .event-heading, .event-details p, .event-map-links { font-size: 1.15em; line-height: 1.73; letter-spacing: .05em; color: var(--olive); }
+.event-info-slide { align-items: center; justify-content: center; padding: 1.5rem 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; color: var(--olive); }
+.event-info { gap: 1.4rem; line-height: 1.73; letter-spacing: .05em; }
+.event-info :is(p, .event-map-links) { font-size: 1.15em; }
 .event-map-links { flex-direction: row; align-items: center; gap: .35em; }
 .map-link { font-size: inherit; text-decoration: underline; }
+.event-photo-only-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
+.event-photo-only-slide img { width: 100%; height: min(44vh, 23.1rem); object-fit: contain; }
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) 1.5rem calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
 .contact-slide { display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
 .contact-slide > div { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
@@ -172,12 +170,7 @@ img {
 .contact-only-slide.slide-visible .contact-slide > div { opacity: 1; transform: translateY(0); }
 .contact-only-slide.slide-visible .contact-slide > div:first-child { transition-delay: .15s; }
 .contact-only-slide.slide-visible .contact-slide > div:last-child { transition-delay: .85s; }
-.event-only-slide > .event-slide { opacity: 1; transform: none; transition: none; }
-.event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease); }
-.event-only-slide.slide-visible .event-date-details { opacity: 1; transform: translateY(0); transition-delay: .2s; }
-.event-only-slide.slide-visible .event-photo { opacity: 1; transform: translateY(0); transition-delay: .5s; }
-.event-only-slide.slide-visible .event-details { opacity: 1; transform: translateY(0); transition-delay: .8s; }
-@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .event-only-slide .event-slide > :is(.event-date-details, .event-photo, .event-details), .contact-only-slide .contact-slide > div { opacity: 1; transform: none; transition: none; } }
+@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .contact-only-slide .contact-slide > div { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {
 	from {

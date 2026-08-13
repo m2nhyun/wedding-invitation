@@ -1,26 +1,16 @@
-import Image from "next/image";
 import { wedding } from "@/data/wedding";
 
 export function EventSection() {
 	return (
-		<section className="event-slide">
-			<div className="event-date-details">
+		<div className="event-info">
+			<div>
 				<p>
 					{wedding.event.date}
 					<br />
 					{wedding.event.time}
 				</p>
 			</div>
-			<div className="event-photo">
-				<Image
-					src={wedding.assets.eventBackground}
-					alt=""
-					width={2048}
-					height={2560}
-					priority
-				/>
-			</div>
-			<div className="event-details">
+			<div>
 				<p className="event-heading">
 					{`${wedding.event.venue.replace(", ", "(")})`}
 				</p>
@@ -34,6 +24,6 @@ export function EventSection() {
 					</a>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }
