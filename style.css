@@ -272,8 +272,6 @@ body
 		.event-date-details p,
 		.event-heading,
 		.event-details p,
-		.event-details a,
-		.event-date-details a,
 		.event-map-links
 	) {
 	font-size: 1.15em;
@@ -287,6 +285,7 @@ body .div3 .event-map-links {
 	gap: 0.35em;
 }
 body .div3 .event-details a {
+	font-size: inherit;
 	text-decoration: underline;
 }
 
