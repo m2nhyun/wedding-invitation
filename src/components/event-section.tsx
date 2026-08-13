@@ -10,15 +10,6 @@ export function EventSection() {
 					<br />
 					{wedding.event.time}
 				</p>
-				<div className="event-map-links">
-					<a className="map-link" href={wedding.event.naverMapUrl}>
-						{wedding.event.naverMapLabel}
-					</a>
-					<span aria-hidden="true">/</span>
-					<a className="map-link" href={wedding.event.kakaoMapUrl}>
-						{wedding.event.kakaoMapLabel}
-					</a>
-				</div>
 			</div>
 			<div className="event-photo">
 				<Image
