@@ -8,7 +8,7 @@
 	--gallery-outline: 1rem;
 	--content-line-height: 1.73;
 	--body-copy-size: clamp(1.06rem, 4.4vw, 1.22rem);
-	--event-copy-size: clamp(.9752rem, 4.048vw, 1.1224rem);
+	--event-copy-size: clamp(.945944rem, 3.92656vw, 1.088728rem);
 }
 
 ::-webkit-scrollbar {
