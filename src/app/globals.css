@@ -123,7 +123,7 @@ img.image-unavailable {
 
 .event-combined-slide { align-items: center; justify-content: center; gap: 1em; padding: 0 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; color: var(--olive); }
 .event-combined-slide > :is(.event-info, .event-photo) { position: relative; top: 1em; }
-.event-info { gap: 1.4rem; line-height: 1.45em; letter-spacing: .05em; }
+.event-info { gap: 1.4rem; line-height: 1.73; letter-spacing: .05em; }
 .event-info :is(p, .event-map-links) { font-size: 1.15em; }
 .event-map-links { flex-direction: row; align-items: center; gap: .35em; }
 .map-link { font-size: inherit; text-decoration: underline; }

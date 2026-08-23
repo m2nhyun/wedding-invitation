@@ -243,7 +243,7 @@ body .div3 {
 }
 body .div3 .event-info {
 	gap: 1.4rem;
-	line-height: 1.45em;
+	line-height: 1.73;
 	letter-spacing: 0.05em;
 }
 body .div3 > :is(.event-info, .div3-1) {
