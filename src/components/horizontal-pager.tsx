@@ -10,13 +10,20 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
   const viewportRef = useRef<HTMLDivElement>(null);
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(1);
+  const [activePageOnLight, setActivePageOnLight] = useState(false);
 
   useEffect(() => {
     const viewport = viewportRef.current;
     if (!viewport) return;
 
     const updatePage = () => {
-      setPage(Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1)));
+      const nextPage = Math.round(viewport.scrollLeft / Math.max(viewport.clientWidth, 1));
+      setPage(nextPage);
+      setActivePageOnLight(
+        slides[nextPage]?.matches(
+          ".event-combined-slide, .contact-only-slide, .gallery-combined-slide, .gallery-wide-slide, .gallery-motion-slide",
+        ) ?? false,
+      );
     };
     const updatePageCount = () => setPageCount(viewport.children.length);
     const slides = Array.from(
@@ -96,7 +103,7 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
       <div className="invitation-viewport" ref={viewportRef} aria-label="청첩장 슬라이드">
         {children}
       </div>
-      <nav className="pager-controls" aria-label="슬라이드 이동">
+      <nav className={`pager-controls${activePageOnLight ? " is-on-light" : ""}`} aria-label="슬라이드 이동">
         <button type="button" className="page-arrow page-arrow-previous" onClick={() => goTo(Math.max(page - 1, 0))} disabled={page === 0} aria-label="이전 슬라이드" />
         <div className="page-dots">{Array.from({ length: pageCount }, (_, index) => <button type="button" key={index} className={index === page ? "is-active" : ""} onClick={() => goTo(index)} aria-label={`${index + 1}번째 슬라이드`} />)}</div>
         <button type="button" className="page-arrow page-arrow-next" onClick={() => goTo(Math.min(page + 1, pageCount - 1))} disabled={page === pageCount - 1} aria-label="다음 슬라이드" />
