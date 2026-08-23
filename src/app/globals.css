@@ -120,7 +120,7 @@ img.image-unavailable {
 .gallery-extra-wide { align-self: flex-end; width: 67%; max-height: 29vh; object-fit: contain; object-position: right top; }
 .gallery-extra-polaroid { align-self: center; width: 34%; max-height: 30vh; margin-top: clamp(4rem, 17vh, 14rem); object-fit: contain; object-position: center; }
 .gallery-cat-slide { align-items: center; justify-content: center; padding: 1rem var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.gallery-cat-slide img { position: relative; top: 1em; width: min(58.8%, 15.75rem); max-height: 56vh; object-fit: contain; }
+.gallery-cat-slide img { position: relative; top: 2em; width: min(58.8%, 15.75rem); max-height: 56vh; object-fit: contain; }
 
 .pager-controls { position: fixed; z-index: 40; bottom: max(1rem, env(safe-area-inset-bottom)); left: 50%; width: min(100%, 430px); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: .9rem; pointer-events: auto; opacity: .7; }
 .page-dots { display: flex; flex-direction: row; gap: .42rem; overflow: hidden; isolation: isolate; padding: .48rem .68rem; border-radius: 999px; background: transparent; pointer-events: auto; }
