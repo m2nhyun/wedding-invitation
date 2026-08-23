@@ -171,10 +171,10 @@ img.image-unavailable {
 .page-arrow:disabled { visibility: hidden; }
 @media (hover: none) and (pointer: coarse) { .page-arrow { display: none; } }
 
-.invitation-slide > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.4s var(--motion-ease), transform 1.4s var(--motion-ease); }
+.invitation-slide > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .invitation-slide.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
-.invitation-slide.slide-visible > :nth-child(2) { transition-delay: .24s; }
-.invitation-slide.slide-visible > :nth-child(3) { transition-delay: .48s; }
+.invitation-slide.slide-visible > :nth-child(2) { transition-delay: .85s; }
+.invitation-slide.slide-visible > :nth-child(3) { transition-delay: 1.55s; }
 .contact-only-slide .contact-slide > div { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .contact-only-slide.slide-visible .contact-slide > div { opacity: 1; transform: translateY(0); }
 .contact-only-slide.slide-visible .contact-slide > div:first-child { transition-delay: .15s; }
