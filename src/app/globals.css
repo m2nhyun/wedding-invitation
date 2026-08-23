@@ -119,7 +119,7 @@ img.image-unavailable {
 .gallery-motion-photo { width: 52%; height: auto; max-height: 38vh; }
 .gallery-extra-pair-slide { justify-content: flex-start; padding: clamp(1rem, 15vh, 12rem) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-extra-wide { position: relative; top: 1em; align-self: center; width: 77.05%; max-height: 33.35vh; object-fit: contain; object-position: center; }
-.gallery-extra-polaroid { position: relative; top: 1em; align-self: center; width: 39.1%; max-height: 34.5vh; margin-top: clamp(4rem, 17vh, 14rem); object-fit: contain; object-position: center; }
+.gallery-extra-polaroid { position: relative; top: 1em; align-self: center; width: 43.01%; max-height: 37.95vh; margin-top: clamp(2.5rem, 12vh, 9rem); object-fit: contain; object-position: center; }
 .gallery-cat-slide { align-items: center; justify-content: center; padding: 1rem var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-cat-slide img { position: relative; top: 2em; width: min(58.8%, 15.75rem); max-height: 56vh; object-fit: contain; }
 
