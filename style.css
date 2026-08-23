@@ -4,6 +4,7 @@
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 	--gallery-outline: 1rem;
 	--content-line-height: 1.73;
+	--body-copy-size: clamp(1.06rem, 4.4vw, 1.22rem);
 }
 
 @font-face {
@@ -81,12 +82,12 @@ body h2 {
 	line-height: var(--content-line-height);
 }
 body p {
-	font-size: 1.15em;
+	font-size: var(--body-copy-size);
 	color: var(--olive);
 	line-height: var(--content-line-height);
 }
 body a {
-	font-size: 1.15em;
+	font-size: var(--body-copy-size);
 }
 body div {
 	display: flex;
@@ -223,14 +224,16 @@ body .div1 :is(h2, .intro-hero-photo) {
 body .div1-message {
 	align-items: center;
 	justify-content: center;
-	padding: 1.5rem 1rem calc(4.75rem + env(safe-area-inset-bottom));
+	padding: 1.5rem 0.6rem calc(4.75rem + env(safe-area-inset-bottom));
 	background: var(--BG);
 }
 body .div1-message p {
-	width: min(100%, 100vw - 1.5rem);
+	width: min(100%, 100vw - 0.9rem);
 	margin: 0 auto;
-	font-size: clamp(1rem, 4.15vw, 1.15rem);
+	font-size: var(--body-copy-size);
 	line-height: var(--content-line-height);
+	word-break: keep-all;
+	overflow-wrap: normal;
 }
 body .div3 {
 	align-items: center;
@@ -252,7 +255,7 @@ body .div3 > :is(.event-info, .div3-1) {
 	top: 1em;
 }
 body .div3 :is(p, .event-map-links) {
-	font-size: 1.15em;
+	font-size: var(--body-copy-size);
 }
 body .div3 .event-map-links {
 	flex-direction: row;
@@ -309,7 +312,7 @@ body .div3-contact .contact button {
 	border: 0;
 	background: transparent;
 	color: inherit;
-	font-size: 1.1em;
+	font-size: var(--body-copy-size);
 	text-decoration: underline;
 	cursor: pointer;
 }
