@@ -87,7 +87,7 @@ img.image-unavailable {
 .intro-message-slide .event-info :is(p, .event-map-links) { font-size: var(--event-copy-size); }
 
 .event-combined-slide { align-items: center; justify-content: center; gap: 2em; padding: 0 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; color: var(--olive); }
-.event-combined-slide > :is(.event-info, .event-photo) { position: relative; top: 1em; }
+.event-combined-slide > :is(.event-info, .event-photo) { position: relative; top: 2em; }
 .event-info { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.4rem; line-height: var(--content-line-height); letter-spacing: .05em; }
 .event-info :is(p, .event-map-links) { font-size: var(--body-copy-size); }
 .event-map-links { display: flex; flex-direction: row; align-items: center; justify-content: center; gap: .35em; }
