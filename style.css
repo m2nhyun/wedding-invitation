@@ -539,11 +539,11 @@ body .div8 #cats {
 }
 
 .invitation-viewport > div.slide-visible > :nth-child(2) {
-	transition-delay: 0.85s;
+	transition-delay: 0.7s;
 }
 
 .invitation-viewport > div.slide-visible > :nth-child(3) {
-	transition-delay: 1.55s;
+	transition-delay: 1.3s;
 }
 .invitation-viewport > .div3-contact > .contact {
 	opacity: 0;
@@ -557,10 +557,10 @@ body .div8 #cats {
 	transform: translateY(0);
 }
 .invitation-viewport > .div3-contact.slide-visible > .contact:first-child {
-	transition-delay: 0.15s;
+	transition-delay: 0.1s;
 }
 .invitation-viewport > .div3-contact.slide-visible > .contact:last-child {
-	transition-delay: 0.85s;
+	transition-delay: 0.7s;
 }
 .invitation-viewport
 	> .div3
@@ -574,17 +574,17 @@ body .div8 #cats {
 .invitation-viewport > .div3.slide-visible > .event-date-details {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 0.15s;
+	transition-delay: 0.1s;
 }
 .invitation-viewport > .div3.slide-visible > .div3-1 {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 0.85s;
+	transition-delay: 0.7s;
 }
 .invitation-viewport > .div3.slide-visible > .event-details {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 1.55s;
+	transition-delay: 1.3s;
 }
 @media (prefers-reduced-motion: reduce) {
 	.invitation-viewport > .div3-contact > .contact,
