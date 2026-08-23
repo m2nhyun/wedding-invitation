@@ -98,8 +98,8 @@ img.image-unavailable {
 .event-photo-only-slide img { width: 100%; height: min(44vh, 23.1rem); object-fit: contain; }
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) var(--gallery-outline) calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
 .contact-slide { position: relative; top: 1em; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
-.contact-slide::before { position: absolute; top: 50%; right: 0; left: 0; height: 1px; content: ""; background: rgb(from var(--olive) r g b / .28); }
-.contact-slide > div { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
+.contact-divider { position: absolute; top: 50%; right: 0; left: 0; z-index: 1; height: 1px; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
+.contact-slide > .contact-panel { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
 .contact-slide :is(p, button) { font-size: var(--body-copy-size); }
 .contact-slide h2 { font-size: 1.32em; line-height: var(--content-line-height); letter-spacing: .1em; }
@@ -140,11 +140,11 @@ img.image-unavailable {
 .invitation-slide.slide-visible > :nth-child(2) { transition-delay: .55s; }
 .invitation-slide.slide-visible > :nth-child(3) { transition-delay: 1.05s; }
 .contact-only-slide > .contact-slide { opacity: 1; transform: none; transition: none; }
-.contact-only-slide .contact-slide > div { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
-.contact-only-slide.slide-visible .contact-slide > div { opacity: 1; transform: translateY(0); }
-.contact-only-slide.slide-visible .contact-slide > div:first-child { transition-delay: .05s; }
-.contact-only-slide.slide-visible .contact-slide > div:last-child { transition-delay: .55s; }
-@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .contact-only-slide .contact-slide > div { opacity: 1; transform: none; transition: none; } }
+.contact-only-slide .contact-slide > .contact-panel { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel { opacity: 1; transform: translateY(0); }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:first-child { transition-delay: .05s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(2) { transition-delay: .55s; }
+@media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .contact-only-slide .contact-slide > .contact-panel { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {
 	from {

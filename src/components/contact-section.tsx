@@ -88,7 +88,7 @@ export function ContactSection() {
 	return (
 		<>
 			<div className="contact-slide">
-				<div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+				<div className="contact-panel relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.groom.parents}
 					</p>
@@ -102,7 +102,7 @@ export function ContactSection() {
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
-				<div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+				<div className="contact-panel relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.bride.parents}
 					</p>
@@ -116,6 +116,7 @@ export function ContactSection() {
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
+				<div className="contact-divider" aria-hidden="true" />
 			</div>
 
 			{selectedSide ? (
