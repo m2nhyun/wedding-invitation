@@ -82,6 +82,7 @@ img.image-unavailable {
 .intro-slide :is(h2, .intro-hero-photo) { position: relative; top: 1em; }
 .intro-message-slide { align-items: center; justify-content: center; gap: 2.25rem; padding: 1.5rem .6rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .intro-message { width: min(100%, calc(100vw - .9rem)); margin: 0 auto; font-size: var(--body-copy-size); line-height: var(--content-line-height); color: var(--olive); word-break: keep-all; overflow-wrap: normal; }
+.intro-message-slide > :is(.intro-message, .event-info) { position: relative; top: 2em; }
 .intro-message-slide .event-info { gap: 0; line-height: var(--content-line-height); letter-spacing: .05em; color: var(--olive); }
 .intro-message-slide .event-info :is(p, .event-map-links) { font-size: var(--event-copy-size); }
 
