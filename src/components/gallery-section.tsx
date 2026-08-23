@@ -43,7 +43,7 @@ export function GallerySection() {
 					alt=""
 					width={2048}
 					height={3089}
-					sizes="(max-width: 430px) 67vw, 288px"
+					sizes="(max-width: 430px) 77.05vw, 332px"
 				/>
 			</section>
 
@@ -84,7 +84,7 @@ export function GallerySection() {
 					alt=""
 					width={2000}
 					height={2468}
-					sizes="(max-width: 430px) 34vw, 146px"
+					sizes="(max-width: 430px) 39.1vw, 169px"
 				/>
 			</section>
 
