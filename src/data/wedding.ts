@@ -120,12 +120,9 @@ export const wedding = {
         },
       ],
     },
-  },
-  assets: {
-    glyph01: assetPath("/assets/glyph01.svg"),
-    glyph03: assetPath("/assets/glyph03.svg"),
-    glyph05: assetPath("/assets/glyph05.svg"),
-    intro: assetPath("/assets/1_12900008_m.jpg"),
+	},
+	assets: {
+		intro: assetPath("/assets/1_12900008_m.jpg"),
     eventBackground: assetPath("/assets/2_13130012.jpg"),
     main: assetPath("/assets/3_12900023.jpg"),
     cats: assetPath("/assets/11_20260511_6.jpg"),

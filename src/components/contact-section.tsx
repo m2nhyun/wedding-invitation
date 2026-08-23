@@ -98,7 +98,6 @@ export function ContactSection() {
 					<button
 						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
-						data-scroll-motion-text
 						onClick={() => setSelectedSide("groom")}>
 						{wedding.gift.labels.heading}
 					</button>
@@ -113,7 +112,6 @@ export function ContactSection() {
 					<button
 						className="absolute bottom-[1.7em] w-full cursor-pointer appearance-none border-0 bg-transparent pb-[0.1em] text-[1.1em] text-inherit underline [-webkit-tap-highlight-color:transparent]"
 						type="button"
-						data-scroll-motion-text
 						onClick={() => setSelectedSide("bride")}>
 						{wedding.gift.labels.heading}
 					</button>
