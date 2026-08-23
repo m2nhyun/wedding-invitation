@@ -289,6 +289,9 @@ body .div3-contact .contact {
 	background: white;
 	color: var(--olive);
 }
+body .div3-contact .contact + .contact {
+	border-top: 1px solid rgb(from var(--olive) r g b / 28%);
+}
 body .div3-contact .contact button {
 	position: static;
 	margin-top: clamp(1.35rem, 3vh, 2rem);

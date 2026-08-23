@@ -132,6 +132,7 @@ img.image-unavailable {
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) 1.5rem calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
 .contact-slide { display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
 .contact-slide > div { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
+.contact-slide > div + div { border-top: 1px solid rgb(from var(--olive) r g b / .28); }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
 .contact-slide h2 { font-size: 1.32em; line-height: 1.75; letter-spacing: .1em; }
 
