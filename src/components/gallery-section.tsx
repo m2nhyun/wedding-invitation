@@ -37,7 +37,7 @@ export function GallerySection() {
 							alt=""
 							width={1000}
 							height={1508}
-							sizes="(max-width: 430px) 27.5vw, 118px"
+							sizes="(max-width: 430px) 30.25vw, 130px"
 						/>
 					</div>
 					<div className="flex h-full min-w-0 flex-1 flex-col">
