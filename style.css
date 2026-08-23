@@ -224,6 +224,7 @@ body .div1 :is(h2, .intro-hero-photo) {
 body .div1-message {
 	align-items: center;
 	justify-content: center;
+	gap: 1.5rem;
 	padding: 1.5rem 0.6rem calc(4.75rem + env(safe-area-inset-bottom));
 	background: var(--BG);
 }
@@ -234,6 +235,24 @@ body .div1-message p {
 	line-height: var(--content-line-height);
 	word-break: keep-all;
 	overflow-wrap: normal;
+}
+body .div1-message .event-info {
+	gap: 1rem;
+	line-height: var(--content-line-height);
+	letter-spacing: 0.05em;
+}
+body .div1-message .event-info :is(p, .event-map-links) {
+	font-size: var(--body-copy-size);
+}
+body .div1-message .event-map-links {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.35em;
+}
+body .div1-message .event-info a {
+	font-size: inherit;
+	text-decoration: underline;
 }
 body .div3 {
 	align-items: center;
@@ -579,7 +598,7 @@ body .div8 #cats {
 .invitation-viewport > .div3.slide-visible > .div3-1 {
 	opacity: 1;
 	transform: translateY(0);
-	transition-delay: 0.7s;
+	transition-delay: 0.1s;
 }
 .invitation-viewport > .div3.slide-visible > .event-details {
 	opacity: 1;
