@@ -35,7 +35,7 @@ export function GallerySection() {
 					alt=""
 					width={1000}
 					height={1508}
-					sizes="(max-width: 430px) 32.5vw, 140px"
+					sizes="(max-width: 430px) 35.75vw, 154px"
 				/>
 				<Image
 					className="gallery-pair-right"
