@@ -47,25 +47,22 @@ export function GallerySection() {
 				/>
 			</section>
 
-			<section className="invitation-slide gallery-slide gallery-wide-slide">
+			<section className="invitation-slide gallery-slide gallery-wide-motion-slide">
 				<Image
 					className="gallery-wide-photo"
 					src={widePhoto}
 					alt=""
 					width={3089}
 					height={2048}
-					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
+					sizes="(max-width: 430px) 83vw, 357px"
 				/>
-			</section>
-
-			<section className="invitation-slide gallery-slide gallery-motion-slide">
 				<Image
 					className="gallery-motion-photo"
 					src={motionPhoto}
 					alt=""
 					width={1200}
 					height={1500}
-					sizes="(max-width: 430px) 82vw, 353px"
+					sizes="(max-width: 430px) 52vw, 224px"
 				/>
 			</section>
 
