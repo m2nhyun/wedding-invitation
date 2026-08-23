@@ -37,7 +37,7 @@ export function GallerySection() {
 							alt=""
 							width={1000}
 							height={1508}
-							sizes="(max-width: 430px) 30vw, 129px"
+							sizes="(max-width: 430px) 27.5vw, 118px"
 						/>
 					</div>
 					<div className="flex h-full min-w-0 flex-1 flex-col">
@@ -47,7 +47,7 @@ export function GallerySection() {
 							alt=""
 							width={2048}
 							height={3089}
-							sizes="(max-width: 430px) 55vw, 237px"
+							sizes="(max-width: 430px) 52.5vw, 226px"
 						/>
 					</div>
 				</div>
