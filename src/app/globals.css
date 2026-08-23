@@ -77,9 +77,11 @@ img.image-unavailable {
 
 
 .intro-slide { align-items: center; justify-content: center; gap: 2.8rem; padding: 0 0 calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.intro-slide h2 { margin: 0; padding: 0; font-size: 1.386em; line-height: var(--content-line-height); letter-spacing: .1em; color: var(--olive); }
+.intro-slide h2 { margin: 0; padding: 0; font-size: var(--body-copy-size); line-height: var(--content-line-height); letter-spacing: .1em; color: var(--olive); }
+.intro-photo-stack { display: flex; width: 100%; flex-direction: column; align-items: center; gap: .75rem; }
 .intro-hero-photo { width: 100%; max-height: 52vh; margin: 0; padding: 0; object-fit: contain; object-position: center; }
-.intro-slide :is(h2, .intro-hero-photo) { position: relative; top: 1em; }
+.intro-hearts { margin: 0; font-size: 1.1em; line-height: 1; letter-spacing: .2em; color: var(--olive); }
+.intro-slide > :is(h2, .intro-photo-stack) { position: relative; top: 1em; }
 .intro-message-slide { align-items: center; justify-content: center; gap: 5.0625rem; padding: 1.5rem .6rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .intro-message { width: min(100%, calc(100vw - .9rem)); margin: 0 auto; font-size: var(--body-copy-size); line-height: var(--content-line-height); color: var(--olive); word-break: keep-all; overflow-wrap: normal; }
 .intro-message-slide > :is(.intro-message, .event-info) { position: relative; top: 2em; }
