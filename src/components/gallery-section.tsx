@@ -28,32 +28,28 @@ export function GallerySection() {
 				<Image className="gallery-portrait" src={landscapePhoto} alt="" width={2212} height={1429} sizes="(max-width: 430px) 78vw, 335px" />
 			</section>
 
-			<section className="invitation-slide gallery-slide gallery-grid-slide gallery-triptych-slide">
-				<div className="flex w-full flex-row items-start gap-[2em]">
-					<div className="mr-[0.5em] flex h-full min-w-0 flex-[0_0_30%] flex-col">
-						<Image
-							className="block h-auto min-w-0 w-full object-cover"
-							src={narrowLeft}
-							alt=""
-							width={1000}
-							height={1508}
-							sizes="(max-width: 430px) 30.25vw, 130px"
-						/>
-					</div>
-					<div className="flex h-full min-w-0 flex-1 flex-col">
-						<Image
-							className="block h-auto min-w-0 w-full object-cover"
-							src={tallRight}
-							alt=""
-							width={2048}
-							height={3089}
-							sizes="(max-width: 430px) 52.5vw, 226px"
-						/>
-					</div>
-				</div>
-
+			<section className="invitation-slide gallery-slide gallery-grid-slide gallery-pair-slide">
 				<Image
-					className="block h-auto w-full"
+					className="gallery-pair-left"
+					src={narrowLeft}
+					alt=""
+					width={1000}
+					height={1508}
+					sizes="(max-width: 430px) 30.25vw, 130px"
+				/>
+				<Image
+					className="gallery-pair-right"
+					src={tallRight}
+					alt=""
+					width={2048}
+					height={3089}
+					sizes="(max-width: 430px) 67vw, 288px"
+				/>
+			</section>
+
+			<section className="invitation-slide gallery-slide gallery-wide-slide">
+				<Image
+					className="gallery-wide-photo"
 					src={widePhoto}
 					alt=""
 					width={3089}
