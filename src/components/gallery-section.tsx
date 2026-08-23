@@ -58,39 +58,34 @@ export function GallerySection() {
 				/>
 			</section>
 
-			<section className="invitation-slide gallery-slide gallery-grid-slide gallery-extra-slide">
-				<div className="flex flex-col">
-					<Image
-						className="block h-auto w-[74%]"
-						src={motionPhoto}
-						alt=""
-						width={1200}
-						height={1500}
-						sizes="(max-width: 430px) 74vw, 318px"
-					/>
-				</div>
+			<section className="invitation-slide gallery-slide gallery-motion-slide">
+				<Image
+					className="gallery-motion-photo"
+					src={motionPhoto}
+					alt=""
+					width={1200}
+					height={1500}
+					sizes="(max-width: 430px) 82vw, 353px"
+				/>
+			</section>
 
-				<div className="mt-[1em] flex flex-col">
-					<Image
-						className="ml-auto block h-auto w-[68%]"
-						src={rightAligned}
-						alt=""
-						width={1800}
-						height={1193}
-						sizes="(max-width: 430px) 68vw, 292px"
-					/>
-				</div>
-				<div className="mx-auto my-[1em] flex w-[33%] flex-col">
-					<Image
-						className="block h-auto w-full"
-						src={smallCenter}
-						alt=""
-						width={2000}
-						height={2468}
-						sizes="(max-width: 430px) 33vw, 142px"
-					/>
-				</div>
-
+			<section className="invitation-slide gallery-slide gallery-extra-pair-slide">
+				<Image
+					className="gallery-extra-wide"
+					src={rightAligned}
+					alt=""
+					width={1800}
+					height={1193}
+					sizes="(max-width: 430px) 67vw, 288px"
+				/>
+				<Image
+					className="gallery-extra-polaroid"
+					src={smallCenter}
+					alt=""
+					width={2000}
+					height={2468}
+					sizes="(max-width: 430px) 34vw, 146px"
+				/>
 			</section>
 
 			<section className="invitation-slide gallery-slide gallery-cat-slide">
