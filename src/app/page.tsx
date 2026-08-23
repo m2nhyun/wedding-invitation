@@ -1,9 +1,9 @@
 import { EventSection } from "@/components/event-section";
-import { EventPhotoSlide } from "@/components/event-photo-slide";
+import { EventPhoto } from "@/components/event-photo-slide";
 import { ContactSection } from "@/components/contact-section";
 import { GallerySection } from "@/components/gallery-section";
 import { IntroSection } from "@/components/intro-section";
-import { IntroPhotoSlide } from "@/components/intro-photo-slide";
+import { IntroMessageSection } from "@/components/intro-message-section";
 import { HorizontalPager } from "@/components/horizontal-pager";
 
 export default function Page() {
@@ -11,11 +11,11 @@ export default function Page() {
     <main className="invitation">
       <HorizontalPager>
         <IntroSection />
-        <section className="invitation-slide event-info-slide">
+        <IntroMessageSection />
+        <section className="invitation-slide event-combined-slide">
           <EventSection />
+          <EventPhoto />
         </section>
-        <IntroPhotoSlide />
-        <EventPhotoSlide />
         <section className="invitation-slide contact-only-slide">
           <ContactSection />
         </section>
