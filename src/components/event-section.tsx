@@ -5,9 +5,7 @@ export function EventSection() {
 		<div className="event-info">
 			<div>
 				<p>
-					{wedding.event.date}
-					<br />
-					{wedding.event.time}
+					{`${wedding.event.date} ${wedding.event.time}`}
 				</p>
 			</div>
 			<div>

@@ -1,4 +1,3 @@
-import { EventSection } from "@/components/event-section";
 import { EventPhoto } from "@/components/event-photo-slide";
 import { ContactSection } from "@/components/contact-section";
 import { GallerySection } from "@/components/gallery-section";
@@ -14,7 +13,6 @@ export default function Page() {
         <IntroMessageSection />
         <section className="invitation-slide event-combined-slide">
           <EventPhoto />
-          <EventSection />
         </section>
         <section className="invitation-slide contact-only-slide">
           <ContactSection />

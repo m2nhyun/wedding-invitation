@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { wedding } from "@/data/wedding";
+import { EventSection } from "@/components/event-section";
 
 export function IntroMessageSection() {
   return (
@@ -14,6 +15,7 @@ export function IntroMessageSection() {
           </Fragment>
         ))}
       </p>
+      <EventSection />
     </section>
   );
 }
