@@ -145,7 +145,7 @@ img.image-unavailable {
 .gallery-slide { padding-right: var(--gallery-outline); padding-left: var(--gallery-outline); }
 .gallery-combined-slide { justify-content: flex-start; gap: clamp(.8rem, 2vh, 1.3rem); padding: clamp(.55rem, 2vh, 1rem) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-combined-slide .gallery-main { width: 100%; height: auto; max-height: 34vh; margin-left: 0; object-fit: contain; object-position: center; }
-.gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 38%; max-height: 22vh; margin-right: 0; object-fit: contain; }
+.gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 41.8%; max-height: 24.2vh; margin-right: 0; object-fit: contain; }
 .gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 70%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-triptych-slide { justify-content: space-between; }

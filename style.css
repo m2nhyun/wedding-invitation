@@ -353,8 +353,8 @@ body .div-img1 .gallery-main {
 body .div-img1 .gallery-hand {
 	flex-shrink: 0;
 	align-self: flex-end;
-	width: 38%;
-	max-height: 22vh;
+	width: 41.8%;
+	max-height: 24.2vh;
 	margin-right: 0;
 	object-fit: contain;
 }
