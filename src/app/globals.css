@@ -116,7 +116,7 @@ img.image-unavailable {
 .gallery-wide-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-wide-photo { position: relative; top: 1em; width: 100%; height: auto; max-height: 40vh; object-fit: contain; object-position: center; }
 .gallery-motion-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.gallery-motion-photo { width: 82%; height: auto; max-height: 60vh; object-fit: contain; object-position: center; }
+.gallery-motion-photo { position: relative; top: 1em; width: 82%; height: auto; max-height: 60vh; object-fit: contain; object-position: center; }
 .gallery-extra-pair-slide { justify-content: flex-start; padding: clamp(1rem, 15vh, 12rem) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-extra-wide { align-self: flex-end; width: 67%; max-height: 29vh; object-fit: contain; object-position: right top; }
 .gallery-extra-polaroid { align-self: center; width: 34%; max-height: 30vh; margin-top: clamp(4rem, 17vh, 14rem); object-fit: contain; object-position: center; }
