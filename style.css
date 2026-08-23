@@ -196,9 +196,9 @@ body .invitation-viewport > div {
 }
 body .div1 {
 	align-items: center;
-	justify-content: flex-start;
-	gap: clamp(1.5rem, 4vh, 2.5rem);
-	padding: clamp(2.75rem, 8vh, 5rem) 1rem
+	justify-content: center;
+	gap: 1em;
+	padding: 0 1rem
 		calc(4.75rem + env(safe-area-inset-bottom));
 }
 body .div1 h2 {
@@ -211,6 +211,10 @@ body .div1 .intro-hero-photo {
 	max-height: 52vh;
 	object-fit: contain;
 	object-position: center;
+}
+body .div1 :is(h2, .intro-hero-photo) {
+	position: relative;
+	top: 1em;
 }
 body .div1-message {
 	align-items: center;
