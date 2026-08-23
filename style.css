@@ -230,18 +230,22 @@ body .div1-message p {
 }
 body .div3 {
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	flex-direction: column;
-	gap: 1.5rem;
-	padding: clamp(2rem, 6vh, 4rem) 1.5rem
+	gap: 1em;
+	padding: 0 1.5rem
 		calc(4.75rem + env(safe-area-inset-bottom));
 	background: white;
 	color: var(--olive);
 }
 body .div3 .event-info {
 	gap: 1.4rem;
-	line-height: 1.73;
+	line-height: 1.45em;
 	letter-spacing: 0.05em;
+}
+body .div3 > :is(.event-info, .div3-1) {
+	position: relative;
+	top: 1em;
 }
 body .div3 :is(p, .event-map-links) {
 	font-size: 1.15em;
