@@ -140,6 +140,7 @@ img.image-unavailable {
 .invitation-slide.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
 .invitation-slide.slide-visible > :nth-child(2) { transition-delay: .7s; }
 .invitation-slide.slide-visible > :nth-child(3) { transition-delay: 1.3s; }
+.contact-only-slide > .contact-slide { opacity: 1; transform: none; transition: none; }
 .contact-only-slide .contact-slide > div { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .contact-only-slide.slide-visible .contact-slide > div { opacity: 1; transform: translateY(0); }
 .contact-only-slide.slide-visible .contact-slide > div:first-child { transition-delay: .1s; }
