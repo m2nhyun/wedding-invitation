@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.addEventListener("contextmenu", (event) => {
 		if (event.target.closest("img")) event.preventDefault();
 	});
+	viewport.addEventListener(
+		"error",
+		(event) => {
+			if (event.target instanceof HTMLImageElement) {
+				event.target.classList.add("image-unavailable");
+			}
+		},
+		true,
+	);
 
 	const pages = Array.from(viewport.children);
 	const dots = document.querySelector(".page-dots");

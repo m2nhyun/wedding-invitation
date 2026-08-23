@@ -45,6 +45,11 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
 				event.preventDefault();
 			}
 		};
+		const markUnavailableImage = (event: Event) => {
+			if (event.target instanceof HTMLImageElement) {
+				event.target.classList.add("image-unavailable");
+			}
+		};
 
     viewport.addEventListener("scroll", updatePage, { passive: true });
     viewport.addEventListener("wheel", onWheel, { passive: false });
@@ -53,6 +58,7 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
 		});
 		document.addEventListener("touchmove", preventMultiTouch, { passive: false });
 		document.addEventListener("contextmenu", preventImageMenu);
+		viewport.addEventListener("error", markUnavailableImage, true);
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") viewport.scrollBy({ left: viewport.clientWidth, behavior: "smooth" });
       if (event.key === "ArrowLeft") viewport.scrollBy({ left: -viewport.clientWidth, behavior: "smooth" });
@@ -73,6 +79,7 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
 			});
 			document.removeEventListener("touchmove", preventMultiTouch);
 			document.removeEventListener("contextmenu", preventImageMenu);
+			viewport.removeEventListener("error", markUnavailableImage, true);
       window.removeEventListener("keydown", onKeyDown);
       viewport.removeEventListener("click", onTopButtonClick);
       window.removeEventListener("resize", updatePageCount);
