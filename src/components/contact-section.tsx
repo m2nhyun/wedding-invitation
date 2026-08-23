@@ -103,7 +103,7 @@ export function ContactSection() {
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
-				<div className="relative flex flex-1 flex-col gap-[0.4em] border-l-[0.4px] border-[rgb(from_var(--olive)_r_g_b/60%)] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+				<div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.bride.parents}
 					</p>
