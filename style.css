@@ -200,7 +200,7 @@ body .invitation-viewport > div {
 body .div1 {
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
+	gap: 2.8rem;
 	padding: 0 0
 		calc(4.75rem + env(safe-area-inset-bottom));
 }
