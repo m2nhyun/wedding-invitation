@@ -96,7 +96,7 @@ img.image-unavailable {
 .event-photo-only-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .event-photo-only-slide img { width: 100%; height: min(44vh, 23.1rem); object-fit: contain; }
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) var(--gallery-outline) calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
-.contact-slide { position: relative; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
+.contact-slide { position: relative; top: 1em; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
 .contact-slide::before { position: absolute; top: 50%; right: 0; left: 0; height: 1px; content: ""; background: rgb(from var(--olive) r g b / .28); }
 .contact-slide > div { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
