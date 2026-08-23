@@ -113,9 +113,9 @@ img.image-unavailable {
 }
 
 
-.intro-slide { align-items: center; justify-content: center; gap: 1em; padding: 0 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.intro-slide { align-items: center; justify-content: center; gap: 1em; padding: 0 0 calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .intro-slide h2 { margin: 0; padding: 0; font-size: 1.386em; line-height: 1.75; letter-spacing: .1em; color: var(--olive); }
-.intro-hero-photo { width: 100%; max-height: 52vh; object-fit: contain; object-position: center; }
+.intro-hero-photo { width: 100%; max-height: 52vh; margin: 0; padding: 0; object-fit: contain; object-position: center; }
 .intro-slide :is(h2, .intro-hero-photo) { position: relative; top: 1em; }
 .intro-message-slide { align-items: center; justify-content: center; padding: 1.5rem 1rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .intro-message { width: min(100%, calc(100vw - 1.5rem)); margin: 0 auto; font-size: clamp(1rem, 4.15vw, 1.15rem); line-height: 1.73; color: var(--olive); }
