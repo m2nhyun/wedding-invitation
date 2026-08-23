@@ -3,6 +3,7 @@
 	--BG: hsl(76, 36%, 92%);
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
 	--gallery-outline: 1rem;
+	--content-line-height: 1.73;
 }
 
 @font-face {
@@ -77,12 +78,12 @@ body h2 {
 	font-size: 1.32em;
 	color: var(--olive);
 	letter-spacing: 0.1em;
-	line-height: 1.75;
+	line-height: var(--content-line-height);
 }
 body p {
 	font-size: 1.15em;
 	color: var(--olive);
-	line-height: 1.7;
+	line-height: var(--content-line-height);
 }
 body a {
 	font-size: 1.15em;
@@ -229,7 +230,7 @@ body .div1-message p {
 	width: min(100%, 100vw - 1.5rem);
 	margin: 0 auto;
 	font-size: clamp(1rem, 4.15vw, 1.15rem);
-	line-height: 1.73;
+	line-height: var(--content-line-height);
 }
 body .div3 {
 	align-items: center;
@@ -243,7 +244,7 @@ body .div3 {
 }
 body .div3 .event-info {
 	gap: 1.4rem;
-	line-height: 1.73;
+	line-height: var(--content-line-height);
 	letter-spacing: 0.05em;
 }
 body .div3 > :is(.event-info, .div3-1) {

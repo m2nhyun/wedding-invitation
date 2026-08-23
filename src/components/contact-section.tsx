@@ -89,10 +89,10 @@ export function ContactSection() {
 		<>
 			<div className="contact-slide">
 				<div className="relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
-					<p className="text-[1.1em] leading-[1.7] text-[var(--olive)]">
+					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.groom.parents}
 					</p>
-					<h2 className="text-[1.32em] leading-[1.75] tracking-[0.1em] text-[var(--olive)]">
+					<h2 className="text-[1.32em] leading-[var(--content-line-height)] tracking-[0.1em] text-[var(--olive)]">
 						{wedding.couple.groom.name}
 					</h2>
 					<button
@@ -104,10 +104,10 @@ export function ContactSection() {
 					</button>
 				</div>
 				<div className="relative flex flex-1 flex-col gap-[0.4em] border-l-[0.4px] border-[rgb(from_var(--olive)_r_g_b/60%)] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
-					<p className="text-[1.1em] leading-[1.7] text-[var(--olive)]">
+					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.bride.parents}
 					</p>
-					<h2 className="text-[1.32em] leading-[1.75] tracking-[0.1em] text-[var(--olive)]">
+					<h2 className="text-[1.32em] leading-[var(--content-line-height)] tracking-[0.1em] text-[var(--olive)]">
 						{wedding.couple.bride.name}
 					</h2>
 					<button
