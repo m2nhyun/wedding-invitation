@@ -62,7 +62,7 @@ export function GallerySection() {
 					alt=""
 					width={1200}
 					height={1500}
-					sizes="(max-width: 430px) 52vw, 224px"
+					sizes="(max-width: 430px) 62.4vw, 269px"
 				/>
 			</section>
 

@@ -113,10 +113,10 @@ img.image-unavailable {
 .gallery-pair-slide { justify-content: flex-start; }
 .gallery-pair-left { align-self: flex-start; width: 35.75%; max-height: 35.2vh; margin-top: clamp(.8rem, 1.6vh, 1.2rem); object-fit: contain; object-position: left top; }
 .gallery-pair-right { align-self: flex-end; width: 70%; max-height: 50vh; margin-top: clamp(2.75rem, 5vh, 4.25rem); object-fit: contain; object-position: right top; }
-.gallery-wide-motion-slide { align-items: center; justify-content: center; gap: clamp(1rem, 2.5vh, 1.5rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
+.gallery-wide-motion-slide { align-items: center; justify-content: center; gap: clamp(1.75rem, 4vh, 2.5rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-wide-motion-slide :is(.gallery-wide-photo, .gallery-motion-photo) { position: relative; top: 1em; object-fit: contain; object-position: center; }
 .gallery-wide-photo { width: 83%; height: auto; max-height: 28vh; }
-.gallery-motion-photo { width: 52%; height: auto; max-height: 38vh; }
+.gallery-motion-photo { width: 62.4%; height: auto; max-height: 45.6vh; }
 .gallery-extra-pair-slide { justify-content: flex-start; padding: clamp(1rem, 15vh, 12rem) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-extra-wide { position: relative; top: 1em; align-self: center; width: 77.05%; max-height: 33.35vh; object-fit: contain; object-position: center; }
 .gallery-extra-polaroid { position: relative; top: 1em; align-self: center; width: 43.01%; max-height: 37.95vh; margin-top: clamp(2.5rem, 12vh, 9rem); object-fit: contain; object-position: center; }
