@@ -111,9 +111,9 @@ img.image-unavailable {
 .gallery-combined-slide .gallery-hand { flex-shrink: 0; align-self: flex-end; width: 40.128%; max-height: 23.232vh; margin-right: 0; object-fit: contain; }
 .gallery-combined-slide .gallery-portrait { align-self: flex-start; width: 70%; max-height: 31vh; margin-left: 0; object-fit: cover; object-position: center; }
 .gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.gallery-pair-slide { justify-content: flex-start; }
+.gallery-pair-slide { justify-content: flex-start; gap: clamp(.27rem, .84vh, .48rem); }
 .gallery-pair-left { align-self: flex-start; width: 35.75%; max-height: 35.2vh; margin-top: clamp(.8rem, 1.6vh, 1.2rem); object-fit: contain; object-position: left top; }
-.gallery-pair-right { align-self: flex-end; width: 70%; max-height: 50vh; margin-top: clamp(2.75rem, 5vh, 4.25rem); object-fit: contain; object-position: right top; }
+.gallery-pair-right { align-self: flex-end; width: 70%; max-height: 50vh; margin-top: clamp(1.65rem, 3vh, 2.55rem); object-fit: contain; object-position: right top; }
 .gallery-wide-motion-slide { align-items: center; justify-content: center; gap: clamp(1.75rem, 4vh, 2.5rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-wide-motion-slide :is(.gallery-wide-photo, .gallery-motion-photo) { position: relative; top: 1em; object-fit: contain; object-position: center; }
 .gallery-wide-photo { width: 83%; height: auto; max-height: 28vh; }
