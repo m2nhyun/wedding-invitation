@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { wedding } from "@/data/wedding";
+import { EventSection } from "@/components/event-section";
 import KakaoPayIcon from "../icons/kakao_simple.svg?react";
 
 type GiftSide = "groom" | "bride";
@@ -88,7 +89,11 @@ export function ContactSection() {
 	return (
 		<>
 			<div className="contact-slide">
-				<div className="contact-panel relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+				<div className="contact-panel contact-event-panel relative flex flex-col bg-[var(--BG)] text-[var(--olive)]">
+					<EventSection />
+				</div>
+				<div className="contact-divider" aria-hidden="true" />
+				<div className="contact-panel relative flex flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.groom.parents}
 					</p>
@@ -102,7 +107,8 @@ export function ContactSection() {
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
-				<div className="contact-panel relative flex flex-1 flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
+				<div className="contact-divider" aria-hidden="true" />
+				<div className="contact-panel relative flex flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.bride.parents}
 					</p>
@@ -116,7 +122,6 @@ export function ContactSection() {
 						{wedding.gift.labels.heading}
 					</button>
 				</div>
-				<div className="contact-divider" aria-hidden="true" />
 			</div>
 
 			{selectedSide ? (

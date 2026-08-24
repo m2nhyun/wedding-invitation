@@ -81,11 +81,9 @@ img.image-unavailable {
 .intro-slide h2 { margin: 0; padding: 0; font-size: 1.317em; line-height: var(--content-line-height); letter-spacing: .1em; color: var(--olive); }
 .intro-hero-photo { width: 100%; max-height: 52vh; margin: 0; padding: 0; object-fit: contain; object-position: center; }
 .intro-slide :is(h2, .intro-hero-photo) { position: relative; top: 1em; }
-.intro-message-slide { align-items: center; justify-content: center; gap: 4.55625rem; padding: 1.5rem .6rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.intro-message-slide { align-items: center; justify-content: center; padding: 1.5rem .6rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .intro-message { width: min(100%, calc(100vw - .9rem)); margin: 0 auto; font-size: var(--body-copy-size); line-height: var(--content-line-height); color: var(--olive); word-break: keep-all; overflow-wrap: normal; }
-.intro-message-slide > :is(.intro-message, .event-info) { position: relative; top: 3em; }
-.intro-message-slide .event-info { gap: 0; line-height: 1.82; letter-spacing: .05em; color: hsl(52, 15%, 47%); }
-.intro-message-slide .event-info :is(p, .event-map-links) { font-size: var(--event-copy-size); }
+.intro-message-slide > .intro-message { position: relative; top: 3em; }
 
 .event-combined-slide { align-items: center; justify-content: center; gap: 2em; padding: 0 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; color: var(--olive); }
 .event-combined-slide > :is(.event-info, .event-photo) { position: relative; top: 2em; }
@@ -97,9 +95,12 @@ img.image-unavailable {
 .event-photo-only-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .event-photo-only-slide img { width: 100%; height: min(44vh, 23.1rem); object-fit: contain; }
 .contact-only-slide { padding: clamp(2rem, 5vh, 2.75rem) var(--gallery-outline) calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
-.contact-slide { position: relative; top: 1em; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; gap: .6rem; background: white; }
-.contact-divider { position: absolute; top: 50%; right: 0; left: 0; z-index: 1; height: 1px; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
-.contact-slide > .contact-panel { flex: 1 1 50%; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
+.contact-slide { position: relative; top: 1em; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; background: white; }
+.contact-divider { flex: 0 0 1px; width: 100%; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
+.contact-slide > .contact-panel { flex: 1 1 0; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
+.contact-slide > .contact-event-panel { flex: .82 1 0; padding: .85rem 1rem; }
+.contact-event-panel .event-info { gap: .3rem; line-height: 1.65; color: hsl(52, 15%, 47%); }
+.contact-event-panel .event-info :is(p, .event-map-links) { font-size: var(--event-copy-size); }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
 .contact-slide :is(p, button) { font-size: var(--body-copy-size); }
 .contact-slide h2 { font-size: 1.32em; line-height: var(--content-line-height); letter-spacing: .1em; }
@@ -143,7 +144,8 @@ img.image-unavailable {
 .contact-only-slide .contact-slide > .contact-panel { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .contact-only-slide.slide-visible .contact-slide > .contact-panel { opacity: 1; transform: translateY(0); }
 .contact-only-slide.slide-visible .contact-slide > .contact-panel:first-child { transition-delay: .05s; }
-.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(2) { transition-delay: .55s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(3) { transition-delay: .45s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(5) { transition-delay: .85s; }
 @media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .contact-only-slide .contact-slide > .contact-panel { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {

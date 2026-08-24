@@ -1,8 +1,12 @@
 import { wedding } from "@/data/wedding";
 
-export function EventSection() {
+type EventSectionProps = {
+	className?: string;
+};
+
+export function EventSection({ className }: EventSectionProps) {
 	return (
-		<div className="event-info">
+		<div className={`event-info${className ? ` ${className}` : ""}`}>
 			<div>
 				<p>
 					{`${wedding.event.date} ${wedding.event.time}`}
