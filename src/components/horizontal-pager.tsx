@@ -21,7 +21,7 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
       setPage(nextPage);
       setActivePageOnLight(
         slides[nextPage]?.matches(
-          ".event-combined-slide, .contact-only-slide, .gallery-combined-slide, .gallery-wide-motion-slide",
+          ".event-combined-slide, .contact-only-slide, .gallery-seated-slide, .gallery-hands-slide",
         ) ?? false,
       );
     };
