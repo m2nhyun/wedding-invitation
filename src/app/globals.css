@@ -81,8 +81,8 @@ img.image-unavailable {
 .intro-slide h2 { margin: 0; padding: 0; font-size: 1.317em; line-height: var(--content-line-height); letter-spacing: .1em; color: var(--olive); }
 .intro-hero-photo { width: 100%; max-height: 52vh; margin: 0; padding: 0; object-fit: contain; object-position: center; }
 .intro-slide :is(h2, .intro-hero-photo) { position: relative; top: 1em; }
-.intro-message-slide { align-items: center; justify-content: center; padding: 1.5rem .6rem calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
-.intro-message { width: min(100%, calc(100vw - .9rem)); margin: 0 auto; font-size: var(--body-copy-size); line-height: var(--content-line-height); color: var(--olive); word-break: keep-all; overflow-wrap: normal; }
+.intro-message-slide { align-items: center; justify-content: center; padding: 1.8rem .72rem calc(5.7rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.intro-message { width: min(100%, calc(100vw - .9rem)); margin: 0 auto; font-size: clamp(1.02rem, 4.224vw, 1.171rem); line-height: var(--content-line-height); color: var(--olive); word-break: keep-all; overflow-wrap: normal; }
 .intro-message-slide > .intro-message { position: relative; top: 2em; }
 
 .event-combined-slide { align-items: center; justify-content: center; gap: 2em; padding: 0 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; color: var(--olive); }
