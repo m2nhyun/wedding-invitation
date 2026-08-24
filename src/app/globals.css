@@ -98,9 +98,9 @@ img.image-unavailable {
 .contact-slide { position: relative; top: 1em; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; background: white; }
 .contact-divider { flex: 0 0 1px; width: 100%; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
 .contact-slide > .contact-panel { flex: 1 1 0; justify-content: center; gap: .55rem; padding: 1rem; border: 0; background: white; }
-.contact-slide > .contact-event-panel { flex: .82 1 0; padding: .85rem 1rem; }
-.contact-event-panel .event-info { gap: .3rem; line-height: 1.65; color: hsl(52, 15%, 47%); }
-.contact-event-panel .event-info :is(p, .event-map-links) { font-size: var(--event-copy-size); }
+.contact-slide > .contact-event-panel { flex: .82 1 0; align-items: center; justify-content: center; padding: .85rem 1rem; }
+.contact-event-panel .event-info { width: 100%; gap: .3rem; line-height: var(--content-line-height); color: var(--olive); }
+.contact-event-panel .event-info :is(p, .event-map-links) { font-size: var(--body-copy-size); }
 .contact-slide > div button { position: static; bottom: auto; width: auto; margin-top: clamp(1.35rem, 3vh, 2rem); }
 .contact-slide :is(p, button) { font-size: var(--body-copy-size); }
 .contact-slide h2 { font-size: 1.32em; line-height: var(--content-line-height); letter-spacing: .1em; }
