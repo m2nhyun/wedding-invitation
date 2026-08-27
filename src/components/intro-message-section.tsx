@@ -4,16 +4,15 @@ import { wedding } from "@/data/wedding";
 export function IntroMessageSection() {
   return (
     <section className="invitation-slide intro-message-slide">
-      <p className="intro-message">
-        {wedding.intro.message.map((paragraph, paragraphIndex) => (
-          <Fragment key={paragraph[0]}>
-            {paragraphIndex > 0 ? <><br /><br /></> : null}
+      <div className="intro-message">
+        {wedding.intro.message.map((paragraph) => (
+          <p className="intro-message-paragraph" key={paragraph[0]}>
             {paragraph.map((line, lineIndex) => (
               <Fragment key={line}>{lineIndex > 0 ? <br /> : null}{line}</Fragment>
             ))}
-          </Fragment>
+          </p>
         ))}
-      </p>
+      </div>
     </section>
   );
 }
