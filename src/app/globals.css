@@ -122,7 +122,7 @@ img.image-unavailable {
 .gallery-collage-left { grid-column: 1; grid-row: 1; width: 100%; max-height: 28vh; object-fit: contain; object-position: left top; }
 .gallery-collage-right { grid-column: 2; grid-row: 1; width: 100%; max-height: 47vh; object-fit: contain; object-position: right top; }
 .gallery-collage-wide { grid-column: 1 / -1; grid-row: 2; width: 100%; max-height: 31vh; object-fit: contain; object-position: center top; }
-.gallery-mirror-slide { justify-content: flex-start; gap: clamp(.7rem, 2vh, 1.1rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.gallery-mirror-slide { justify-content: flex-start; gap: calc(clamp(.7rem, 2vh, 1.1rem) + .5em); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-mirror-photo { align-self: flex-start; width: 100%; height: auto; max-height: 32vh; object-fit: contain; object-position: left top; }
 .gallery-groom-photo { align-self: flex-end; width: 68%; height: auto; max-height: 24vh; object-fit: contain; object-position: right top; }
 .gallery-seated-polaroid { align-self: center; width: 35%; height: auto; max-height: 24vh; object-fit: contain; object-position: center; }
