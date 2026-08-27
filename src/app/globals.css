@@ -118,10 +118,10 @@ img.image-unavailable {
 .gallery-story-wide { align-self: flex-start; width: 77.5%; height: auto; max-height: 28vh; object-fit: contain; object-position: left top; }
 .gallery-story-standing { align-self: center; width: 58%; height: auto; max-height: 39vh; object-fit: contain; object-position: center top; }
 .gallery-story-hand { position: relative; top: .5em; align-self: flex-end; width: 30%; height: auto; max-height: 21vh; object-fit: contain; object-position: right top; }
-.gallery-collage-slide { display: grid; grid-template-columns: 34% 62%; grid-template-rows: auto auto; align-content: start; justify-content: space-between; row-gap: clamp(1.25rem, 4vh, 2.5rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.gallery-collage-slide { display: grid; grid-template-columns: 34% 62%; grid-template-rows: auto 1fr; align-content: stretch; justify-content: space-between; row-gap: clamp(1.25rem, 4vh, 2.5rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-collage-left { grid-column: 1; grid-row: 1; width: 100%; max-height: 28vh; object-fit: contain; object-position: left top; }
 .gallery-collage-right { grid-column: 2; grid-row: 1; width: 100%; max-height: 47vh; object-fit: contain; object-position: right top; }
-.gallery-collage-wide { grid-column: 1 / -1; grid-row: 2; width: 100%; max-height: 31vh; object-fit: contain; object-position: center top; }
+.gallery-collage-wide { grid-column: 1 / -1; grid-row: 2; align-self: end; width: 100%; max-width: none; max-height: 31vh; object-fit: contain; object-position: center bottom; }
 .gallery-mirror-slide { justify-content: flex-start; gap: calc(clamp(.7rem, 2vh, 1.1rem) + .5em); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-mirror-photo { align-self: flex-start; width: 100%; height: auto; max-height: 32vh; object-fit: contain; object-position: left top; }
 .gallery-groom-photo { align-self: flex-end; width: 68%; height: auto; max-height: 24vh; object-fit: contain; object-position: right top; }
