@@ -3,7 +3,7 @@ import { wedding } from "@/data/wedding";
 
 const [
 	standingPortrait,
-	,
+	handsPolaroid,
 	boutonnierePhoto,
 	bouquetMoment,
 	mirrorPhoto,
@@ -25,6 +25,7 @@ export function GallerySection() {
 					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
 				/>
 				<Image className="gallery-standing-portrait" src={standingPortrait} alt="" width={2212} height={1429} sizes="(max-width: 430px) 74vw, 318px" />
+				<Image className="gallery-hand-polaroid" src={handsPolaroid} alt="" width={5354} height={6634} sizes="(max-width: 430px) 32vw, 138px" />
 			</section>
 
 			<section className="invitation-slide gallery-slide gallery-standing-slide">
