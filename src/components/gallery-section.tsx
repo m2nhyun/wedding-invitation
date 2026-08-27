@@ -30,7 +30,7 @@ export function GallerySection() {
 					alt=""
 					width={1200}
 					height={1500}
-					sizes="(max-width: 430px) 55vw, 237px"
+					sizes="(max-width: 430px) 58vw, 249px"
 				/>
 				<Image className="gallery-story-hand" src={handsPolaroid} alt="" width={5354} height={6634} sizes="(max-width: 430px) 30vw, 129px" />
 			</section>
