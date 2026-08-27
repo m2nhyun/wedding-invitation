@@ -93,7 +93,7 @@ img.image-unavailable {
 .map-link { font-size: inherit; text-decoration: underline; }
 .event-combined-slide .event-photo { width: 100%; height: min(39vh, 20rem); object-fit: contain; }
 .event-photo-only-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.event-photo-only-slide img { width: 100%; height: min(44vh, 23.1rem); object-fit: contain; }
+.event-photo-only-slide img { width: 105%; max-width: none; height: min(46.2vh, 24.255rem); object-fit: contain; }
 .contact-only-slide { padding: 0 0 calc(4.25rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .contact-slide { display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; background: white; }
 .contact-divider { flex: 0 0 1px; align-self: center; width: calc(100% - (var(--gallery-outline) * 2)); opacity: 1; transform: none; transition: none; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
