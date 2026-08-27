@@ -145,6 +145,7 @@ img.image-unavailable {
 
 .invitation-slide > :is(h2, p, a, button, img, div) { opacity: 0; transform: translateY(1.25rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .invitation-slide.slide-visible > :is(h2, p, a, button, img, div) { opacity: 1; transform: translateY(0); }
+.event-photo-only-slide > img { transform: translateY(2rem); transition-duration: 1.8s; }
 .invitation-slide.slide-visible > :nth-child(2) { transition-delay: .55s; }
 .invitation-slide.slide-visible > :nth-child(3) { transition-delay: 1.05s; }
 .contact-only-slide > .contact-slide { opacity: 1; transform: none; transition: none; }
