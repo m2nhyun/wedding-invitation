@@ -115,7 +115,7 @@ img.image-unavailable {
 
 .gallery-slide { padding-right: var(--gallery-outline); padding-left: var(--gallery-outline); }
 .gallery-story-slide { justify-content: flex-start; gap: clamp(.7rem, 1.7vh, 1.05rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.gallery-story-wide { align-self: flex-start; width: 77.5%; height: auto; max-height: 28vh; object-fit: contain; object-position: left top; }
+.gallery-story-wide { position: relative; top: -.5em; align-self: flex-start; width: 79%; height: auto; max-height: 28vh; object-fit: contain; object-position: left top; }
 .gallery-story-standing { align-self: center; width: 58%; height: auto; max-height: 39vh; object-fit: contain; object-position: center top; }
 .gallery-story-hand { position: relative; top: .5em; align-self: flex-end; width: 30%; height: auto; max-height: 21vh; object-fit: contain; object-position: right top; }
 .gallery-collage-slide { display: grid; grid-template-columns: 34% 62%; grid-template-rows: auto 1fr; align-content: stretch; justify-content: space-between; row-gap: clamp(1.25rem, 4vh, 2.5rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }

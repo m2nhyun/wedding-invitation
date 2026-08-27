@@ -22,7 +22,7 @@ export function GallerySection() {
 					alt=""
 					width={2212}
 					height={1429}
-					sizes="(max-width: 430px) 77.5vw, 333px"
+					sizes="(max-width: 430px) 79vw, 340px"
 				/>
 				<Image
 					className="gallery-story-standing"
