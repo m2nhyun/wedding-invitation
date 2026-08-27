@@ -6,7 +6,7 @@
 	--BG: hsl(76, 36%, 92%);
 	--pager-active-on-light: hsl(76, 33%, 56%);
 	--motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
-	--gallery-outline: 1rem;
+	--gallery-outline: 1em;
 	--content-line-height: 1.73;
 	--body-copy-size: clamp(1.06rem, 4.4vw, 1.22rem);
 	--event-copy-size: clamp(.945944rem, 3.92656vw, 1.088728rem);
@@ -108,22 +108,22 @@ img.image-unavailable {
 .contact-slide h2 { font-size: 1.32em; line-height: var(--content-line-height); letter-spacing: .1em; }
 
 .gallery-slide { padding-right: var(--gallery-outline); padding-left: var(--gallery-outline); }
-.gallery-seated-slide { justify-content: flex-start; gap: clamp(2rem, 8vh, 5.5rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
+.gallery-seated-slide { justify-content: flex-start; gap: clamp(2rem, 8vh, 5.5rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-seated-wide { width: 100%; height: auto; max-height: 31vh; object-fit: contain; object-position: center; }
 .gallery-standing-portrait { align-self: center; width: 74%; height: auto; max-height: 38vh; object-fit: contain; object-position: center; }
-.gallery-hands-slide { justify-content: flex-start; padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
+.gallery-hands-slide { justify-content: flex-start; padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .gallery-hands-polaroid { align-self: flex-end; width: 39%; height: auto; max-height: 24vh; margin-top: clamp(1rem, 3vh, 2.5rem); object-fit: contain; object-position: right top; }
 .gallery-hands-motion { align-self: center; width: 86%; height: auto; max-height: 52vh; margin-top: clamp(2rem, 7vh, 4.5rem); object-fit: contain; object-position: center; }
-.gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.gallery-grid-slide { justify-content: center; gap: clamp(.45rem, 1.4vh, .8rem); padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-pair-slide { justify-content: flex-start; gap: clamp(.27rem, .84vh, .48rem); }
 .gallery-pair-left { align-self: flex-start; width: 35.75%; max-height: 35.2vh; margin-top: clamp(.8rem, 1.6vh, 1.2rem); object-fit: contain; object-position: left top; }
 .gallery-pair-right { align-self: flex-end; width: 70%; max-height: 50vh; margin-top: clamp(1.65rem, 3vh, 2.55rem); object-fit: contain; object-position: right top; }
-.gallery-mirror-slide { justify-content: flex-start; padding: max(.75rem, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.gallery-mirror-slide { justify-content: flex-start; padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-mirror-photo { align-self: flex-start; width: 100%; height: auto; max-height: 30vh; object-fit: contain; object-position: left top; }
 .gallery-groom-photo { align-self: flex-end; width: 67%; height: auto; max-height: 34vh; margin-top: clamp(2.5rem, 10vh, 7.5rem); object-fit: contain; object-position: right top; }
-.gallery-polaroid-slide { align-items: center; justify-content: center; padding: 1rem var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.gallery-polaroid-slide { align-items: center; justify-content: center; padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-seated-polaroid { position: relative; top: 1em; width: 43%; height: auto; max-height: 38vh; object-fit: contain; object-position: center; }
-.gallery-cat-slide { align-items: center; justify-content: center; padding: 1rem var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
+.gallery-cat-slide { align-items: center; justify-content: center; padding: max(1em, env(safe-area-inset-top)) var(--gallery-outline) calc(4.75rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .gallery-cat-slide img { position: relative; top: 2em; width: min(58.8%, 15.75rem); max-height: 56vh; object-fit: contain; }
 
 .pager-controls { position: fixed; z-index: 40; bottom: max(1rem, env(safe-area-inset-bottom)); left: 50%; width: min(100%, 430px); transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: .9rem; pointer-events: auto; opacity: .7; }
