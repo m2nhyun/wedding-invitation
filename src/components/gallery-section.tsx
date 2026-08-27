@@ -15,47 +15,44 @@ const [
 export function GallerySection() {
 	return (
 		<>
-			<section className="invitation-slide gallery-slide gallery-seated-slide">
+			<section className="invitation-slide gallery-slide gallery-story-slide">
 				<Image
-					className="gallery-seated-wide"
-					src={wedding.assets.main}
+					className="gallery-story-wide"
+					src={standingPortrait}
 					alt=""
-					width={3089}
-					height={2048}
-					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
+					width={2212}
+					height={1429}
+					sizes="(max-width: 430px) 80vw, 344px"
 				/>
-				<Image className="gallery-standing-portrait" src={standingPortrait} alt="" width={2212} height={1429} sizes="(max-width: 430px) 74vw, 318px" />
-				<Image className="gallery-hand-polaroid" src={handsPolaroid} alt="" width={5354} height={6634} sizes="(max-width: 430px) 32vw, 138px" />
-			</section>
-
-			<section className="invitation-slide gallery-slide gallery-standing-slide">
 				<Image
-					className="gallery-standing-photo"
+					className="gallery-story-standing"
 					src={holdingHandsMotion}
 					alt=""
 					width={1200}
 					height={1500}
-					sizes="(max-width: 430px) 78vw, 335px"
+					sizes="(max-width: 430px) 55vw, 237px"
 				/>
+				<Image className="gallery-story-hand" src={handsPolaroid} alt="" width={5354} height={6634} sizes="(max-width: 430px) 30vw, 129px" />
 			</section>
 
-			<section className="invitation-slide gallery-slide gallery-grid-slide gallery-pair-slide">
+			<section className="invitation-slide gallery-slide gallery-collage-slide">
 				<Image
-					className="gallery-pair-left"
+					className="gallery-collage-left"
 					src={boutonnierePhoto}
 					alt=""
 					width={1000}
 					height={1508}
-					sizes="(max-width: 430px) 35.75vw, 154px"
+					sizes="(max-width: 430px) 34vw, 146px"
 				/>
 				<Image
-					className="gallery-pair-right"
+					className="gallery-collage-right"
 					src={bouquetMoment}
 					alt=""
 					width={2048}
 					height={3089}
-					sizes="(max-width: 430px) 70vw, 301px"
+					sizes="(max-width: 430px) 62vw, 267px"
 				/>
+				<Image className="gallery-collage-wide" src={wedding.assets.main} alt="" width={3089} height={2048} sizes="(max-width: 430px) calc(100vw - 2em), 398px" />
 			</section>
 
 			<section className="invitation-slide gallery-slide gallery-mirror-slide">
@@ -65,7 +62,7 @@ export function GallerySection() {
 					alt=""
 					width={3089}
 					height={2048}
-					sizes="(max-width: 430px) calc(110vw - 2.2em), 438px"
+					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
 				/>
 				<Image
 					className="gallery-groom-photo"
@@ -73,7 +70,7 @@ export function GallerySection() {
 					alt=""
 					width={1800}
 					height={1193}
-					sizes="(max-width: 430px) 74.8vw, 322px"
+					sizes="(max-width: 430px) 68vw, 292px"
 				/>
 				<Image className="gallery-seated-polaroid" src={seatedPolaroid} alt="" width={2000} height={2468} sizes="(max-width: 430px) 35vw, 151px" />
 			</section>
