@@ -17,7 +17,7 @@ export function EventSection({ className }: EventSectionProps) {
 					{`${wedding.event.venue.replace(", ", "(")})`}
 				</p>
 				<div className="event-map-links">
-					<a className="map-link" href={wedding.event.naverMapUrl}>
+					<a className="map-link" href={wedding.event.naverMapAppUrl}>
 						{wedding.event.naverMapLabel}
 					</a>
 					<span aria-hidden="true">/</span>
