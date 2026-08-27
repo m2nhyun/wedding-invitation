@@ -104,7 +104,7 @@ img.image-unavailable {
 .contact-slide { display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; background: white; }
 .contact-divider { flex: 0 0 1px; align-self: center; width: calc(100% - (var(--gallery-outline) * 2)); opacity: 1; transform: none; transition: none; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
 .contact-slide > .contact-panel { flex: 1 1 0; justify-content: center; gap: .44rem; padding: 1rem; border: 0; background: white; }
-.contact-slide > .contact-event-panel { display: grid; flex: 1 1 0; place-items: center; padding: .85rem 1rem; background: var(--BG); }
+.contact-slide > .contact-event-panel { display: grid; flex: 0 0 calc((100% - 1px) / 3 - 1.5em); place-items: center; padding: .85rem 1rem; background: var(--BG); }
 .contact-event-panel .event-info { width: 100%; gap: .45rem; margin: 0; line-height: var(--content-line-height); color: var(--olive); }
 .contact-event-panel .event-info > div { display: flex; flex-direction: column; align-items: center; gap: .45rem; }
 .contact-event-panel .event-info p { margin: 0; }
