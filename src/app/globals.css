@@ -99,7 +99,7 @@ img.image-unavailable {
 .map-link { font-size: inherit; text-decoration: underline; }
 .event-combined-slide .event-photo { width: 100%; height: min(39vh, 20rem); object-fit: contain; }
 .event-photo-only-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
-.event-photo-only-slide img { width: 105%; max-width: none; height: min(46.2vh, 24.255rem); object-fit: contain; }
+.event-photo-only-slide img { width: 110%; max-width: none; height: min(48.4vh, 25.41rem); object-fit: contain; }
 .contact-only-slide { padding: 0 0 calc(4.25rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .contact-slide { position: relative; display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; background: white; }
 .contact-slide::before { position: absolute; z-index: 5; top: calc(33.333333% + 1.5em); left: var(--gallery-outline); width: calc(100% - (var(--gallery-outline) * 2)); height: 1px; content: ""; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
