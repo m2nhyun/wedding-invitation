@@ -32,7 +32,7 @@ export function HorizontalPager({ children }: HorizontalPagerProps) {
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("slide-visible");
+          entry.target.classList.toggle("slide-visible", entry.isIntersecting);
         });
       },
       { root: viewport, threshold: 0.55 },
