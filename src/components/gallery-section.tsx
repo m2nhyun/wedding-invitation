@@ -3,7 +3,7 @@ import { wedding } from "@/data/wedding";
 
 const [
 	standingPortrait,
-	handsPolaroid,
+	,
 	boutonnierePhoto,
 	bouquetMoment,
 	mirrorPhoto,
@@ -27,22 +27,14 @@ export function GallerySection() {
 				<Image className="gallery-standing-portrait" src={standingPortrait} alt="" width={2212} height={1429} sizes="(max-width: 430px) 74vw, 318px" />
 			</section>
 
-			<section className="invitation-slide gallery-slide gallery-hands-slide">
+			<section className="invitation-slide gallery-slide gallery-standing-slide">
 				<Image
-					className="gallery-hands-polaroid"
-					src={handsPolaroid}
-					alt=""
-					width={5354}
-					height={6634}
-					sizes="(max-width: 430px) 39vw, 168px"
-				/>
-				<Image
-					className="gallery-hands-motion"
+					className="gallery-standing-photo"
 					src={holdingHandsMotion}
 					alt=""
 					width={1200}
 					height={1500}
-					sizes="(max-width: 430px) 86vw, 370px"
+					sizes="(max-width: 430px) 78vw, 335px"
 				/>
 			</section>
 
@@ -82,10 +74,7 @@ export function GallerySection() {
 					height={1193}
 					sizes="(max-width: 430px) 67vw, 288px"
 				/>
-			</section>
-
-			<section className="invitation-slide gallery-slide gallery-polaroid-slide">
-				<Image className="gallery-seated-polaroid" src={seatedPolaroid} alt="" width={2000} height={2468} sizes="(max-width: 430px) 43vw, 185px" />
+				<Image className="gallery-seated-polaroid" src={seatedPolaroid} alt="" width={2000} height={2468} sizes="(max-width: 430px) 35vw, 151px" />
 			</section>
 
 			<section className="invitation-slide gallery-slide gallery-cat-slide">
