@@ -64,7 +64,7 @@ export function GallerySection() {
 					alt=""
 					width={3089}
 					height={2048}
-					sizes="(max-width: 430px) calc(100vw - 2em), 398px"
+					sizes="(max-width: 430px) calc(110vw - 2.2em), 438px"
 				/>
 				<Image
 					className="gallery-groom-photo"
@@ -72,7 +72,7 @@ export function GallerySection() {
 					alt=""
 					width={1800}
 					height={1193}
-					sizes="(max-width: 430px) 67vw, 288px"
+					sizes="(max-width: 430px) 74.8vw, 322px"
 				/>
 				<Image className="gallery-seated-polaroid" src={seatedPolaroid} alt="" width={2000} height={2468} sizes="(max-width: 430px) 35vw, 151px" />
 			</section>
