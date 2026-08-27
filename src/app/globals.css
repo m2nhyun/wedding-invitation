@@ -146,6 +146,8 @@ img.image-unavailable {
 .event-photo-only-slide > img { transform: translateY(2rem); transition-duration: 1.8s; }
 .invitation-slide.slide-visible > :nth-child(2) { transition-delay: .55s; }
 .invitation-slide.slide-visible > :nth-child(3) { transition-delay: 1.05s; }
+.gallery-collage-slide.slide-visible > :nth-child(2) { transition-delay: .5s; }
+.gallery-collage-slide.slide-visible > :nth-child(3) { transition-delay: .95s; }
 .contact-only-slide > .contact-slide { opacity: 1; transform: none; transition: none; }
 .contact-only-slide .contact-slide > .contact-panel { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .contact-only-slide.slide-visible .contact-slide > .contact-panel { opacity: 1; transform: translateY(0); }
