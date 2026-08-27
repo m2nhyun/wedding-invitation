@@ -94,9 +94,9 @@ img.image-unavailable {
 .event-combined-slide .event-photo { width: 100%; height: min(39vh, 20rem); object-fit: contain; }
 .event-photo-only-slide { align-items: center; justify-content: center; padding: max(.75rem, env(safe-area-inset-top)) 1.5rem calc(4.75rem + env(safe-area-inset-bottom)); background: white; }
 .event-photo-only-slide img { width: 100%; height: min(44vh, 23.1rem); object-fit: contain; }
-.contact-only-slide { padding: 0 0 calc(4.25rem + env(safe-area-inset-bottom)); background: white; }
+.contact-only-slide { padding: 0 0 calc(4.25rem + env(safe-area-inset-bottom)); background: var(--BG); }
 .contact-slide { display: flex; min-height: 0; flex: 1 1 auto; flex-direction: column; background: white; }
-.contact-divider { flex: 0 0 1px; align-self: center; width: calc(100% - (var(--gallery-outline) * 2)); background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
+.contact-divider { flex: 0 0 1px; align-self: center; width: calc(100% - (var(--gallery-outline) * 2)); opacity: 1; transform: none; transition: none; background: rgb(from var(--olive) r g b / .28); pointer-events: none; }
 .contact-slide > .contact-panel { flex: 1 1 0; justify-content: center; gap: .44rem; padding: 1rem; border: 0; background: white; }
 .contact-slide > .contact-event-panel { display: grid; flex: 1 1 0; place-items: center; padding: .85rem 1rem; background: var(--BG); }
 .contact-event-panel .event-info { width: 100%; gap: .45rem; margin: 0; line-height: var(--content-line-height); color: var(--olive); }
@@ -143,9 +143,9 @@ img.image-unavailable {
 .contact-only-slide > .contact-slide { opacity: 1; transform: none; transition: none; }
 .contact-only-slide .contact-slide > .contact-panel { opacity: 0; transform: translateY(2.5rem); transition: opacity 1.6s var(--motion-ease), transform 1.6s var(--motion-ease); }
 .contact-only-slide.slide-visible .contact-slide > .contact-panel { opacity: 1; transform: translateY(0); }
-.contact-only-slide.slide-visible .contact-slide > .contact-panel:first-child { transition-delay: .05s; }
-.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(3) { transition-delay: .45s; }
-.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(4) { transition-delay: .85s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:first-child { transition-delay: .2s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(3) { transition-delay: .6s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(4) { transition-delay: 1s; }
 @media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .contact-only-slide .contact-slide > .contact-panel { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {
