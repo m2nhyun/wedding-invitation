@@ -147,7 +147,7 @@ img.image-unavailable {
 .contact-only-slide.slide-visible .contact-slide > .contact-panel { opacity: 1; transform: translateY(0); }
 .contact-only-slide.slide-visible .contact-slide > .contact-panel:first-child { transition-delay: .05s; }
 .contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(3) { transition-delay: .45s; }
-.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(5) { transition-delay: .85s; }
+.contact-only-slide.slide-visible .contact-slide > .contact-panel:nth-child(4) { transition-delay: .85s; }
 @media (prefers-reduced-motion: reduce) { .invitation-slide > :is(h2, p, a, button, img, div), .contact-only-slide .contact-slide > .contact-panel { opacity: 1; transform: none; transition: none; } }
 
 @keyframes giftBackdropIn {

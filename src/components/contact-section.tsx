@@ -89,9 +89,6 @@ export function ContactSection() {
 	return (
 		<>
 			<div className="contact-slide">
-				<div className="contact-panel contact-event-panel relative flex flex-col bg-[var(--BG)] text-[var(--olive)]">
-					<EventSection />
-				</div>
 				<div className="contact-panel relative flex flex-col gap-[0.4em] bg-[var(--BG)] py-[1.8em] text-[var(--olive)]">
 					<p className="text-[1.1em] leading-[var(--content-line-height)] text-[var(--olive)]">
 						{wedding.couple.groom.parents}
@@ -120,6 +117,9 @@ export function ContactSection() {
 						onClick={() => setSelectedSide("bride")}>
 						{wedding.gift.labels.heading}
 					</button>
+				</div>
+				<div className="contact-panel contact-event-panel relative flex flex-col bg-[var(--BG)] text-[var(--olive)]">
+					<EventSection />
 				</div>
 			</div>
 
