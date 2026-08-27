@@ -177,7 +177,7 @@ export function ContactSection() {
 										</div>
 										<div className="flex min-w-0 flex-col gap-[0.12rem]">
 											{account.bank ? (
-												<span className="text-left text-[0.78rem] leading-[1.35] text-[rgba(133,129,101,0.78)]">
+												<span className="text-left text-[0.78rem] leading-[1.35] text-[var(--olive)]">
 													{account.bank}
 												</span>
 											) : null}
